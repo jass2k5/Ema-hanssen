@@ -1,0 +1,42 @@
+.duo-1{
+    margin-top: 2rem;
+    grid-area: first-duo;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    @include flex-gap;
+    width: 100%;
+    .container{
+        @include flex-gap(1rem);
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        .product{
+            @include flex-gap;
+            flex-direction: column;
+            height: 50%;
+            width: 100%;
+            position: relative;
+
+            img{
+                height: 60vh;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 1rem;
+            }
+            .solo-info{
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              border-bottom-right-radius: 1rem;
+              @include back-white-product;
+
+              span{
+                font-size: clamp(0.4rem, 2vh, 1.3rem);
+                font-weight: 300;
+              }
+            }
+        }
+    }
+}

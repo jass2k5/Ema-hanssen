@@ -36,6 +36,7 @@
   --blur:30px;
   --br-clr1: rgba(255,255,255,0.3);
   --gap-logo: 0.4rem;
+  --margin-nav: clamp(0.2rem, 1vw + 0.2rem, 0.4rem);
 }
 
 * {
@@ -52,19 +53,22 @@ body {
   height: auto;
   min-height: 100%;
   width: 100%;
-  background-color: var(--second-clr);
+  background-color: var(--body-clr);
 }
 
 main {
   min-height: 100vh;
+  height: auto;
   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: var(--main-padding);
   position: relative;
   background-color: var(--body-clr);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "header" "section" "smartphone" "duo1";
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: "header" "section" "smartphone" "first-duo" "infobox";
   z-index: 0;
 }
 main header {
@@ -87,9 +91,10 @@ main header .img .hero-image {
   border-radius: 16px;
 }
 main header .img nav {
-  position: sticky;
-  top: 0%;
-  left: 0%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: var(--margin-nav);
   height: 35px;
   display: flex;
   align-items: center;
@@ -100,6 +105,7 @@ main header .img nav {
   left: 0%;
   top: 0%;
   border-bottom-right-radius: 20px;
+  z-index: 1000;
 }
 main header .img nav .logo-text {
   display: flex;
@@ -252,6 +258,176 @@ main .latest .smartphoneinfo .latestwork .downclick i {
 main .latest .smartphoneinfo .latestwork .downclick i:hover {
   transform: scale(1.2);
 }
+main .duo-1 {
+  margin-top: 2rem;
+  grid-area: first-duo;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+}
+main .duo-1 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+main .duo-1 .container .product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+main .duo-1 .container .product img {
+  height: 60vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 1rem;
+}
+main .duo-1 .container .product .solo-info {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-bottom-right-radius: 1rem;
+  text-transform: capitalize;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--body-clr);
+}
+main .duo-1 .container .product .solo-info span {
+  font-size: clamp(0.4rem, 2vh, 1.3rem);
+  font-weight: 300;
+}
+main .infomobile {
+  grid-area: infobox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-direction: column;
+  padding: var(--space-xss);
+}
+main .infomobile .info {
+  background-color: var(--third-clr);
+  padding: 1.4rem;
+  margin-right: 2px;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.1rem;
+}
+main .infomobile .info h3 {
+  font-size: clamp(0.2rem, 2vh + 0.2rem, 1.1rem);
+}
+main .infomobile .info i {
+  display: inline-block;
+  font-size: clamp(0.2rem, 2vh + 0.1rem, 1.1rem);
+  transition: transform 0.4s ease-in-out;
+  pointer-events: none;
+}
+main .infomobile .info:hover i {
+  transform: scale(1.2);
+}
+main .infomobile .info:nth-last-child(1) {
+  background-color: var(--second-clr);
+  color: white;
+}
+
+.footer {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "row1";
+  padding: var(--main-padding);
+  background-color: var(--body-clr);
+}
+.footer .aboutandmore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: row1;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--second-clr);
+  padding: 4rem;
+  gap: 2rem;
+}
+.footer .aboutandmore .first-half {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer .aboutandmore .first-half .ema-img {
+  height: 57px;
+  width: 57px;
+  border-radius: var(--circle);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+}
+.footer .aboutandmore .first-half .sideview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  color: white;
+}
+.footer .aboutandmore .first-half .sideview h2 {
+  font-size: var(--space-smd);
+}
+.footer .aboutandmore .first-half .sideview h3 {
+  font-size: var(--space-xss);
+  opacity: 0.7;
+}
+.footer .aboutandmore .second-half {
+  padding: var(--space-xs);
+  background-color: var(--body-clr);
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  transition: all 0.4s ease-in-out;
+}
+.footer .aboutandmore .second-half a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--second-clr);
+}
+.footer .aboutandmore .second-half a span {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.footer .aboutandmore .second-half:hover {
+  transform: translateY(-3px);
+}
 
 @media (min-width: 1024px) {
   main {
@@ -368,5 +544,8 @@ main .latest .smartphoneinfo .latestwork .downclick i:hover {
     align-items: center;
     justify-content: center;
     gap: 20px;
+  }
+  .infomobile {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
