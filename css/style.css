@@ -69,11 +69,11 @@ main {
 }
 main header {
   grid-area: header;
-  height: auto;
+  height: 80%;
   width: 100%;
 }
 main header .img {
-  height: auto;
+  height: 46vh;
   width: 100%;
   position: relative;
 }
@@ -87,7 +87,9 @@ main header .img .hero-image {
   border-radius: 16px;
 }
 main header .img nav {
-  position: absolute;
+  position: sticky;
+  top: 0%;
+  left: 0%;
   height: 35px;
   display: flex;
   align-items: center;
@@ -156,7 +158,7 @@ main header .img .featured {
   text-transform: capitalize;
   font-weight: 800;
   position: absolute;
-  bottom: 1%;
+  bottom: 0%;
   right: 0%;
   padding: clamp(0.2rem, 1vw + 0.1rem, 0.5rem);
   background-color: var(--body-clr);
