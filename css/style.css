@@ -47,27 +47,29 @@
   font-style: normal;
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+  height: auto;
+  min-height: 100%;
   width: 100%;
   background-color: var(--second-clr);
 }
 
 main {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   padding: var(--main-padding);
   position: relative;
   background-color: var(--body-clr);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "header" "section" "smartphone";
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header" "section" "smartphone" "duo1";
   z-index: 0;
 }
 main header {
   grid-area: header;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 main header .img {
@@ -95,7 +97,7 @@ main header .img nav {
   background-color: var(--body-clr);
   left: 0%;
   top: 0%;
-  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 20px;
 }
 main header .img nav .logo-text {
   display: flex;
@@ -161,14 +163,14 @@ main header .img .featured {
   border-top-left-radius: 8px;
 }
 main header .img .featured span {
-  font-size: clamp(0.7rem, 2vw + 0.4rem, 1.1rem);
+  font-size: clamp(0.7rem, 2vw + 0.4rem, 1rem);
 }
 main .Ema {
   grid-area: section;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100%;
+  height: auto;
   width: 100%;
   position: relative;
 }
@@ -213,6 +215,8 @@ main .Ema .brandbox .overview .sideview h3 {
 }
 main .latest {
   grid-area: smartphone;
+  height: auto;
+  width: 100%;
 }
 main .latest .smartphoneinfo {
   padding: 1.5rem 1.1rem;
@@ -226,6 +230,10 @@ main .latest .smartphoneinfo .latestwork {
 }
 main .latest .smartphoneinfo .latestwork .view {
   border-bottom: 1px solid black;
+  transition: all 0.4s ease-in-out;
+}
+main .latest .smartphoneinfo .latestwork .view:hover {
+  transform: translateY(-2px);
 }
 main .latest .smartphoneinfo .latestwork .downclick {
   display: flex;
@@ -235,6 +243,12 @@ main .latest .smartphoneinfo .latestwork .downclick {
 }
 main .latest .smartphoneinfo .latestwork .downclick h3 {
   text-transform: capitalize;
+}
+main .latest .smartphoneinfo .latestwork .downclick i {
+  transition: all 0.4s ease-in-out;
+}
+main .latest .smartphoneinfo .latestwork .downclick i:hover {
+  transform: scale(1.2);
 }
 
 @media (min-width: 1024px) {
@@ -247,8 +261,8 @@ main .latest .smartphoneinfo .latestwork .downclick h3 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto 1fr;
     grid-template-areas: "header section" "header smartphone" "header .";
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
   main header {
     grid-area: header;

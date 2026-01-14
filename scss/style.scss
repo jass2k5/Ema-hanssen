@@ -1,48 +1,52 @@
+@import 'utils/fonts';
+@import 'utils/keyframes';
+@import 'utils/mixins';
+@import 'utils/root';
 
-@import 'fonts';
-@import 'mixins';
-@import 'keyframes';
-@import 'root';
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
-html,body{
-    height: 100%;
+
+html,
+body {
+    height: auto;
+    min-height: 100%;
     width: 100%;
     background-color: var(--second-clr);
 }
-main{
-    height: 100%;
+
+main {
+    min-height: 100vh;
     width: 100%;
     padding: var(--main-padding);
     position: relative;
-    // overflow: hidden;
     background-color: var(--body-clr);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "header"
-                        "section"
-                        "smartphone";
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "header"
+        "section"
+        "smartphone"
+        "duo1" ;
     z-index: 0;
 
-
-    header{
+    header {
         grid-area: header;
-        height: 100%;
+        height: auto;
         width: 100%;
-        .img{
+
+        .img {
             height: auto;
             width: 100%;
             position: relative;
 
-            .hero-image{
+            .hero-image {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
@@ -50,81 +54,71 @@ main{
                 border-radius: 16px;
             }
 
-               
-            
-            nav{
+            nav {
                 position: absolute;
                 height: 35px;
                 @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
                 @include back-white;
                 left: 0%;
-                top: 0%; 
-                border-bottom-right-radius: 8px;
+                top: 0%;
+                border-bottom-right-radius: 20px;
 
-                .logo-text{
+                .logo-text {
                     @include flex-gap(10px);
                     overflow: hidden;
-                    
-                    img{
+
+                    img {
                         height: 1.2rem;
                         width: 1.2rem;
                         object-fit: cover;
                         object-position: center;
                     }
-                    span{
+
+                    span {
                         padding: 5px;
                         height: auto;
                         will-change: transform;
 
-                        &:hover a{
+                        &:hover a {
                             animation: loopText 0.6s ease-in-out;
                         }
 
-                        a{
+                        a {
                             text-decoration: none;
                             color: var(--second-clr);
                             font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
                             font-weight: 500;
                             display: inline-block;
                         }
-
                     }
                 }
-                ul{
-                    @include flex-gap(clamp(0.2rem, 1vw,1.5rem));   
 
-                    
+                ul {
+                    @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
 
-                li{
-                    list-style: none;
-                    padding: 5px;
-                    height: auto;
-                    overflow: hidden;
-                    will-change: transform;
-                    
-                    &:hover a{
-                        animation: loopText 0.6s ease-in-out;
-                    }
-                        
-                        
-                        a{  
- 
+                    li {
+                        list-style: none;
+                        padding: 5px;
+                        height: auto;
+                        overflow: hidden;
+                        will-change: transform;
+
+                        &:hover a {
+                            animation: loopText 0.6s ease-in-out;
+                        }
+
+                        a {
                             font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
-                            
                             text-decoration: none;
                             display: inline-block;
                             color: var(--second-clr);
                             font-weight: 500;
-                            
-                            
                         }
-                        
                     }
-                    
-                    
                 }
             }
-            .featured{
+
+            .featured {
                 text-transform: capitalize;
                 font-weight: 800;
                 position: absolute;
@@ -133,88 +127,108 @@ main{
                 padding: clamp(0.2rem, 1vw + 0.1rem, 0.5rem);
                 background-color: var(--body-clr);
                 border-top-left-radius: 8px;
-                span{
-                    font-size: clamp(0.7rem, 2vw + 0.4rem, 1.1rem);  
+
+                span {
+                    font-size: clamp(0.7rem, 2vw + 0.4rem, 1rem);
                 }
             }
         }
-       
     }
-     .Ema{
+
+    .Ema {
         grid-area: section;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        height: 100%;
+        height: auto;
         width: 100%;
         position: relative;
-         .infobox{
+
+        .infobox {
             display: none;
-         }
-         
-        .brandbox{
+        }
+
+        .brandbox {
             background-color: var(--third-clr);
             padding: var(--space-md);
             @include flex-gap(30px);
             border-radius: 1rem;
             flex-direction: column;
-               p{
+
+            p {
                 line-height: var(--lh-body);
-               }
-            .overview{
-                // @include flex-gap(15px);
+            }
+
+            .overview {
                 display: flex;
                 align-items: center;
                 gap: 16px;
                 justify-content: flex-start;
                 width: 100%;
 
-                .ema-img{
+                .ema-img {
                     height: 57px;
                     width: 57px;
                     border-radius: var(--circle);
                     object-fit: contain;
-                    object-position: top ;
-
+                    object-position: top;
                 }
-                .sideview{
-                    h2{
+
+                .sideview {
+                    h2 {
                         font-size: var(--space-smd);
                     }
-                    h3{
+
+                    h3 {
                         font-size: var(--space-xss);
                         opacity: 0.7;
                     }
                 }
             }
-        } }
-       .latest{
-           grid-area: smartphone;
-           
-       .smartphoneinfo{
-            // background-color:black;
+        }
+    }
+
+    .latest {
+        grid-area: smartphone;
+        height: auto;
+        width: 100%;
+
+        .smartphoneinfo {
             padding: 1.5rem 1.1rem;
             border-radius: 16px;
 
-            .latestwork{
+            .latestwork {
                 @include flex-gap(40%);
 
-                .view{
-                    border-bottom: 1px solid black
-                }
+                .view {
+                    border-bottom: 1px solid black;
+                    transition: all 0.4s ease-in-out;
 
-                .downclick{
-                    @include flex-gap(9px);
-
-                    h3{
-                        text-transform: capitalize;
+                    &:hover {
+                        transform: translateY(-2px);
                     }
                 }
-                }    } }  }
-            
-    
-         
 
-  
-            
-@import 'desktop';
+                .downclick {
+                    @include flex-gap(9px);
+
+                    h3 {
+                        text-transform: capitalize;
+                    }
+
+                    i {
+                        transition: all 0.4s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+@import 'responsive/desktop'
