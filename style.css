@@ -320,7 +320,7 @@ main .latest .smartphoneinfo .latestwork .downclick h3 {
     pointer-events: none;
   }
   main .Ema .upleftrow .infobox .info:hover i {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   main .Ema .upleftrow .infobox .info:nth-last-child(1) {
     background-color: var(--second-clr);
