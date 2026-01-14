@@ -1,0 +1,129 @@
+
+@media (min-width: 1024px){
+   main{
+    height: 100vh;
+    width: 100%;
+    padding: 12px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr ;
+    grid-template-areas: "header section"
+    "header smartphone"
+    "header .";
+    column-gap: 10px;
+      
+
+        header{
+            grid-area: header;
+            position: sticky;
+            top: 0%;
+            height: 100vh;
+            width: 100%;
+
+           .img{
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .hero-image{
+                height: 97vh;
+                width: 100%;
+            }
+           }
+
+        }
+        .Ema{
+            height: 48vh;
+
+            
+            .upleftrow{
+                grid-area: section;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+
+                .brandbox{
+                    flex: 1;
+                    height: 100%;
+                    padding: 3rem;
+                    @include flex-gap(40%);
+                }
+                .infobox{
+                    flex: 1;
+                   display: flex;
+                   align-items: center;
+                   justify-content:space-between;
+                   padding: 1rem;
+                   flex-direction: column;
+                   height: 100%;
+                   width: 40%;
+                   border-radius: 1rem;
+                   color: black;
+                   gap: 0.7rem;
+                   .info{
+                     background-color: var(--third-clr);
+                     padding: 1rem;
+                     margin-right: 2px;
+                     height: 60%;
+                     width: 100%;
+                     display: flex;
+                     align-items: center;
+                     justify-content: space-between;
+                     border-radius: 1.1rem;
+
+                     h3{
+                       font-size: clamp(0.2rem, 2vw + 0.1rem, 1.1rem);
+                     }
+                    i{   
+                        display: inline-block;
+                        font-size: clamp(0.2rem, 2vw + 0.1rem, 1.1rem);
+                        transition: transform 0.4s ease-in-out;
+                        pointer-events: none;
+                    }
+                     
+                    &:hover i{
+                        transform: scale(1.1);
+                    }
+                    &:nth-last-child(1){
+                        background-color: var(--second-clr);
+                        color: white;
+                    }
+                   }
+                }
+
+                
+            }
+            
+        }
+    .latest{
+        margin-top: 0.8rem;
+       grid-area: smartphone;
+       height: 100%;
+       border-radius: 1rem;
+       padding: 1rem;
+       background-color: var(--third-clr);
+       
+       .smartphoneinfo{
+        height: 100%;
+        width: 100%;
+        padding: var(--space-xn);
+
+        .latestwork{
+            height: 100%;
+            width: 100%;
+            @include flex-gap(60%);
+            
+
+            .downclick{
+                @include flex-gap(20px);
+            
+        }
+       }
+
+    }
+
+
+    }} }

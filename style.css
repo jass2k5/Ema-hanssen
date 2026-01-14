@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@keyframes loopText {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+:root {
+  --main-padding:0.8rem ;
+  --body-clr: white;
+  --second-clr: black;
+  --third-clr: whitesmoke;
+  --circle: 50%;
+  --main-font:"Ubuntu", sans-serif;
+  --font-size: 1rem;
+  --lh-body: 1.6;
+  --space-xn:0.2rem;
+  --space-xs:0.4rem;
+  --space-xss:0.9rem;
+  --space-s: 1rem;
+  --space-smd:1.2rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --blur:30px;
+  --br-clr1: rgba(255,255,255,0.3);
+  --gap-logo: 0.4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--second-clr);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: var(--main-padding);
+  position: relative;
+  background-color: var(--body-clr);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "header" "section" "smartphone";
+  z-index: 0;
+}
+main header {
+  grid-area: header;
+  height: 100%;
+  width: 100%;
+}
+main header .img {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+main header .img .hero-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 16px;
+}
+main header .img nav {
+  position: absolute;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.2rem, 1vw, 1.5rem);
+  padding: var(--space-xs);
+  background-color: var(--body-clr);
+  left: 0%;
+  top: 0%;
+  border-bottom-right-radius: 8px;
+}
+main header .img nav .logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+main header .img nav .logo-text img {
+  height: 1.2rem;
+  width: 1.2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main header .img nav .logo-text span {
+  padding: 5px;
+  height: auto;
+  will-change: transform;
+}
+main header .img nav .logo-text span:hover a {
+  animation: loopText 0.6s ease-in-out;
+}
+main header .img nav .logo-text span a {
+  text-decoration: none;
+  color: var(--second-clr);
+  font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
+  font-weight: 500;
+  display: inline-block;
+}
+main header .img nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.2rem, 1vw, 1.5rem);
+}
+main header .img nav ul li {
+  list-style: none;
+  padding: 5px;
+  height: auto;
+  overflow: hidden;
+  will-change: transform;
+}
+main header .img nav ul li:hover a {
+  animation: loopText 0.6s ease-in-out;
+}
+main header .img nav ul li a {
+  font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
+  text-decoration: none;
+  display: inline-block;
+  color: var(--second-clr);
+  font-weight: 500;
+}
+main header .img .featured {
+  text-transform: capitalize;
+  font-weight: 800;
+  position: absolute;
+  bottom: 1%;
+  right: 0%;
+  padding: clamp(0.2rem, 1vw + 0.1rem, 0.5rem);
+  background-color: var(--body-clr);
+  border-top-left-radius: 8px;
+}
+main header .img .featured span {
+  font-size: clamp(0.7rem, 2vw + 0.4rem, 1.1rem);
+}
+main .Ema {
+  grid-area: section;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+main .Ema .infobox {
+  display: none;
+}
+main .Ema .brandbox {
+  background-color: var(--third-clr);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+main .Ema .brandbox p {
+  line-height: var(--lh-body);
+}
+main .Ema .brandbox .overview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+  width: 100%;
+}
+main .Ema .brandbox .overview .ema-img {
+  height: 57px;
+  width: 57px;
+  border-radius: var(--circle);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+}
+main .Ema .brandbox .overview .sideview h2 {
+  font-size: var(--space-smd);
+}
+main .Ema .brandbox .overview .sideview h3 {
+  font-size: var(--space-xss);
+  opacity: 0.7;
+}
+main .latest {
+  grid-area: smartphone;
+}
+main .latest .smartphoneinfo {
+  padding: 1.5rem 1.1rem;
+  border-radius: 16px;
+}
+main .latest .smartphoneinfo .latestwork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40%;
+}
+main .latest .smartphoneinfo .latestwork .view {
+  border-bottom: 1px solid black;
+}
+main .latest .smartphoneinfo .latestwork .downclick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+main .latest .smartphoneinfo .latestwork .downclick h3 {
+  text-transform: capitalize;
+}
+
+@media (min-width: 1024px) {
+  main {
+    height: 100vh;
+    width: 100%;
+    padding: 12px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "header section" "header smartphone" "header .";
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  main header {
+    grid-area: header;
+    position: sticky;
+    top: 0%;
+    height: 100vh;
+    width: 100%;
+  }
+  main header .img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  main header .img .hero-image {
+    height: 97vh;
+    width: 100%;
+  }
+  main .Ema {
+    height: 48vh;
+  }
+  main .Ema .upleftrow {
+    grid-area: section;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  main .Ema .upleftrow .brandbox {
+    flex: 1;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40%;
+  }
+  main .Ema .upleftrow .infobox {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    border-radius: 1rem;
+    color: black;
+    gap: 0.7rem;
+  }
+  main .Ema .upleftrow .infobox .info {
+    background-color: var(--third-clr);
+    padding: 1rem;
+    margin-right: 2px;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.1rem;
+  }
+  main .Ema .upleftrow .infobox .info h3 {
+    font-size: clamp(0.2rem, 2vw + 0.1rem, 1.1rem);
+  }
+  main .Ema .upleftrow .infobox .info i {
+    display: inline-block;
+    font-size: clamp(0.2rem, 2vw + 0.1rem, 1.1rem);
+    transition: transform 0.4s ease-in-out;
+    pointer-events: none;
+  }
+  main .Ema .upleftrow .infobox .info:hover i {
+    transform: scale(1.1);
+  }
+  main .Ema .upleftrow .infobox .info:nth-last-child(1) {
+    background-color: var(--second-clr);
+    color: white;
+  }
+  main .latest {
+    margin-top: 0.8rem;
+    grid-area: smartphone;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--third-clr);
+  }
+  main .latest .smartphoneinfo {
+    height: 100%;
+    width: 100%;
+    padding: var(--space-xn);
+  }
+  main .latest .smartphoneinfo .latestwork {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60%;
+  }
+  main .latest .smartphoneinfo .latestwork .downclick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
