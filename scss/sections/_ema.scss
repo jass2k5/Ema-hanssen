@@ -1,0 +1,48 @@
+.Ema {
+        grid-area: section;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 100%;
+        position: relative;
+
+        .infobox {
+            display: none;
+        }
+
+        .brandbox {
+            background-color: var(--third-clr);
+            padding: var(--space-md);
+            @include flex-gap(30px);
+            border-radius: 1rem;
+            flex-direction: column;
+
+            p {
+                line-height: var(--lh-body);
+            }
+
+            .overview {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                justify-content: flex-start;
+                width: 100%;
+
+                .ema-img {
+                    @include ema-img(57px,57px,var(--circle));
+                }
+
+                .sideview {
+                    h2 {
+                        font-size: var(--space-smd);
+                    }
+
+                    h3 {
+                        font-size: var(--space-xss);
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }

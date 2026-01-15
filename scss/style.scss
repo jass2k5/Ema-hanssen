@@ -1,240 +1,25 @@
+//Base
 @import 'utils/fonts';
-@import 'utils/keyframes';
-@import 'utils/mixins';
 @import 'utils/root';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
+//Utils
+@import 'utils/keyframes';
+@import 'utils/mixins';
 
-html,
-body {
-    height: auto;
-    min-height: 100%;
-    width: 100%;
-    background-color: var(--body-clr);
-}
+//base layouts
+@import 'layouts/body';
+@import 'layouts/main';
 
-main {
-    min-height: 100vh;
-    height: auto;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: var(--main-padding);
-    position: relative;
-    background-color: var(--body-clr);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-        "header"
-        "section"
-        "smartphone"
-        "first-duo"
-        "infobox";
-    z-index: 0;
 
-    header {
-        grid-area: header;
-        height: 80%;
-        width: 100%;
-
-        .img {
-            height: 46vh;
-            width: 100%;
-            position: relative;
-
-            .hero-image {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                object-position: top;
-                border-radius: 16px;
-            }
-
-            nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                margin-left: var(--margin-nav);
-                height: 35px;
-                @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
-                @include back-white;
-                transform-origin: top;
-                border-bottom-right-radius: 20px;
-                z-index: 1000;
-                opacity: 0;
-                animation: grow 1s cubic-bezier(0.7,0,0.3,1) forwards;
-                will-change: transform;
-
-                .logo-text {
-                    @include flex-gap(10px);
-                    overflow: hidden;
-
-                    img {
-                        height: 1.2rem;
-                        width: 1.2rem;
-                        object-fit: cover;
-                        object-position: center;
-                    }
-
-                    span {
-                        padding: 5px;
-                        height: auto;
-                        will-change: transform;
-
-                        &:hover a {
-                            animation: loopText 0.4s ease-in-out;
-                        }
-
-                        a {
-                            text-decoration: none;
-                            color: var(--second-clr);
-                            font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
-                            font-weight: 500;
-                            display: inline-block;
-                        }
-                    }
-                }
-
-                ul {
-                    @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
-
-                    li {
-                        list-style: none;
-                        padding: 5px;
-                        height: auto;
-                        overflow: hidden;
-                        will-change: transform;
-
-                        &:hover a {
-                            animation: loopText 0.4s ease-in-out;
-                        }
-
-                        a {
-                            font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
-                            text-decoration: none;
-                            display: inline-block;
-                            color: var(--second-clr);
-                            font-weight: 500;
-                        }
-                    }
-                }
-            }
-
-            .featured {
-                text-transform: capitalize;
-                font-weight: 800;
-                position: absolute;
-                bottom: 0%;
-                right: 0%;
-                padding: clamp(0.2rem, 1vw + 0.1rem, 0.5rem);
-                background-color: var(--body-clr);
-                border-top-left-radius: 8px;
-
-                span {
-                    font-size: clamp(0.7rem, 2vw + 0.4rem, 1rem);
-                }
-            }
-        }
-    }
-
-    .Ema {
-        grid-area: section;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        height: auto;
-        width: 100%;
-        position: relative;
-
-        .infobox {
-            display: none;
-        }
-
-        .brandbox {
-            background-color: var(--third-clr);
-            padding: var(--space-md);
-            @include flex-gap(30px);
-            border-radius: 1rem;
-            flex-direction: column;
-
-            p {
-                line-height: var(--lh-body);
-            }
-
-            .overview {
-                display: flex;
-                align-items: center;
-                gap: 16px;
-                justify-content: flex-start;
-                width: 100%;
-
-                .ema-img {
-                    @include ema-img(57px,57px,var(--circle));
-                }
-
-                .sideview {
-                    h2 {
-                        font-size: var(--space-smd);
-                    }
-
-                    h3 {
-                        font-size: var(--space-xss);
-                        opacity: 0.7;
-                    }
-                }
-            }
-        }
-    }
-
-    .latest {
-        grid-area: smartphone;
-        height: auto;
-        width: 100%;
-
-        .smartphoneinfo {
-            padding: 1.5rem 1.1rem;
-            border-radius: 16px;
-
-            .latestwork {
-                @include flex-gap(40%);
-
-                .view {
-                    border-bottom: 1px solid black;
-                    transition: all 0.4s ease-in-out;
-
-                    &:hover {
-                        transform: translateY(-2px);
-                    }
-                }
-
-                .downclick {
-                    @include flex-gap(9px);
-
-                    h3 {
-                        text-transform: capitalize;
-                    }
-
-                    i {
-                        transition: all 0.4s ease-in-out;
-
-                        &:hover {
-                            transform: scale(1.2);
-                        }
-                    }
-                }
-            }
-        }
-    }
+//page sections in order
+@import 'sections/hero';
+@import 'sections/ema.scss';
+@import 'sections/latest';
 @import 'sections/slider';
+
+//footer layout
+@import 'layouts/footer';
+
+//responsives
 @import 'responsive/infoboxmobile';
-}
-@import 'sections/footer';
 @import 'responsive/desktop';

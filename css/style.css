@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+:root {
+  --main-padding:0.8rem ;
+  --body-clr: white;
+  --second-clr: black;
+  --third-clr: whitesmoke;
+  --circle: 50%;
+  --main-font:"Ubuntu", sans-serif;
+  --font-size: 1rem;
+  --lh-body: 1.6;
+  --space-xn:0.2rem;
+  --space-xs:0.4rem;
+  --space-xss:0.9rem;
+  --space-s: 1rem;
+  --space-smd:1.2rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --blur:30px;
+  --br-clr1: rgba(255,255,255,0.3);
+  --gap-logo: 0.4rem;
+  --margin-nav: clamp(0.2rem, 1vw + 0.2rem, 0.4rem);
+}
+
 @keyframes loopText {
   0% {
     transform: translateY(0);
@@ -27,28 +49,6 @@
     opacity: 1;
   }
 }
-:root {
-  --main-padding:0.8rem ;
-  --body-clr: white;
-  --second-clr: black;
-  --third-clr: whitesmoke;
-  --circle: 50%;
-  --main-font:"Ubuntu", sans-serif;
-  --font-size: 1rem;
-  --lh-body: 1.6;
-  --space-xn:0.2rem;
-  --space-xs:0.4rem;
-  --space-xss:0.9rem;
-  --space-s: 1rem;
-  --space-smd:1.2rem;
-  --space-md: 2rem;
-  --space-lg: 4rem;
-  --blur:30px;
-  --br-clr1: rgba(255,255,255,0.3);
-  --gap-logo: 0.4rem;
-  --margin-nav: clamp(0.2rem, 1vw + 0.2rem, 0.4rem);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -81,17 +81,18 @@ main {
   grid-template-areas: "header" "section" "smartphone" "first-duo" "infobox";
   z-index: 0;
 }
-main header {
+
+header {
   grid-area: header;
   height: 80%;
   width: 100%;
 }
-main header .img {
+header .img {
   height: 46vh;
   width: 100%;
   position: relative;
 }
-main header .img .hero-image {
+header .img .hero-image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -100,7 +101,7 @@ main header .img .hero-image {
      object-position: top;
   border-radius: 16px;
 }
-main header .img nav {
+header .img nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -119,14 +120,14 @@ main header .img nav {
   animation: grow 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
   will-change: transform;
 }
-main header .img nav .logo-text {
+header .img nav .logo-text {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   overflow: hidden;
 }
-main header .img nav .logo-text img {
+header .img nav .logo-text img {
   height: 1.2rem;
   width: 1.2rem;
   -o-object-fit: cover;
@@ -134,45 +135,45 @@ main header .img nav .logo-text img {
   -o-object-position: center;
      object-position: center;
 }
-main header .img nav .logo-text span {
+header .img nav .logo-text span {
   padding: 5px;
   height: auto;
   will-change: transform;
 }
-main header .img nav .logo-text span:hover a {
+header .img nav .logo-text span:hover a {
   animation: loopText 0.4s ease-in-out;
 }
-main header .img nav .logo-text span a {
+header .img nav .logo-text span a {
   text-decoration: none;
   color: var(--second-clr);
   font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
   font-weight: 500;
   display: inline-block;
 }
-main header .img nav ul {
+header .img nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: clamp(0.2rem, 1vw, 1.5rem);
 }
-main header .img nav ul li {
+header .img nav ul li {
   list-style: none;
   padding: 5px;
   height: auto;
   overflow: hidden;
   will-change: transform;
 }
-main header .img nav ul li:hover a {
+header .img nav ul li:hover a {
   animation: loopText 0.4s ease-in-out;
 }
-main header .img nav ul li a {
+header .img nav ul li a {
   font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
   text-decoration: none;
   display: inline-block;
   color: var(--second-clr);
   font-weight: 500;
 }
-main header .img .featured {
+header .img .featured {
   text-transform: capitalize;
   font-weight: 800;
   position: absolute;
@@ -182,10 +183,11 @@ main header .img .featured {
   background-color: var(--body-clr);
   border-top-left-radius: 8px;
 }
-main header .img .featured span {
+header .img .featured span {
   font-size: clamp(0.7rem, 2vw + 0.4rem, 1rem);
 }
-main .Ema {
+
+.Ema {
   grid-area: section;
   display: flex;
   flex-direction: column;
@@ -194,10 +196,10 @@ main .Ema {
   width: 100%;
   position: relative;
 }
-main .Ema .infobox {
+.Ema .infobox {
   display: none;
 }
-main .Ema .brandbox {
+.Ema .brandbox {
   background-color: var(--third-clr);
   padding: var(--space-md);
   display: flex;
@@ -207,17 +209,17 @@ main .Ema .brandbox {
   border-radius: 1rem;
   flex-direction: column;
 }
-main .Ema .brandbox p {
+.Ema .brandbox p {
   line-height: var(--lh-body);
 }
-main .Ema .brandbox .overview {
+.Ema .brandbox .overview {
   display: flex;
   align-items: center;
   gap: 16px;
   justify-content: flex-start;
   width: 100%;
 }
-main .Ema .brandbox .overview .ema-img {
+.Ema .brandbox .overview .ema-img {
   height: 57px;
   width: 57px;
   border-radius: var(--circle);
@@ -226,51 +228,53 @@ main .Ema .brandbox .overview .ema-img {
   -o-object-position: top;
      object-position: top;
 }
-main .Ema .brandbox .overview .sideview h2 {
+.Ema .brandbox .overview .sideview h2 {
   font-size: var(--space-smd);
 }
-main .Ema .brandbox .overview .sideview h3 {
+.Ema .brandbox .overview .sideview h3 {
   font-size: var(--space-xss);
   opacity: 0.7;
 }
-main .latest {
+
+.latest {
   grid-area: smartphone;
   height: auto;
   width: 100%;
 }
-main .latest .smartphoneinfo {
+.latest .smartphoneinfo {
   padding: 1.5rem 1.1rem;
   border-radius: 16px;
 }
-main .latest .smartphoneinfo .latestwork {
+.latest .smartphoneinfo .latestwork {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40%;
 }
-main .latest .smartphoneinfo .latestwork .view {
+.latest .smartphoneinfo .latestwork .view {
   border-bottom: 1px solid black;
   transition: all 0.4s ease-in-out;
 }
-main .latest .smartphoneinfo .latestwork .view:hover {
+.latest .smartphoneinfo .latestwork .view:hover {
   transform: translateY(-2px);
 }
-main .latest .smartphoneinfo .latestwork .downclick {
+.latest .smartphoneinfo .latestwork .downclick {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
 }
-main .latest .smartphoneinfo .latestwork .downclick h3 {
+.latest .smartphoneinfo .latestwork .downclick h3 {
   text-transform: capitalize;
 }
-main .latest .smartphoneinfo .latestwork .downclick i {
+.latest .smartphoneinfo .latestwork .downclick i {
   transition: all 0.4s ease-in-out;
 }
-main .latest .smartphoneinfo .latestwork .downclick i:hover {
+.latest .smartphoneinfo .latestwork .downclick i:hover {
   transform: scale(1.2);
 }
-main .duo-1 {
+
+.duo-1 {
   margin-top: 2rem;
   grid-area: first-duo;
   min-height: 100vh;
@@ -282,7 +286,7 @@ main .duo-1 {
   gap: 0;
   width: 100%;
 }
-main .duo-1 .container {
+.duo-1 .container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,7 +295,7 @@ main .duo-1 .container {
   height: 100%;
   width: 100%;
 }
-main .duo-1 .container .product {
+.duo-1 .container .product {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,7 +305,7 @@ main .duo-1 .container .product {
   width: 100%;
   position: relative;
 }
-main .duo-1 .container .product img {
+.duo-1 .container .product img {
   height: 60vh;
   width: 100%;
   -o-object-fit: cover;
@@ -310,7 +314,7 @@ main .duo-1 .container .product img {
      object-position: top;
   border-radius: 1rem;
 }
-main .duo-1 .container .product .solo-info {
+.duo-1 .container .product .solo-info {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -321,46 +325,9 @@ main .duo-1 .container .product .solo-info {
   padding-bottom: 0.5rem;
   background-color: var(--body-clr);
 }
-main .duo-1 .container .product .solo-info span {
+.duo-1 .container .product .solo-info span {
   font-size: clamp(0.4rem, 2vh, 1.3rem);
   font-weight: 300;
-}
-main .infomobile {
-  grid-area: infobox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-direction: column;
-  padding: var(--space-xss);
-}
-main .infomobile .info {
-  background-color: var(--third-clr);
-  padding: 1.4rem;
-  margin-right: 2px;
-  height: 60%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 1.1rem;
-}
-main .infomobile .info h3 {
-  font-size: clamp(0.2rem, 2vh + 0.2rem, 1.1rem);
-}
-main .infomobile .info i {
-  display: inline-block;
-  font-size: clamp(0.2rem, 2vh + 0.1rem, 1.1rem);
-  transition: transform 0.4s ease-in-out;
-  pointer-events: none;
-}
-main .infomobile .info:hover i {
-  transform: scale(1.2);
-}
-main .infomobile .info:nth-last-child(1) {
-  background-color: var(--second-clr);
-  color: white;
 }
 
 .footer {
@@ -558,6 +525,44 @@ main .infomobile .info:nth-last-child(1) {
   color: white;
   font-size: 1.2rem;
   text-decoration: none;
+}
+
+.infomobile {
+  grid-area: infobox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-direction: column;
+  padding: var(--space-xss);
+}
+.infomobile .info {
+  background-color: var(--third-clr);
+  padding: 1.4rem;
+  margin-right: 2px;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.1rem;
+}
+.infomobile .info h3 {
+  font-size: clamp(0.2rem, 2vh + 0.2rem, 1.1rem);
+}
+.infomobile .info i {
+  display: inline-block;
+  font-size: clamp(0.2rem, 2vh + 0.1rem, 1.1rem);
+  transition: transform 0.4s ease-in-out;
+  pointer-events: none;
+}
+.infomobile .info:hover i {
+  transform: scale(1.2);
+}
+.infomobile .info:nth-last-child(1) {
+  background-color: var(--second-clr);
+  color: white;
 }
 
 @media (min-width: 1024px) {

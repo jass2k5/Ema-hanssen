@@ -1,0 +1,104 @@
+ header {
+        grid-area: header;
+        height: 80%;
+        width: 100%;
+
+        .img {
+            height: 46vh;
+            width: 100%;
+            position: relative;
+
+            .hero-image {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 16px;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                margin-left: var(--margin-nav);
+                height: 35px;
+                @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
+                @include back-white;
+                transform-origin: top;
+                border-bottom-right-radius: 20px;
+                z-index: 1000;
+                opacity: 0;
+                animation: grow 1s cubic-bezier(0.7,0,0.3,1) forwards;
+                will-change: transform;
+
+                .logo-text {
+                    @include flex-gap(10px);
+                    overflow: hidden;
+
+                    img {
+                        height: 1.2rem;
+                        width: 1.2rem;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+
+                    span {
+                        padding: 5px;
+                        height: auto;
+                        will-change: transform;
+
+                        &:hover a {
+                            animation: loopText 0.4s ease-in-out;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: var(--second-clr);
+                            font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
+                            font-weight: 500;
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                ul {
+                    @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
+
+                    li {
+                        list-style: none;
+                        padding: 5px;
+                        height: auto;
+                        overflow: hidden;
+                        will-change: transform;
+
+                        &:hover a {
+                            animation: loopText 0.4s ease-in-out;
+                        }
+
+                        a {
+                            font-size: clamp(0.3rem, 1vw + 0.4rem, 0.8rem);
+                            text-decoration: none;
+                            display: inline-block;
+                            color: var(--second-clr);
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            .featured {
+                text-transform: capitalize;
+                font-weight: 800;
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                padding: clamp(0.2rem, 1vw + 0.1rem, 0.5rem);
+                background-color: var(--body-clr);
+                border-top-left-radius: 8px;
+
+                span {
+                    font-size: clamp(0.7rem, 2vw + 0.4rem, 1rem);
+                }
+            }
+        }
+    }
