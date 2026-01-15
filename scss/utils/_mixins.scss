@@ -23,3 +23,9 @@
     object-position: top;
                 
 }
+@mixin all-childs($gap:1.5rem,$direction:column){
+    @include flex-gap($gap);
+              flex-direction: $direction;
+              height: 100%;
+              width: 100%;
+}
