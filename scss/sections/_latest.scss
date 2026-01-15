@@ -2,10 +2,11 @@
         grid-area: smartphone;
         height: auto;
         width: 100%;
-
+        
         .smartphoneinfo {
             padding: 1.5rem 1.1rem;
             border-radius: 16px;
+            background-color: var(--third-clr);
 
             .latestwork {
                 @include flex-gap(40%);

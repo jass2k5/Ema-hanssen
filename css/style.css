@@ -80,6 +80,7 @@ main {
   grid-template-rows: repeat(5, auto);
   grid-template-areas: "header" "section" "smartphone" "first-duo" "infobox";
   z-index: 0;
+  row-gap: 1rem;
 }
 
 header {
@@ -246,6 +247,7 @@ header .featured span {
 .latest .smartphoneinfo {
   padding: 1.5rem 1.1rem;
   border-radius: 16px;
+  background-color: var(--third-clr);
 }
 .latest .smartphoneinfo .latestwork {
   display: flex;
