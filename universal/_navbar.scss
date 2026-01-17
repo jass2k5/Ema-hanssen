@@ -4,6 +4,7 @@
                 left: 0;
                 margin-left: var(--margin-nav);
                 height: 35px;
+                width: auto;
                 @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
                 @include back-white;
                 transform-origin: top;

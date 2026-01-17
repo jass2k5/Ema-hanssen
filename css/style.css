@@ -89,6 +89,7 @@ nav {
   left: 0;
   margin-left: var(--margin-nav);
   height: 35px;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
