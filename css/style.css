@@ -83,6 +83,80 @@ main {
   row-gap: 1rem;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: var(--margin-nav);
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.2rem, 1vw, 1.5rem);
+  padding: var(--space-xs);
+  background-color: var(--body-clr);
+  transform-origin: top;
+  border-bottom-right-radius: 20px;
+  z-index: 1000;
+  opacity: 0;
+  animation: grow 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+  will-change: transform;
+}
+nav .logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+nav .logo-text img {
+  height: 1.2rem;
+  width: 1.2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+nav .logo-text span {
+  padding: 5px;
+  height: auto;
+  will-change: transform;
+}
+nav .logo-text span:hover a {
+  animation: loopText 0.4s ease-in-out;
+}
+nav .logo-text span a {
+  text-decoration: none;
+  color: var(--second-clr);
+  font-size: clamp(0.3rem, 1vw + 0.5rem, 0.8rem);
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.2rem, 1vw, 1.5rem);
+}
+nav ul li {
+  list-style: none;
+  padding: 5px;
+  height: auto;
+  overflow: hidden;
+  will-change: transform;
+}
+nav ul li:hover a {
+  animation: loopText 0.4s ease-in-out;
+}
+nav ul li a {
+  font-size: clamp(0.3rem, 1vw + 0.5rem, 0.8rem);
+  text-decoration: none;
+  display: inline-block;
+  color: var(--second-clr);
+  font-weight: 600;
+}
+
 header {
   grid-area: header;
   height: 80%;
@@ -102,79 +176,6 @@ header .hero-image {
      object-position: top;
   border-radius: 16px;
   position: relative;
-}
-header nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-left: var(--margin-nav);
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(0.2rem, 1vw, 1.5rem);
-  padding: var(--space-xs);
-  background-color: var(--body-clr);
-  transform-origin: top;
-  border-bottom-right-radius: 20px;
-  z-index: 1000;
-  opacity: 0;
-  animation: grow 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
-  will-change: transform;
-}
-header nav .logo-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  overflow: hidden;
-}
-header nav .logo-text img {
-  height: 1.2rem;
-  width: 1.2rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-header nav .logo-text span {
-  padding: 5px;
-  height: auto;
-  will-change: transform;
-}
-header nav .logo-text span:hover a {
-  animation: loopText 0.4s ease-in-out;
-}
-header nav .logo-text span a {
-  text-decoration: none;
-  color: var(--second-clr);
-  font-size: clamp(0.3rem, 1vw + 0.5rem, 0.8rem);
-  font-weight: 600;
-  text-transform: capitalize;
-  display: inline-block;
-}
-header nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(0.2rem, 1vw, 1.5rem);
-}
-header nav ul li {
-  list-style: none;
-  padding: 5px;
-  height: auto;
-  overflow: hidden;
-  will-change: transform;
-}
-header nav ul li:hover a {
-  animation: loopText 0.4s ease-in-out;
-}
-header nav ul li a {
-  font-size: clamp(0.3rem, 1vw + 0.5rem, 0.8rem);
-  text-decoration: none;
-  display: inline-block;
-  color: var(--second-clr);
-  font-weight: 600;
 }
 header .featured {
   text-transform: capitalize;
@@ -353,7 +354,7 @@ header .featured span {
   width: 10px;
   background-color: transparent;
   border-top-left-radius: 0.4rem;
-  box-shadow: -1px -1px 0 0 white;
+  box-shadow: -2px -1.5px 0 0 white;
 }
 
 .footer {

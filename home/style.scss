@@ -12,8 +12,9 @@
 
 
 //page sections in order
+@import  '../universal/navbar';
 @import 'sections/hero';
-@import 'sections/ema.scss';
+@import 'sections/ema';
 @import 'sections/latest';
 @import 'sections/slider';
 

@@ -1,94 +1,23 @@
- header {
-        grid-area: header;
-        height: 80%;
+header {
+    grid-area: header;
+    height: 80%;
+    width: 100%;
+    
+    .img {
+        height: 46vh;
         width: 100%;
-
-        .img {
-            height: 46vh;
-            width: 100%;
-            position: relative;
-            
-            }
-            .hero-image {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                object-position: top;
-                border-radius: 16px;
-                position: relative;
-
-            }
-
-            nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                margin-left: var(--margin-nav);
-                height: 35px;
-                @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
-                @include back-white;
-                transform-origin: top;
-                border-bottom-right-radius: 20px;
-                z-index: 1000;
-                opacity: 0;
-                animation: grow 1s cubic-bezier(0.7,0,0.3,1) forwards;
-                will-change: transform;
-                .logo-text {
-                    @include flex-gap(10px);
-                    overflow: hidden;
-
-                    img {
-                        height: 1.2rem;
-                        width: 1.2rem;
-                        object-fit: cover;
-                        object-position: center;
-                    }
-
-                    span {
-                        padding: 5px;
-                        height: auto;
-                        will-change: transform;
-
-                        &:hover a {
-                            animation: loopText 0.4s ease-in-out;
-                        }
-
-                        a {
-                            text-decoration: none;
-                            color: var(--second-clr);
-                            font-size: clamp(0.3rem, 1vw + 0.5rem, 0.8rem);
-                            font-weight: 600;
-                            text-transform: capitalize;
-                            display: inline-block;
-                        }
-                    }
-                }
-
-                ul {
-                    @include flex-gap(clamp(0.2rem, 1vw, 1.5rem));
-
-                    li {
-                        list-style: none;
-                        padding: 5px;
-                        height: auto;
-                        overflow: hidden;
-                        will-change: transform;
-
-                        &:hover a {
-                            animation: loopText 0.4s ease-in-out;
-                        }
-
-                        a {
-                            font-size: clamp(0.3rem, 1vw + 0.5rem, 0.8rem);
-                            text-decoration: none;
-                            display: inline-block;
-                            color: var(--second-clr);
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-
+        position: relative;
+        
+    }
+    .hero-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 16px;
+        position: relative;
+        
+    }
             .featured {
                 text-transform: capitalize;
                 font-weight: 800;
