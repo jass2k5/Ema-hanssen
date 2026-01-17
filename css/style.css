@@ -190,6 +190,29 @@ header .featured {
 header .featured span {
   font-size: clamp(0.7rem, 2vw + 0.4rem, 1rem);
 }
+header .featured::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background-color: transparent;
+  border-bottom-right-radius: 4rem;
+  bottom: 0%;
+  right: 100%;
+  z-index: 2;
+  box-shadow: 1px 1.4px 0 0 white;
+}
+header .featured::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background-color: transparent;
+  border-bottom-right-radius: 4rem;
+  top: -14%;
+  right: 0;
+  box-shadow: 1px 1.4px 0 0 white;
+}
 
 .Ema {
   grid-area: section;
