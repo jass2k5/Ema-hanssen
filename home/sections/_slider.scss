@@ -11,6 +11,10 @@
         flex-direction: column;
         height: 100%;
         width: 100%;
+         .duo,.duo1,.duo2,.duo3,.duo4{
+             @include flex-gap(1rem);
+             flex-direction: column;
+         }
         .product{
             @include flex-gap;
             flex-direction: column;

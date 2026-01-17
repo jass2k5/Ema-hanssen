@@ -6,10 +6,12 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: repeat(4,auto);
     grid-template-areas: "header section"
     "header smartphone"
-    "header .";
+    "header slider"
+    "footer footer";
+    overflow-y: scroll;
     column-gap: 30px;
 
         header{
@@ -28,6 +30,9 @@
                 height: 97vh;
                 width: 100%;
             }
+           }
+           .featured{
+            margin-bottom: 1rem;
            }
 
         }
@@ -125,5 +130,60 @@
     } // ← Close main
     .infomobile{
         display: none;
+    }
+    .duo-1{
+        grid-area: slider;
+        height: 100%;
+        width: 100%;
+        padding: var(--main-padding);
+
+        .container{
+            @include flex-gap(2rem);
+            height: 100%;
+            flex-wrap: wrap;
+            flex-direction: row;
+            .duo,.duo1,.duo2,.duo3,.duo4{
+                flex-direction: row;
+            }
+
+        }
+    }
+    .footer{
+        grid-area: footer;
+        
+        .aboutandmore{
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+            .first-half{
+                width: 50%;
+                flex-direction: row;
+                margin-right: 2rem;
+                justify-content: flex-start;
+                     
+                .ema-img{
+                    @include ema-img(65px,65px,var(--circle));
+                }
+
+            }
+        }
+        .all{
+            flex-direction: row;
+        }
+        .end{
+            padding: 3rem;
+
+            h3{
+                font-size: 1.5rem;
+                
+            }
+            .contacts{
+                margin-top: 1.4rem;
+                
+                a{
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 } // ← Close @media
