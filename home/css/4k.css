@@ -1,0 +1,13 @@
+@media (min-width: 1440px) {
+  main {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+@media (min-width: 2560px) {
+  main {
+    max-width: 1800px;
+  }
+}/*# sourceMappingURL=4k.css.map */
