@@ -1,0 +1,27 @@
+@media (max-width: 395px){
+  .latest{
+
+    .smartphoneinfo{
+        
+        .latestwork{
+            @include flex-gap(30%);
+
+            .downclick{
+                @include flex-gap(6px);
+
+                h3{
+                    font-size: clamp(0.8rem,3vw + 0.3rem,1.2rem);
+                }
+                i{
+                    font-size: 1rem;
+                }
+            }
+            .view{
+                font-size: clamp(0.8rem,3vw + 0.3rem,1.2rem);
+                
+            }
+
+        }
+    }
+  }
+}
