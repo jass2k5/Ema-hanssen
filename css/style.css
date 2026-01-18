@@ -960,6 +960,9 @@ header .featured::after {
   .duo-1 .container .duo, .duo-1 .container .duo1, .duo-1 .container .duo2, .duo-1 .container .duo3, .duo-1 .container .duo4 {
     flex-direction: row;
   }
+  .duo-1 .container .duo .product img, .duo-1 .container .duo1 .product img, .duo-1 .container .duo2 .product img, .duo-1 .container .duo3 .product img, .duo-1 .container .duo4 .product img {
+    height: 60vh;
+  }
   .footer {
     grid-area: footer;
   }

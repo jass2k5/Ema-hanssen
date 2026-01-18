@@ -144,6 +144,11 @@
             flex-direction: row;
             .duo,.duo1,.duo2,.duo3,.duo4{
                 flex-direction: row;
+                .product{
+                    img{
+                        height: 60vh;
+                    }
+                }
             }
 
         }
@@ -187,6 +192,3 @@
         }
     }
 } // ← Close @media
-@media (min-width:2500px){
-
-}
