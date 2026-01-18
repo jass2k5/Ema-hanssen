@@ -70,7 +70,7 @@
             }
             @media (min-width:2500px){
                 nav{
-                    height: clamp(3rem,4.5vh,6rem);
+                    height: clamp(2rem,4vh,3rem);
                     .logo-text{
                         @include flex-gap(20px);
 
@@ -82,17 +82,18 @@
             span{
                 padding: 5px;
                 a{
-                    font-size: clamp(0.8rem, 1.5vh,2rem);
+                    font-size: clamp(0.8rem, 1.3vh,2rem);
+
                     
                 }
             }
         }
         ul{
-            @include flex-gap(clamp(1.5rem,2vw,2.5rem));
+            @include flex-gap(clamp(0.8rem,1vw,1.5rem));
             li{
                 
                 a{
-                    font-size: clamp(0.3rem, 1.5vh, 2.5rem);
+                    font-size: clamp(0.3rem, 1.3vh, 2.5rem);
 
 
                 }
