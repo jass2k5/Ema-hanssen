@@ -1,28 +1,29 @@
 //Base
-@import 'utils/fonts';
-@import 'utils/root';
+@use 'utils/fonts';
+@use 'utils/root';
 
 //Utils
-@import 'utils/keyframes';
-@import 'utils/mixins';
+@use 'utils/keyframes';
+@use 'utils/mixins';
 
 //base layouts
-@import 'layouts/body';
-@import 'layouts/main';
+@use 'layouts/body';
+@use 'layouts/main';
 
 
 //page sections in order
-@import  '../universal/navbar';
-@import 'sections/hero';
-@import 'sections/ema';
-@import 'sections/latest';
-@import 'sections/slider';
+// @import 'universal/navbar';
+@use 'universal/navbar';
+@use 'sections/hero';
+@use 'sections/ema';
+@use 'sections/latest';
+@use 'sections/slider';
 
 //footer layout
-@import 'layouts/footer';
+@use 'layouts/footer';
 
 //responsives
-@import 'responsive/infoboxmobile';
-@import 'responsive/smallsp';
-@import 'responsive/tablets';
-@import 'responsive/desktop';
+@use 'responsive/infoboxmobile';
+@use 'responsive/smallsp';
+@use 'responsive/tablets';
+@use 'responsive/desktop';

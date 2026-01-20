@@ -1,4 +1,5 @@
 // mid and large tablets
+@use '../utils/util' as *;
 @media (min-width:768px){
      header{
         height: 100%;
