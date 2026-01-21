@@ -1,0 +1,43 @@
+@use '../../utils/util' as *;
+.journal{
+    grid-area: journal;
+    height: auto;
+    width: 100%;
+    background-color: var(--third-clr);
+    border-radius: 1rem;
+    padding: 2rem;
+    .three-columns{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2rem;
+
+        .h1{
+            font-size: clamp(1rem, 2vh + 0.5rem, 2rem);
+            font-weight: 800;
+        }
+        p{
+            font-size: clamp(0.8rem, 2vh + 0.3rem, 1.2rem);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .button{
+            @include flex-gap(5px);
+            background-color: var(--body-clr);
+            border: 1px solid rgba(255,255,255,0.6);
+            padding: 0.5rem;
+            a{
+                color: var(--second-clr);
+                text-decoration: none;
+                font-weight: 400;
+                font-size: clamp(0.8rem, 2vh + 0.3rem, 1.2rem);
+            }
+            i{
+                color: black;
+                font-size: clamp(0.6rem, 2vh , 1.2rem);
+            }
+
+        }
+    }
+}

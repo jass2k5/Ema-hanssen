@@ -1,0 +1,23 @@
+@use '../../utils/util' as *;
+.work-main {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    // max-width: 1200px;
+    // margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: var(--main-padding);
+    position: relative;
+    background-color: var(--body-clr);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas:
+        "header"
+        "journal"
+        "scroll"
+        "infobox";
+    z-index: 0;
+    row-gap: 1rem;
+}

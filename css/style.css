@@ -621,7 +621,6 @@ header .featured::after {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
   flex-direction: column;
   padding: var(--space-xss);
 }
@@ -1000,4 +999,166 @@ header .featured::after {
   .footer .end .contacts a {
     font-size: 1.5rem;
   }
+}
+.work-main {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--main-padding);
+  position: relative;
+  background-color: var(--body-clr);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header" "journal" "scroll" "infobox";
+  z-index: 0;
+  row-gap: 1rem;
+}
+
+.work-header {
+  grid-area: header;
+  height: 70%;
+  width: 100%;
+}
+.work-header .container {
+  height: 46vh;
+  width: 100%;
+  position: relative;
+}
+.work-header .main-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 16px;
+  position: relative;
+}
+.work-header .text-edit {
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  border-radius: 0.8rem;
+  height: auto;
+  padding: 0rem 1rem;
+}
+.work-header .text-edit .paragraph {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.work-header .text-edit .paragraph p {
+  font-size: clamp(1rem, 2vw + 0.3rem, 1.5rem);
+  text-transform: capitalize;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.journal {
+  grid-area: journal;
+  height: auto;
+  width: 100%;
+  background-color: var(--third-clr);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.journal .three-columns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+.journal .three-columns .h1 {
+  font-size: clamp(1rem, 2vh + 0.5rem, 2rem);
+  font-weight: 800;
+}
+.journal .three-columns p {
+  font-size: clamp(0.8rem, 2vh + 0.3rem, 1.2rem);
+  line-height: 1.6;
+  font-weight: 300;
+}
+.journal .three-columns .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--body-clr);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 0.5rem;
+}
+.journal .three-columns .button a {
+  color: var(--second-clr);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: clamp(0.8rem, 2vh + 0.3rem, 1.2rem);
+}
+.journal .three-columns .button i {
+  color: black;
+  font-size: clamp(0.6rem, 2vh, 1.2rem);
+}
+
+.scroll {
+  grid-area: scroll;
+  height: auto;
+  width: 100%;
+}
+.scroll .container-scroll {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.scroll .container-scroll .slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.scroll .container-scroll .slider .infoandpic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.scroll .container-scroll .slider .infoandpic img {
+  height: 60vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 1rem;
+}
+.scroll .container-scroll .slider .infoandpic .inside-info {
+  height: auto;
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  border-radius: 0.5rem;
+  height: auto;
+  padding: 0rem 1rem;
+}
+.scroll .container-scroll .slider .infoandpic .inside-info p {
+  font-size: clamp(1rem, 2vw + 0.3rem, 1.5rem);
+  text-transform: capitalize;
+  font-weight: 300;
+  line-height: 1.4;
+  background-color: white;
+  border-radius: 0.8rem;
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */
