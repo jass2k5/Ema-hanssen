@@ -147,7 +147,77 @@
         }
     }
         }
-        
+
+//page blog
+@media (min-width:768px) and (min-height:1000px){
+    .work-header{
+        height: 65vh;
+        overflow: visible;
+        .container{
+            height: 100%;
+        }
+        .text-edit{
+            padding: 0rem 0.5rem;
+            .paragraph{
+                height: auto;
+                width: auto;
+                padding: 1.5rem;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0.6rem;
+                span{
+                display: inline-block;
+                transform: translateY(-5px);
+                border-radius: 4px;
+                background-color: var(--second-clr);
+                color:var(--body-clr);
+                padding: 0rem 0.3rem;
+                font-size: 1.8vh;
+                }
+                a{
+                    display: inline-block;
+                    margin-left: 1.5rem;
+                    font-weight: 400;
+                    text-decoration: none;
+                    font-size: medium;
+                    color: var(--second-clr);
+                    border-bottom: 1px solid black;
+                    transition: transform 0.5s ease-in-out;
+
+               &:hover{
+                  transform: translateY(-3px);
+               }
+
+                }
+
+            }
+
+        }
+    }
+    .journal{
+        .three-columns{
+            gap: 6rem;
+        }
+    }
+    .scroll{
+        .container-scroll{
+            flex-direction: row;
+            flex-wrap: wrap;
+            .slider{
+                flex-direction: row;
+                .infoandpic{
+                    transition: transform 0.4s ease-in-out;
+                    img{
+                        height: 40vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
     //small tablets
 @media (min-width:490px){
       .duo-1{
@@ -170,4 +240,43 @@
         }
 
         }
+}
+//for blog page
+@media (min-width:490px){
+    .work-header{
+        height: 80vh;
+        width: 100%;
+        .container{
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+    .journal{
+        height: 45vh;
+
+    }
+    .scroll{
+        .container-scroll{
+            flex-direction: row;
+            .slider{
+                flex-direction: row;
+                .infoandpic{
+                    img{
+                        height: 45vh;
+
+                    }
+                    .inside-info{
+                        padding: 0rem 0.5rem;
+    
+
+                        p{
+                            font-size:small;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }

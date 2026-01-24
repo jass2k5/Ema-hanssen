@@ -22,13 +22,14 @@
 //footer layout
 @use 'layouts/footer';
 
-//responsives
-@use 'responsive/infoboxmobile';
-@use 'responsive/smallsp';
-@use 'responsive/tablets';
-@use 'responsive/desktop';
-//page 2 work 
+//page 2 work (base styles before responsives)
 @use 'pages/worksections/mainw';
 @use 'pages/worksections/herow';
 @use 'pages/worksections/journal';
 @use 'pages/worksections/scroll';
+
+//responsives (these should override base styles)
+@use 'responsive/infoboxmobile';
+@use 'responsive/smallsp';
+@use 'responsive/tablets';
+@use 'responsive/desktop';

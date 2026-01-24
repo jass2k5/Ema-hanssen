@@ -615,6 +615,178 @@ header .featured::after {
   text-decoration: none;
 }
 
+.work-main {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--main-padding);
+  position: relative;
+  background-color: var(--body-clr);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header" "journal" "scroll" "infobox";
+  z-index: 0;
+  row-gap: 1rem;
+}
+
+.work-header {
+  grid-area: header;
+  height: 70%;
+  width: 100%;
+}
+.work-header .container {
+  height: 46vh;
+  width: 100%;
+  position: relative;
+}
+.work-header .main-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 16px;
+  position: relative;
+}
+.work-header .text-edit {
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  border-radius: 0.8rem;
+  height: auto;
+  padding: 0rem 1rem;
+}
+.work-header .text-edit .paragraph {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.work-header .text-edit .paragraph span {
+  display: none;
+}
+.work-header .text-edit .paragraph p {
+  font-size: clamp(0.7rem, 2vw + 0.3rem, 1rem);
+  text-transform: capitalize;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.work-header .text-edit .paragraph a {
+  display: none;
+}
+
+.journal {
+  grid-area: journal;
+  height: auto;
+  width: 100%;
+  background-color: var(--third-clr);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.journal .three-columns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+.journal .three-columns h1 {
+  font-size: clamp(1rem, 3vh + 0.5rem, 3rem);
+  font-weight: 400;
+}
+.journal .three-columns p {
+  font-size: clamp(0.8rem, 2vh + 0.3rem, 1.2rem);
+  line-height: 1.6;
+  font-weight: 300;
+}
+.journal .three-columns .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--body-clr);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.journal .three-columns .button a {
+  color: var(--second-clr);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: clamp(0.5rem, 2vh + 0.3rem, 0.8rem);
+}
+.journal .three-columns .button i {
+  color: black;
+  font-size: clamp(0.6rem, 2vh, 1.2rem);
+}
+
+.scroll {
+  grid-area: scroll;
+  height: auto;
+  width: 100%;
+}
+.scroll .container-scroll {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.scroll .container-scroll .slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.scroll .container-scroll .slider .infoandpic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.scroll .container-scroll .slider .infoandpic img {
+  height: 60vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 1rem;
+}
+.scroll .container-scroll .slider .infoandpic .inside-info {
+  height: auto;
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0rem 1rem;
+}
+.scroll .container-scroll .slider .infoandpic .inside-info p {
+  font-size: clamp(0.8rem, 2vw + 0.3rem, 1rem);
+  text-transform: capitalize;
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: white;
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+
 .infomobile {
   grid-area: infobox;
   display: flex;
@@ -801,6 +973,66 @@ header .featured::after {
     font-size: 1.5rem;
   }
 }
+@media (min-width: 768px) and (min-height: 1000px) {
+  .work-header {
+    height: 65vh;
+    overflow: visible;
+  }
+  .work-header .container {
+    height: 100%;
+  }
+  .work-header .text-edit {
+    padding: 0rem 0.5rem;
+  }
+  .work-header .text-edit .paragraph {
+    height: auto;
+    width: auto;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+  .work-header .text-edit .paragraph span {
+    display: inline-block;
+    transform: translateY(-5px);
+    border-radius: 4px;
+    background-color: var(--second-clr);
+    color: var(--body-clr);
+    padding: 0rem 0.3rem;
+    font-size: 1.8vh;
+  }
+  .work-header .text-edit .paragraph a {
+    display: inline-block;
+    margin-left: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: medium;
+    color: var(--second-clr);
+    border-bottom: 1px solid black;
+    transition: transform 0.5s ease-in-out;
+  }
+  .work-header .text-edit .paragraph a:hover {
+    transform: translateY(-3px);
+  }
+  .journal .three-columns {
+    gap: 6rem;
+  }
+  .scroll .container-scroll {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .scroll .container-scroll .slider {
+    flex-direction: row;
+  }
+  .scroll .container-scroll .slider .infoandpic {
+    transition: transform 0.4s ease-in-out;
+  }
+  .scroll .container-scroll .slider .infoandpic img {
+    height: 40vh;
+  }
+}
 @media (min-width: 490px) {
   .duo-1 .container {
     display: flex;
@@ -818,6 +1050,35 @@ header .featured::after {
     height: 45vh;
   }
 }
+@media (min-width: 490px) {
+  .work-header {
+    height: 80vh;
+    width: 100%;
+  }
+  .work-header .container {
+    height: 100%;
+    width: 100%;
+  }
+  .journal {
+    height: 45vh;
+  }
+  .scroll .container-scroll {
+    flex-direction: row;
+  }
+  .scroll .container-scroll .slider {
+    flex-direction: row;
+  }
+  .scroll .container-scroll .slider .infoandpic img {
+    height: 45vh;
+  }
+  .scroll .container-scroll .slider .infoandpic .inside-info {
+    padding: 0rem 0.5rem;
+  }
+  .scroll .container-scroll .slider .infoandpic .inside-info p {
+    font-size: small;
+  }
+}
+/* Desktop layout for main index page */
 @media (min-width: 1200px) {
   main {
     height: 100vh;
@@ -1000,165 +1261,89 @@ header .featured::after {
     font-size: 1.5rem;
   }
 }
-.work-main {
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: var(--main-padding);
-  position: relative;
-  background-color: var(--body-clr);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: "header" "journal" "scroll" "infobox";
-  z-index: 0;
-  row-gap: 1rem;
-}
-
-.work-header {
-  grid-area: header;
-  height: 70%;
-  width: 100%;
-}
-.work-header .container {
-  height: 46vh;
-  width: 100%;
-  position: relative;
-}
-.work-header .main-image {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  border-radius: 16px;
-  position: relative;
-}
-.work-header .text-edit {
-  position: absolute;
-  bottom: 4%;
-  width: 100%;
-  border-radius: 0.8rem;
-  height: auto;
-  padding: 0rem 1rem;
-}
-.work-header .text-edit .paragraph {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-.work-header .text-edit .paragraph p {
-  font-size: clamp(1rem, 2vw + 0.3rem, 1.5rem);
-  text-transform: capitalize;
-  font-weight: 300;
-  line-height: 1.4;
-}
-
-.journal {
-  grid-area: journal;
-  height: auto;
-  width: 100%;
-  background-color: var(--third-clr);
-  border-radius: 1rem;
-  padding: 2rem;
-}
-.journal .three-columns {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 2rem;
-}
-.journal .three-columns .h1 {
-  font-size: clamp(1rem, 2vh + 0.5rem, 2rem);
-  font-weight: 800;
-}
-.journal .three-columns p {
-  font-size: clamp(0.8rem, 2vh + 0.3rem, 1.2rem);
-  line-height: 1.6;
-  font-weight: 300;
-}
-.journal .three-columns .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  background-color: var(--body-clr);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  padding: 0.5rem;
-}
-.journal .three-columns .button a {
-  color: var(--second-clr);
-  text-decoration: none;
-  font-weight: 400;
-  font-size: clamp(0.8rem, 2vh + 0.3rem, 1.2rem);
-}
-.journal .three-columns .button i {
-  color: black;
-  font-size: clamp(0.6rem, 2vh, 1.2rem);
-}
-
-.scroll {
-  grid-area: scroll;
-  height: auto;
-  width: 100%;
-}
-.scroll .container-scroll {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.scroll .container-scroll .slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-direction: column;
-  height: auto;
-  width: 100%;
-}
-.scroll .container-scroll .slider .infoandpic {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-.scroll .container-scroll .slider .infoandpic img {
-  height: 60vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  border-radius: 1rem;
-}
-.scroll .container-scroll .slider .infoandpic .inside-info {
-  height: auto;
-  position: absolute;
-  bottom: 4%;
-  width: 100%;
-  border-radius: 0.5rem;
-  height: auto;
-  padding: 0rem 1rem;
-}
-.scroll .container-scroll .slider .infoandpic .inside-info p {
-  font-size: clamp(1rem, 2vw + 0.3rem, 1.5rem);
-  text-transform: capitalize;
-  font-weight: 300;
-  line-height: 1.4;
-  background-color: white;
-  border-radius: 0.8rem;
-  padding: 1rem;
+/* Desktop layout for blog/work pages */
+@media (min-width: 1024px) {
+  .work-main {
+    height: 100vh;
+    width: 100%;
+    padding: var(--main-padding);
+    background-color: var(--body-clr);
+    overflow-y: scroll;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header journal" "header scroll" "header infobox";
+    gap: 1rem;
+  }
+  .work-main > .infomobile {
+    display: flex;
+  }
+  .work-header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 98vh;
+    overflow: hidden;
+  }
+  .work-header .container {
+    height: 100%;
+    width: 100%;
+  }
+  .work-header .text-edit {
+    bottom: 2%;
+    width: 100%;
+    padding: 0rem 0.5rem;
+  }
+  .work-header .text-edit .paragraph {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+  .work-header .text-edit .paragraph span {
+    display: inline-block;
+    transform: translateY(-10px);
+    border-radius: 4px;
+    background-color: var(--second-clr);
+    color: var(--body-clr);
+    padding: 0rem 0.3rem;
+    font-size: 1.8vh;
+  }
+  .work-header .text-edit .paragraph a {
+    display: inline-block;
+    margin-left: 1.5rem;
+    font-weight: 400;
+    font-size: medium;
+    text-decoration: none;
+    color: var(--second-clr);
+    border-bottom: 1px solid black;
+    transition: transform 0.5s ease-in-out;
+  }
+  .work-header .text-edit .paragraph a:hover {
+    transform: translateY(-3px);
+  }
+  .journal {
+    grid-area: journal;
+    height: 45vh;
+  }
+  .journal .three-columns {
+    position: relative;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+  .scroll {
+    grid-area: scroll;
+  }
+  .scroll .container-scroll {
+    flex-direction: row;
+  }
+  .scroll .container-scroll .slider {
+    flex-direction: row;
+  }
+  .scroll .container-scroll .slider .infoandpic img {
+    height: 50vh;
+  }
 }/*# sourceMappingURL=style.css.map */
