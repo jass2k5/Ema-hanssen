@@ -8,11 +8,11 @@
     @include flex-gap;
     width: 100%;
     .container{
-        @include flex-gap(1rem);
+        @include flex-gap(2rem);
         flex-direction: column;
         height: 100%;
         width: 100%;
-         .duo,.duo1,.duo2,.duo3,.duo4{
+         .duo{
              @include flex-gap(1rem);
              flex-direction: column;
          }

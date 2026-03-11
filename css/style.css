@@ -349,12 +349,12 @@ header .featured::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-.duo-1 .container .duo, .duo-1 .container .duo1, .duo-1 .container .duo2, .duo-1 .container .duo3, .duo-1 .container .duo4 {
+.duo-1 .container .duo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1090,8 +1090,8 @@ header .featured::after {
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "header section" "header smartphone" "header slider" "footer footer";
     overflow-y: scroll;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
   main header {
     grid-area: header;
@@ -1113,7 +1113,7 @@ header .featured::after {
     margin-bottom: 1rem;
   }
   main .Ema {
-    height: 48vh;
+    height: 38vh;
   }
   main .Ema .upleftrow {
     grid-area: section;
@@ -1124,37 +1124,36 @@ header .featured::after {
     justify-content: center;
   }
   main .Ema .upleftrow .brandbox {
-    flex: 1;
+    flex: 1.5;
     height: 100%;
     padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40%;
+    border-radius: 0.4rem;
   }
   main .Ema .upleftrow .infobox {
-    flex: 1;
+    flex: 0.9;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
     flex-direction: column;
     height: 100%;
-    width: 40%;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     color: black;
     gap: 0.7rem;
   }
   main .Ema .upleftrow .infobox .info {
     background-color: var(--third-clr);
-    padding: 1rem;
+    padding: 0.9rem;
     margin-right: 2px;
     height: 60%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 1.1rem;
+    border-radius: 0.8rem;
   }
   main .Ema .upleftrow .infobox .info h3 {
     font-size: clamp(0.2rem, 2vw + 0.1rem, 1.1rem);
@@ -1173,7 +1172,7 @@ header .featured::after {
     color: white;
   }
   main .latest {
-    margin-top: 0.8rem;
+    margin-top: -0.3rem;
     grid-area: smartphone;
     height: 100%;
     border-radius: 1rem;
@@ -1203,6 +1202,7 @@ header .featured::after {
     display: none;
   }
   .duo-1 {
+    margin-top: -0.4rem;
     grid-area: slider;
     height: 100%;
     width: 100%;
@@ -1217,10 +1217,12 @@ header .featured::after {
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .duo-1 .container .duo, .duo-1 .container .duo1, .duo-1 .container .duo2, .duo-1 .container .duo3, .duo-1 .container .duo4 {
+  .duo-1 .container .duo {
+    display: flex;
+    gap: 1.5rem;
     flex-direction: row;
   }
-  .duo-1 .container .duo .product img, .duo-1 .container .duo1 .product img, .duo-1 .container .duo2 .product img, .duo-1 .container .duo3 .product img, .duo-1 .container .duo4 .product img {
+  .duo-1 .container .duo .product img {
     height: 60vh;
   }
   .footer {

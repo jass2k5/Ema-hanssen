@@ -15,7 +15,8 @@
     "header slider"
     "footer footer";
     overflow-y: scroll;
-    column-gap: 30px;
+    column-gap: 0.5rem;
+
 
         header{
             grid-area: header;
@@ -40,7 +41,7 @@
 
         }
         .Ema{
-            height: 48vh;
+            height: 38vh;
 
             
             .upleftrow{
@@ -51,34 +52,35 @@
                 align-items: flex-start;
                 justify-content: center;
 
+
                 .brandbox{
-                    flex: 1;
+                    flex: 1.5;
                     height: 100%;
                     padding: 3rem;
                     @include flex-gap(40%);
+                    border-radius: 0.4rem;
                 }
                 .infobox{
-                    flex: 1;
+                    flex: 0.9;
                    display: flex;
                    align-items: center;
                    justify-content:space-between;
-                   padding: 1rem;
                    flex-direction: column;
                    height: 100%;
-                   width: 40%;
-                   border-radius: 1rem;
+                //    width: 40%;
+                   border-radius: 0.8rem;
                    color: black;
                    gap: 0.7rem;
                    .info{
                      background-color: var(--third-clr);
-                     padding: 1rem;
+                     padding: 0.9rem;
                      margin-right: 2px;
                      height: 60%;
                      width: 100%;
                      display: flex;
                      align-items: center;
                      justify-content: space-between;
-                     border-radius: 1.1rem;
+                     border-radius: 0.8rem;
 
                      h3{
                        font-size: clamp(0.2rem, 2vw + 0.1rem, 1.1rem);
@@ -105,7 +107,7 @@
             
         }
         .latest{
-           margin-top: 0.8rem;
+        margin-top: -0.3rem;
            grid-area: smartphone;
            height: 100%;
            border-radius: 1rem;
@@ -135,6 +137,7 @@
         display: none;
     }
     .duo-1{
+        margin-top: -0.4rem;
         grid-area: slider;
         height: 100%;
         width: 100%;
@@ -145,8 +148,10 @@
             height: 100%;
             flex-wrap: wrap;
             flex-direction: row;
-            .duo,.duo1,.duo2,.duo3,.duo4{
-                flex-direction: row;
+            .duo{
+                display: flex;
+                gap: 1.5rem;
+                flex-direction:row;
                 .product{
                     img{
                         height: 60vh;
