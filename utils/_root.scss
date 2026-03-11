@@ -3,6 +3,8 @@
     --body-clr: white;
     --second-clr: black;
     --third-clr: whitesmoke;
+    --text-clr: black;
+    --contact-clr:black;
     --circle: 50%;
     --main-font:"Ubuntu", sans-serif;
     --font-size: 1rem;
@@ -18,4 +20,12 @@
     --br-clr1: rgba(255,255,255,0.3);
     --gap-logo: 0.4rem;
     --margin-nav:  clamp(0.2rem, 1vw + 0.2rem, 0.4rem);
+}
+.darkmode{
+    --body-clr: black;
+    --third-clr: rgb(40, 42, 43);
+    --text-clr:white;
+    --contact-clr:whitesmoke;
+
+
 }

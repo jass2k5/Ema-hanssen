@@ -13,6 +13,7 @@
         }
 
         .brandbox {
+            color: var(--text-clr);
             background-color: var(--third-clr);
             padding: var(--space-md);
             @include flex-gap(30px);
@@ -24,6 +25,7 @@
             }
 
             .overview {
+                color: var(--text-clr);
                 display: flex;
                 align-items: center;
                 gap: 16px;

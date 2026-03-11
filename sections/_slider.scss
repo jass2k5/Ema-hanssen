@@ -41,6 +41,7 @@
               span{
                 font-size: clamp(0.4rem, 1.5vh, 1.3rem);
                 font-weight: 400;
+                color: var(--text-clr);
                 &::after{
                     content: '';
                     height: 15px;
@@ -49,7 +50,7 @@
                     left: 0%;
                     border-top-left-radius: 0.4rem;
                     position: absolute;
-                    box-shadow: -2px -2px 0 0 white;
+                    box-shadow: -2px -2px 0 0 var(--body-clr);
                     background-color: transparent;
                 }
                &::before{
@@ -61,7 +62,7 @@
                 width: 18px;
                 background-color: transparent;
                 border-top-left-radius: 0.4rem ;
-                box-shadow: -3px -3px 0 0 white;
+                box-shadow: -3px -3px 0 0 var(--body-clr);
                }
               }
             }

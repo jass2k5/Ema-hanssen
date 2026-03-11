@@ -22,6 +22,7 @@ const projectImages = [
                     <div class = "glass-layer"></div>
                     <div class="solo-info">
                         <span>${item.title}</span>
+                        <i class="ri-arrow-right-long-line"></i>
                     </div>
                  </div>`;
             
@@ -34,10 +35,32 @@ const projectImages = [
     allproduct.forEach(productBox =>{
         productBox.addEventListener('mouseenter',()=>{
             productBox.classList.add('is-hovered');
+
+
         });
         productBox.addEventListener('mouseleave',()=>{
             productBox.classList.remove('is-hovered');
         })
+    })
+    const darkbtn = document.querySelector('.modes');
+    const body = document.body;
+    const logo = document.querySelector('.logo');
+    if(localStorage.getItem('theme') === 'dark'){
+        body.classList.add('darkmode');
+        darkbtn.style.justifyContent = "flex-end";
+        logo.style.color =  "#FFFFFF";
+    }
+    darkbtn.addEventListener('click',()=>{
+         body.classList.toggle('darkmode');
+         if(body.classList.contains('darkmode')){
+            darkbtn.style.justifyContent = "flex-end";
+            logo.style.color =  "#FFFFFF";
+            localStorage.setItem('theme',"dark");
+         }else{
+            darkbtn.style.justifyContent = "flex-start";
+            logo.style.color = "#0E1011";
+            localStorage.setItem('theme','light');
+         }
     })
     
 })
