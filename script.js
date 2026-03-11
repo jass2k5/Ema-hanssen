@@ -18,14 +18,26 @@ const projectImages = [
         const pair = projectImages.slice(i,i+2);
         pair.forEach(item =>{
                     const productHtml = ` <div class="product">
-                    <img loading="lazy" src="${item.src}" alt="reviewimages">
+                    <img loading="lazy" class = "gallery-image" src="${item.src}" alt="reviewimages">
+                    <div class = "glass-layer"></div>
                     <div class="solo-info">
                         <span>${item.title}</span>
                     </div>
                  </div>`;
             
             duowrapper.innerHTML += productHtml;
-            container.appendChild(duowrapper);
         })
+        container.appendChild(duowrapper);
     }
+   
+    const allproduct = document.querySelectorAll('.product');
+    allproduct.forEach(productBox =>{
+        productBox.addEventListener('mouseenter',()=>{
+            productBox.classList.add('is-hovered');
+        });
+        productBox.addEventListener('mouseleave',()=>{
+            productBox.classList.remove('is-hovered');
+        })
+    })
+    
 })
