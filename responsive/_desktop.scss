@@ -83,11 +83,11 @@
                      border-radius: 0.8rem;
 
                      h3{
-                       font-size: clamp(0.2rem, 2vw + 0.1rem, 1.1rem);
+                       font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
                      }
                     i{   
                         display: inline-block;
-                        font-size: clamp(0.2rem, 2vw + 0.1rem, 1.1rem);
+                        font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
                         transition: transform 0.4s ease-in-out;
                         pointer-events: none;
                     }
@@ -107,7 +107,7 @@
             
         }
         .latest{
-        margin-top: -0.3rem;
+           margin-top: -0.3rem;
            grid-area: smartphone;
            height: 100%;
            border-radius: 1rem;
@@ -118,13 +118,11 @@
             height: 100%;
             width: 100%;
             padding: var(--space-xn);
-
             .latestwork{
                 height: 100%;
                 width: 100%;
-                @include flex-gap(60%);
+                @include flex-gap(70%);
                 
-
                 .downclick{
                     @include flex-gap(20px);
                 }
