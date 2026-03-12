@@ -60,12 +60,13 @@
                        pointer-events: none;
                            }
                      
-                    &:hover i{
-                        transform: scale(1.2);
-                    }
+                   
                     &:nth-last-child(1){
                         background-color: var(--second-clr);
                         color: white;
+                    }
+                    #arrow{
+                        display: none;
                     }
                    }
                 }

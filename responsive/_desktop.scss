@@ -87,15 +87,37 @@
                      h3{
                        font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
                      }
+                     .iconwrapper{
+                        position: relative;
+                        display: inline-block;
+                        overflow: hidden;
+                        height: 2rem;
+                        width: 2rem;
+                        text-align: center;
+                        padding: 0.2rem 0rem;
+                     }
                     i{   
                         display: inline-block;
+                        position: absolute;
                         font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
-                        transition: transform 0.4s ease-in-out;
                         pointer-events: none;
+                        transition: all 0.3s ease-in-out;
                     }
-                     
-                    &:hover i{
-                        transform: scale(1.2);
+                    
+                    .logos{
+                        transform: translate(0,0);
+                    }
+                    .arrow{
+                         transform: translateY(100%);
+                         opacity: 0;
+                    }
+                    &:hover .logos{
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+                    &:hover .arrow{
+                        transform: translate(0,0);
+                        opacity: 1;
                     }
                     &:nth-last-child(1){
                         background-color: var(--contact-clr);
@@ -161,6 +183,7 @@
                         position: absolute;
                         inset: 0;
                         z-index: 1;
+                        border-radius: 0.8rem;
                         pointer-events: none;
                         backdrop-filter: blur(0px);
                         -webkit-backdrop-filter: blur(0px);

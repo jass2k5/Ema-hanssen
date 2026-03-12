@@ -9,7 +9,10 @@ const projectImages = [
         { src: 'img/img5.webp', title: 'Nature' },
         { src: 'img/image.png', title: 'Brand' },
         { src: 'img/img7.webp', title: 'Studio' },
-        { src: 'img/img8.webp', title: 'Colors' }
+        { src: 'img/img8.webp', title: 'Colors' },
+        { src: 'img/img9.webp', title: 'Duo'},
+        { src: 'img/img10.avif', title: 'Elegence'},
+        
     ];
     container.innerHTML = "";
     for(let i = 0; i < projectImages.length;i += 2){
@@ -62,5 +65,8 @@ const projectImages = [
             localStorage.setItem('theme','light');
          }
     })
+ 
+
     
+
 })

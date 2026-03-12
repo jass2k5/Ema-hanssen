@@ -466,7 +466,7 @@ header .featured::after {
   width: 100%;
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
-  background-color: var(--second-clr);
+  background-color: var(--text-clr);
   padding: 4rem;
   gap: 2rem;
 }
@@ -494,7 +494,7 @@ header .featured::after {
   justify-content: center;
   gap: 5px;
   flex-direction: column;
-  color: white;
+  color: var(--body-clr);
 }
 .footer .aboutandmore .first-half .sideview h2 {
   font-size: var(--space-smd);
@@ -514,7 +514,7 @@ header .featured::after {
 .footer .aboutandmore .second-half a {
   display: inline-block;
   text-decoration: none;
-  color: var(--second-clr);
+  color: var(--text-clr);
 }
 .footer .aboutandmore .second-half a span {
   display: inline-block;
@@ -528,8 +528,8 @@ header .featured::after {
   grid-area: row2;
   height: auto;
   width: 100%;
-  color: white;
-  background-color: black;
+  color: var(--body-clr);
+  background-color: var(--text-clr);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -545,10 +545,10 @@ header .featured::after {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  color: var(--body-clr);
 }
 .footer .all .pages h3 {
   font-size: 1rem;
-  color: white;
 }
 .footer .all .pages .f-nav ul {
   display: flex;
@@ -562,7 +562,7 @@ header .featured::after {
 }
 .footer .all .pages .f-nav ul li a {
   font-size: 0.9rem;
-  color: white;
+  color: var(--body-clr);
   text-decoration: none;
 }
 .footer .all .CMS {
@@ -573,6 +573,7 @@ header .featured::after {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  color: var(--body-clr);
 }
 .footer .all .CMS h3 {
   font-size: 1.1rem;
@@ -595,6 +596,7 @@ header .featured::after {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  color: var(--body-clr);
 }
 .footer .all .utility h3 {
   font-size: 1rem;
@@ -613,7 +615,7 @@ header .featured::after {
   grid-area: row3;
   height: 100%;
   width: 100%;
-  background-color: var(--second-clr);
+  background-color: var(--text-clr);
   margin-top: -1px;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -638,7 +640,7 @@ header .featured::after {
   gap: 3rem;
 }
 .footer .end .contacts a {
-  color: white;
+  color: var(--body-clr);
   font-size: 1.2rem;
   text-decoration: none;
 }
@@ -931,12 +933,12 @@ header .featured::after {
     transition: transform 0.4s ease-in-out;
     pointer-events: none;
   }
-  .Ema .upleftrow .infobox .info:hover i {
-    transform: scale(1.2);
-  }
   .Ema .upleftrow .infobox .info:nth-last-child(1) {
     background-color: var(--second-clr);
     color: white;
+  }
+  .Ema .upleftrow .infobox .info #arrow {
+    display: none;
   }
   .latest .smartphoneinfo .latestwork {
     display: flex;
@@ -1185,14 +1187,36 @@ header .featured::after {
   main .Ema .upleftrow .infobox .info h3 {
     font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
   }
+  main .Ema .upleftrow .infobox .info .iconwrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    padding: 0.2rem 0rem;
+  }
   main .Ema .upleftrow .infobox .info i {
     display: inline-block;
+    position: absolute;
     font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
-    transition: transform 0.4s ease-in-out;
     pointer-events: none;
+    transition: all 0.3s ease-in-out;
   }
-  main .Ema .upleftrow .infobox .info:hover i {
-    transform: scale(1.2);
+  main .Ema .upleftrow .infobox .info .logos {
+    transform: translate(0, 0);
+  }
+  main .Ema .upleftrow .infobox .info .arrow {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  main .Ema .upleftrow .infobox .info:hover .logos {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  main .Ema .upleftrow .infobox .info:hover .arrow {
+    transform: translate(0, 0);
+    opacity: 1;
   }
   main .Ema .upleftrow .infobox .info:nth-last-child(1) {
     background-color: var(--contact-clr);
@@ -1258,6 +1282,7 @@ header .featured::after {
     position: absolute;
     inset: 0;
     z-index: 1;
+    border-radius: 0.8rem;
     pointer-events: none;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
