@@ -337,11 +337,21 @@ header .featured::after {
   gap: 40%;
 }
 .latest .smartphoneinfo .latestwork .view {
-  border-bottom: 1px solid var(--text-clr);
+  position: relative;
   transition: all 0.4s ease-in-out;
 }
-.latest .smartphoneinfo .latestwork .view:hover {
-  transform: translateY(-2px);
+.latest .smartphoneinfo .latestwork .view::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text-clr);
+  transition: all 0.4s ease-in-out;
+}
+.latest .smartphoneinfo .latestwork .view:hover::after {
+  width: 25%;
 }
 .latest .smartphoneinfo .latestwork .downclick {
   display: flex;
@@ -354,9 +364,6 @@ header .featured::after {
 }
 .latest .smartphoneinfo .latestwork .downclick i {
   transition: all 0.4s ease-in-out;
-}
-.latest .smartphoneinfo .latestwork .downclick i:hover {
-  transform: scale(1.2);
 }
 
 .duo-1 {
@@ -1170,14 +1177,13 @@ header .featured::after {
     height: 100%;
     border-radius: 0.8rem;
     color: black;
-    gap: 0.7rem;
+    gap: 0.4rem;
   }
   main .Ema .upleftrow .infobox .info {
     background-color: var(--third-clr);
     color: var(--text-clr);
-    padding: 0.9rem;
+    padding: 0.7rem;
     margin-right: 2px;
-    height: 60%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1241,25 +1247,34 @@ header .featured::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 70%;
+    gap: 67%;
   }
   main .latest .smartphoneinfo .latestwork .downclick {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 8px;
   }
-  .infomobile {
+  main .latest .smartphoneinfo .latestwork .downclick h3 {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+  main .latest .smartphoneinfo .latestwork .downclick i {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+  main .latest .smartphoneinfo .latestwork .view {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+  }
+  main .infomobile {
     display: none;
   }
-  .duo-1 {
+  main .duo-1 {
     margin-top: -0.4rem;
     grid-area: slider;
     height: 100%;
     width: 100%;
-    padding: var(--main-padding);
+    padding: 0.8rem 0.3rem;
   }
-  .duo-1 .container {
+  main .duo-1 .container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1268,17 +1283,17 @@ header .featured::after {
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .duo-1 .container .duo {
+  main .duo-1 .container .duo {
     display: flex;
     gap: 0.8rem;
     flex-direction: row;
   }
-  .duo-1 .container .duo .product {
+  main .duo-1 .container .duo .product {
     z-index: 0;
     transform: translateZ(0);
     backface-visibility: hidden;
   }
-  .duo-1 .container .duo .product .glass-layer {
+  main .duo-1 .container .duo .product .glass-layer {
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -1288,11 +1303,12 @@ header .featured::after {
     -webkit-backdrop-filter: blur(0px);
     transition: backdrop-filter 0.5s ease;
   }
-  .duo-1 .container .duo .product .gallery-image {
+  main .duo-1 .container .duo .product .gallery-image {
+    height: 65vh;
     will-change: transform;
     transition: all 0.4s ease-in;
   }
-  .duo-1 .container .duo .product .solo-info {
+  main .duo-1 .container .duo .product .solo-info {
     z-index: 2;
     position: absolute;
     top: 0%;
@@ -1308,7 +1324,7 @@ header .featured::after {
     justify-content: center;
     gap: 0.5rem;
   }
-  .duo-1 .container .duo .product .solo-info i {
+  main .duo-1 .container .duo .product .solo-info i {
     width: 0%;
     height: 0%;
     opacity: 0;
@@ -1317,36 +1333,36 @@ header .featured::after {
     transition: all 0.4s ease-in;
     font-size: clamp(0.4rem, 1.5vh, 1.3rem);
   }
-  .duo-1 .container .duo .product img {
+  main .duo-1 .container .duo .product img {
     z-index: 0;
     height: 60vh;
     transition: filter 0.3s ease;
   }
-  .duo-1 .container .duo .product.is-hovered .glass-layer {
+  main .duo-1 .container .duo .product.is-hovered .glass-layer {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
   }
-  .duo-1 .container .duo .product.is-hovered .solo-info i {
+  main .duo-1 .container .duo .product.is-hovered .solo-info i {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
     height: 100%;
     width: 100%;
   }
-  .footer {
+  main .footer {
     grid-area: footer;
   }
-  .footer .aboutandmore {
+  main .footer .aboutandmore {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .footer .aboutandmore .first-half {
+  main .footer .aboutandmore .first-half {
     width: 50%;
     flex-direction: row;
     margin-right: 2rem;
     justify-content: flex-start;
   }
-  .footer .aboutandmore .first-half .ema-img {
+  main .footer .aboutandmore .first-half .ema-img {
     height: 65px;
     width: 65px;
     border-radius: var(--circle);
@@ -1355,24 +1371,24 @@ header .featured::after {
     -o-object-position: top;
        object-position: top;
   }
-  .footer .all {
+  main .footer .all {
     flex-direction: row;
   }
-  .footer .end {
+  main .footer .end {
     padding: 3rem;
   }
-  .footer .end h3 {
+  main .footer .end h3 {
     font-size: 1.5rem;
   }
-  .footer .end .contacts {
+  main .footer .end .contacts {
     margin-top: 1.4rem;
   }
-  .footer .end .contacts a {
+  main .footer .end .contacts a {
     font-size: 1.5rem;
   }
+  /* Desktop layout for blog/work pages */
 }
-/* Desktop layout for blog/work pages */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) and (min-width: 1024px) {
   .work-main {
     height: 100vh;
     width: 100%;

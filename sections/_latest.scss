@@ -14,11 +14,21 @@
                 @include flex-gap(40%);
 
                 .view {
-                    border-bottom: 1px solid var(--text-clr);
+                    position: relative;
                     transition: all 0.4s ease-in-out;
 
-                    &:hover {
-                        transform: translateY(-2px);
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 2px;
+                        width: 100%;
+                        background-color: var(--text-clr);
+                        transition: all 0.4s ease-in-out;
+                    }
+                    &:hover::after{
+                        width: 25%;
                     }
                 }
 
@@ -32,9 +42,9 @@
                     i {
                         transition: all 0.4s ease-in-out;
 
-                        &:hover {
-                            transform: scale(1.2);
-                        }
+                        // &:hover {
+                        //     transform: scale(1.2);
+                        // }
                     }
                 }
             }
