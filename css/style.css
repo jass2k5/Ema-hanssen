@@ -1180,6 +1180,7 @@ header .featured::after {
     gap: 0.4rem;
   }
   main .Ema .upleftrow .infobox .info {
+    cursor: pointer;
     background-color: var(--third-clr);
     color: var(--text-clr);
     padding: 0.7rem;
@@ -1195,11 +1196,9 @@ header .featured::after {
   }
   main .Ema .upleftrow .infobox .info .iconwrapper {
     position: relative;
-    display: inline-block;
     overflow: hidden;
     height: 2rem;
     width: 2rem;
-    text-align: center;
     padding: 0.2rem 0rem;
   }
   main .Ema .upleftrow .infobox .info i {
@@ -1210,7 +1209,7 @@ header .featured::after {
     transition: all 0.3s ease-in-out;
   }
   main .Ema .upleftrow .infobox .info .logos {
-    transform: translate(0, 0);
+    transform: translateY(2px);
   }
   main .Ema .upleftrow .infobox .info .arrow {
     transform: translateY(100%);
@@ -1221,7 +1220,7 @@ header .featured::after {
     opacity: 0;
   }
   main .Ema .upleftrow .infobox .info:hover .arrow {
-    transform: translate(0, 0);
+    transform: translateY(2px);
     opacity: 1;
   }
   main .Ema .upleftrow .infobox .info:nth-last-child(1) {
@@ -1263,6 +1262,7 @@ header .featured::after {
   }
   main .latest .smartphoneinfo .latestwork .view {
     font-size: clamp(0.8rem, 1.5vw, 1rem);
+    cursor: pointer;
   }
   main .infomobile {
     display: none;
@@ -1289,6 +1289,7 @@ header .featured::after {
     flex-direction: row;
   }
   main .duo-1 .container .duo .product {
+    cursor: pointer;
     z-index: 0;
     transform: translateZ(0);
     backface-visibility: hidden;
