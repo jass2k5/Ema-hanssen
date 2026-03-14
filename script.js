@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded',()=>{
+
+let scrollimages = document.querySelector('.sliderimage');
+const scrollpictures = [
+    {src: 'img/image.png',alt:'hero-image'},
+    {src:'img/workscroll1.avif',alt:'hero-image'},
+    {src: 'img/img3.webp',alt: 'hero-image'}
+];
+scrollpictures.forEach((pics,idx) =>{
+    let showfirstclass = "";
+    if(idx === 0){
+        showfirstclass = "active";
+    }else if(idx === 1){
+        showfirstclass = "next";
+    }
+    const injecting = `<img class="hero-image ${showfirstclass}" src="${pics.src}" alt="${pics.alt}">`;
+    scrollimages.innerHTML += injecting;
+});
+
 let slidersection = document.querySelector('.duo-1')
 let container = document.querySelector('.container');
 const projectImages = [
@@ -65,7 +83,7 @@ const projectImages = [
             localStorage.setItem('theme','light');
          }
     })
- 
+    
 
     
 

@@ -132,7 +132,7 @@ nav .logo-text span {
   will-change: transform;
 }
 nav .logo-text span:hover a {
-  animation: loopText 0.4s ease-in-out;
+  animation: loopText 0.3s ease-in-out;
 }
 nav .logo-text span a {
   text-decoration: none;
@@ -156,7 +156,7 @@ nav ul li {
   will-change: transform;
 }
 nav ul li:hover a {
-  animation: loopText 0.4s ease-in-out;
+  animation: loopText 0.3s ease-in-out;
 }
 nav ul li a {
   text-decoration: none;
@@ -221,7 +221,13 @@ header .img {
   width: 100%;
   position: relative;
 }
+header .sliderimage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
 header .hero-image {
+  position: absolute;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -229,7 +235,17 @@ header .hero-image {
   -o-object-position: top;
      object-position: top;
   border-radius: 16px;
-  position: relative;
+}
+header .active {
+  z-index: 2;
+  transform: translateX(-0.4%);
+}
+header .slideout {
+  transform: translateX(-100%);
+  transition: transform 0.6s ease-in-out;
+}
+header .next {
+  z-index: 1;
 }
 header .featured {
   text-transform: capitalize;
@@ -1209,7 +1225,7 @@ header .featured::after {
     transition: all 0.3s ease-in-out;
   }
   main .Ema .upleftrow .infobox .info .logos {
-    transform: translateY(2px);
+    transform: translateY(6px);
   }
   main .Ema .upleftrow .infobox .info .arrow {
     transform: translateY(100%);
@@ -1220,7 +1236,7 @@ header .featured::after {
     opacity: 0;
   }
   main .Ema .upleftrow .infobox .info:hover .arrow {
-    transform: translateY(2px);
+    transform: translateY(6px);
     opacity: 1;
   }
   main .Ema .upleftrow .infobox .info:nth-last-child(1) {

@@ -86,6 +86,7 @@
 
                      h3{
                        font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+                      
                      }
                      .iconwrapper{
                         position: relative;
@@ -93,6 +94,7 @@
                         height: 2rem;
                         width: 2rem;
                         padding: 0.2rem 0rem;
+                    
                      }
                     i{   
                         display: inline-block;
@@ -103,7 +105,7 @@
                     }
                     
                     .logos{
-                        transform: translateY(2px);
+                        transform: translateY(6px);
                     }
                     .arrow{
                          transform: translateY(100%);
@@ -114,7 +116,7 @@
                         opacity: 0;
                     }
                     &:hover .arrow{
-                        transform: translateY(2px);
+                        transform: translateY(6px);
                         opacity: 1;
                     }
                     &:nth-last-child(1){
