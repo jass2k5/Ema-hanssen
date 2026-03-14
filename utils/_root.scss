@@ -20,12 +20,15 @@
     --br-clr1: rgba(255,255,255,0.3);
     --gap-logo: 0.4rem;
     --margin-nav:  clamp(0.2rem, 1vw + 0.2rem, 0.4rem);
+    --thumb-clr : rgba(99,99,99,0.8);
+    --thumb-hover: #555555da; 
+    
 }
 .darkmode{
     --body-clr: black;
     --third-clr: rgb(40, 42, 43);
     --text-clr:white;
     --contact-clr:whitesmoke;
-
-
+    --thumb-clr: rgba(209,209,209);
+    --thumb-hover: rgba(255,255,255);
 }

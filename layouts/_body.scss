@@ -15,4 +15,7 @@ body {
     width: 100%;
     color: var(--text-clr);
     background-color: var(--body-clr);
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }

@@ -44,13 +44,13 @@
                 color: var(--text-clr);
                 &::after{
                     content: '';
-                    height: 15px;
-                    width: 15px;
+                    height: 30px;
+                    width: 30px;
                     top: 100%;
                     left: 0%;
-                    border-top-left-radius: 0.4rem;
+                    border-top-left-radius: 1.2rem;
                     position: absolute;
-                    box-shadow: -2px -2px 0 0 var(--body-clr);
+                    box-shadow: -6px -5px 0 0 var(--body-clr);
                     background-color: transparent;
                 }
                &::before{
@@ -58,11 +58,11 @@
                 position: absolute;
                 top: 0%;
                 left: 100%;
-                height: 18px;
-                width: 18px;
+                height: 20px;
+                width: 20px;
                 background-color: transparent;
-                border-top-left-radius: 0.4rem ;
-                box-shadow: -3px -3px 0 0 var(--body-clr);
+                border-top-left-radius: 0.8rem ;
+                box-shadow: -7px -5px 0 0 var(--body-clr);
                }
               }
             }

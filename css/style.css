@@ -21,6 +21,8 @@
   --br-clr1: rgba(255,255,255,0.3);
   --gap-logo: 0.4rem;
   --margin-nav: clamp(0.2rem, 1vw + 0.2rem, 0.4rem);
+  --thumb-clr: rgba(99,99,99,0.8);
+  --thumb-hover: #555555da;
 }
 
 .darkmode {
@@ -28,6 +30,8 @@
   --third-clr: rgb(40, 42, 43);
   --text-clr:white;
   --contact-clr:whitesmoke;
+  --thumb-clr: rgba(209,209,209);
+  --thumb-hover: rgba(255,255,255);
 }
 
 @keyframes loopText {
@@ -75,6 +79,10 @@ body {
   color: var(--text-clr);
   background-color: var(--body-clr);
 }
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
 
 main {
   min-height: 100vh;
@@ -82,6 +90,22 @@ main {
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+main::-webkit-scrollbar {
+  height: auto;
+}
+main::-webkit-scrollbar-track {
+  background: var(--third-clr);
+}
+main::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-clr);
+  border-radius: 100px;
+  border: 3px solid var(--third-clr);
+}
+main::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover);
+}
+main {
   padding: var(--main-padding);
   position: relative;
   background-color: var(--body-clr);
@@ -448,13 +472,13 @@ header .featured::after {
 }
 .duo-1 .container .product .solo-info span::after {
   content: "";
-  height: 15px;
-  width: 15px;
+  height: 30px;
+  width: 30px;
   top: 100%;
   left: 0%;
-  border-top-left-radius: 0.4rem;
+  border-top-left-radius: 1.2rem;
   position: absolute;
-  box-shadow: -2px -2px 0 0 var(--body-clr);
+  box-shadow: -6px -5px 0 0 var(--body-clr);
   background-color: transparent;
 }
 .duo-1 .container .product .solo-info span::before {
@@ -462,11 +486,11 @@ header .featured::after {
   position: absolute;
   top: 0%;
   left: 100%;
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   background-color: transparent;
-  border-top-left-radius: 0.4rem;
-  box-shadow: -3px -3px 0 0 var(--body-clr);
+  border-top-left-radius: 0.8rem;
+  box-shadow: -7px -5px 0 0 var(--body-clr);
 }
 
 .footer {

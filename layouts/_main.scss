@@ -7,6 +7,22 @@ main {
     // margin: auto;
     overflow-y: auto;
     overflow-x: hidden;
+    &::-webkit-scrollbar{
+        height: auto;
+    }
+    &::-webkit-scrollbar-track{
+        background: var(--third-clr);
+
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: var(--thumb-clr);
+        border-radius: 100px;
+        border: 3px solid var(--third-clr);
+        &:hover {
+        background: var(--thumb-hover); 
+    }
+    }
+    
     padding: var(--main-padding);
     position: relative;
     background-color: var(--body-clr);
