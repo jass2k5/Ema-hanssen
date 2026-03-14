@@ -30,8 +30,8 @@
                         transform: scale(1.2);
                     }
                     &:nth-last-child(1){
-                        background-color: var(--second-clr);
-                        color: white;
+                        background-color: var(--contact-clr);
+                        color: var(--body-clr);
                     }
                    }
                 }

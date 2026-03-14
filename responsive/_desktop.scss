@@ -4,20 +4,20 @@
 @media (min-width: 1200px){
    
    main{
-    height: 100vh;
-    width: 100%;
-    padding: 12px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4,auto);
-    grid-template-areas: "header section"
-    "header smartphone"
-    "header slider"
-    "footer footer";
-    overflow-y: scroll;
-    column-gap: 0.5rem;
-
+     height: 100vh;
+     width: 100%;
+     padding: 12px;
+     overflow: hidden;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: max-content max-content max-content max-content;
+     grid-template-areas: "header section"
+     "header smartphone"
+     "header slider"
+     "header infobox";
+     overflow-y: scroll;
+     column-gap: 0.5rem;
+       
 
         header{
             grid-area: header;
@@ -44,8 +44,8 @@
             height: 38vh;
 
             
+            grid-area: section;
             .upleftrow{
-                grid-area: section;
                 height: 100%;
                 width: 100%;
                 display: flex;
@@ -163,10 +163,9 @@
            }
         }
 
-    } // ← Close main
-    .infomobile{
-        display: none;
     }
+   
+
     .duo-1{
         margin-top: -0.4rem;
         grid-area: slider;
@@ -250,6 +249,30 @@
 
         }
     }
+        .infomobile{
+        margin-top: -0.3rem;
+        grid-area: infobox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        height: 90%;
+        padding: 0rem 0.4rem;
+        overflow: hidden;
+        .info{
+            margin: 0;
+            height: 30%;
+            padding: 1.6rem;
+            border-radius: 0.8rem;
+            width: calc(50% - 0.25rem);
+        }
+        .info:nth-child(5){
+          width: 100%;
+        }
+    
+     }
     .footer{
         grid-area: footer;
         

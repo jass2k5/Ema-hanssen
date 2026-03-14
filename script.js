@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded',()=>{
 
+ const darkbtn = document.querySelector('.modes');
+    const body = document.body;
+    const logo = document.querySelector('.logo');
+    if(localStorage.getItem('theme') === 'dark'){
+        body.classList.add('darkmode');
+        darkbtn.style.justifyContent = "flex-end";
+        logo.style.color =  "#FFFFFF";
+    }
+    darkbtn.addEventListener('click',()=>{
+         body.classList.toggle('darkmode');
+         if(body.classList.contains('darkmode')){
+            darkbtn.style.justifyContent = "flex-end";
+            logo.style.color =  "#FFFFFF";
+            localStorage.setItem('theme',"dark");
+         }else{
+            darkbtn.style.justifyContent = "flex-start";
+            logo.style.color = "#0E1011";
+            localStorage.setItem('theme','light');
+         }
+    });
+
 let scrollimages = document.querySelector('.sliderimage');
 const scrollpictures = [
     {src: 'img/image.png',alt:'hero-image'},
@@ -16,7 +37,27 @@ scrollpictures.forEach((pics,idx) =>{
     const injecting = `<img class="hero-image ${showfirstclass}" src="${pics.src}" alt="${pics.alt}">`;
     scrollimages.innerHTML += injecting;
 });
+let autoslider;
+let currentindex = 0 ;
+const intervaltime = 4000;
+function slidingpanel(){
+        images = document.querySelectorAll('.hero-image');
+        if(images.length === 0){
+            return;
+        }
+        images.forEach(img =>{
+            img.classList.remove('slideout','next');
+        });
+        images[currentindex].classList.add('slideout');
+        images[currentindex].classList.remove('active');
 
+        currentindex = (currentindex + 1) % images.length;
+        images[currentindex].classList.add('active');
+
+        let nextimage = (currentindex + 1)%images.length;
+        images[nextimage].classList.add('next');
+}
+autoslider = setInterval(slidingpanel,intervaltime);
 let slidersection = document.querySelector('.duo-1')
 let container = document.querySelector('.container');
 const projectImages = [
@@ -63,26 +104,7 @@ const projectImages = [
             productBox.classList.remove('is-hovered');
         })
     })
-    const darkbtn = document.querySelector('.modes');
-    const body = document.body;
-    const logo = document.querySelector('.logo');
-    if(localStorage.getItem('theme') === 'dark'){
-        body.classList.add('darkmode');
-        darkbtn.style.justifyContent = "flex-end";
-        logo.style.color =  "#FFFFFF";
-    }
-    darkbtn.addEventListener('click',()=>{
-         body.classList.toggle('darkmode');
-         if(body.classList.contains('darkmode')){
-            darkbtn.style.justifyContent = "flex-end";
-            logo.style.color =  "#FFFFFF";
-            localStorage.setItem('theme',"dark");
-         }else{
-            darkbtn.style.justifyContent = "flex-start";
-            logo.style.color = "#0E1011";
-            localStorage.setItem('theme','light');
-         }
-    })
+   
     
 
     
