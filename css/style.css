@@ -112,7 +112,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "header" "section" "smartphone" "first-duo" "infobox";
+  grid-template-areas: "header" "section" "smartphone" "first-duo" "infobox" "footer";
   z-index: 0;
   row-gap: 1rem;
 }
@@ -497,6 +497,7 @@ header .featured::after {
 }
 
 .footer {
+  grid-area: footer;
   height: auto;
   width: 100%;
   display: grid;
@@ -896,9 +897,6 @@ header .featured::after {
   transition: transform 0.4s ease-in-out;
   pointer-events: none;
 }
-.infomobile .info:hover i {
-  transform: scale(1.2);
-}
 .infomobile .info:nth-last-child(1) {
   background-color: var(--contact-clr);
   color: var(--body-clr);
@@ -1167,8 +1165,8 @@ header .featured::after {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content max-content max-content max-content;
-    grid-template-areas: "header section" "header smartphone" "header slider" "header infobox";
+    grid-template-rows: max-content max-content max-content max-content max-content;
+    grid-template-areas: "header section" "header smartphone" "header slider" "header infobox" "header footer";
     overflow-y: scroll;
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
@@ -1399,34 +1397,67 @@ header .featured::after {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
-    height: 90%;
+    height: auto;
     padding: 0rem 0.4rem;
-    overflow: hidden;
+    overflow: visible;
   }
   main .infomobile .info {
     margin: 0;
-    height: 30%;
+    height: auto;
     padding: 1.6rem;
     border-radius: 0.8rem;
     width: calc(50% - 0.25rem);
   }
-  main .infomobile .info:nth-child(5) {
+  main .infomobile .info .iconwrapper {
+    position: relative;
+    overflow: hidden;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.2rem 0rem;
+  }
+  main .infomobile .info i {
+    display: inline-block;
+    position: absolute;
+    font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+  }
+  main .infomobile .info .logos {
+    transform: translateY(6px);
+  }
+  main .infomobile .info .arrow {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  main .infomobile .info:hover .logos {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  main .infomobile .info:hover .arrow {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+  main .infomobile .info:nth-last-child(1) {
+    background-color: var(--contact-clr);
+    color: var(--body-clr);
     width: 100%;
   }
-  main .footer {
+  main .infomobile .footer {
     grid-area: footer;
+    height: auto;
+    width: 100%;
   }
-  main .footer .aboutandmore {
+  main .infomobile .footer .aboutandmore {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  main .footer .aboutandmore .first-half {
+  main .infomobile .footer .aboutandmore .first-half {
     width: 50%;
     flex-direction: row;
     margin-right: 2rem;
     justify-content: flex-start;
   }
-  main .footer .aboutandmore .first-half .ema-img {
+  main .infomobile .footer .aboutandmore .first-half .ema-img {
     height: 65px;
     width: 65px;
     border-radius: var(--circle);
@@ -1435,19 +1466,19 @@ header .featured::after {
     -o-object-position: top;
        object-position: top;
   }
-  main .footer .all {
+  main .infomobile .footer .all {
     flex-direction: row;
   }
-  main .footer .end {
+  main .infomobile .footer .end {
     padding: 3rem;
   }
-  main .footer .end h3 {
+  main .infomobile .footer .end h3 {
     font-size: 1.5rem;
   }
-  main .footer .end .contacts {
+  main .infomobile .footer .end .contacts {
     margin-top: 1.4rem;
   }
-  main .footer .end .contacts a {
+  main .infomobile .footer .end .contacts a {
     font-size: 1.5rem;
   }
   /* Desktop layout for blog/work pages */
