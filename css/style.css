@@ -486,7 +486,7 @@ header .featured::after {
   position: absolute;
   top: 0%;
   left: 99.8%;
-  height: 15px;
+  height: 10px;
   width: 15px;
   background-color: transparent;
   border-top-left-radius: 0.6rem;
