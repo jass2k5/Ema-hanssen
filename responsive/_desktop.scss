@@ -41,7 +41,8 @@
 
         }
         .Ema{
-            height: 38vh;
+            min-height: 38vh; 
+            height: max-content;
 
             
             grid-area: section;
