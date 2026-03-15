@@ -41,7 +41,7 @@ let autoslider;
 let currentindex = 0 ;
 const intervaltime = 4000;
 function slidingpanel(){
-        images = document.querySelectorAll('.hero-image');
+        let images = document.querySelectorAll('.hero-image');
         if(images.length === 0){
             return;
         }

@@ -1,5 +1,6 @@
 @use '../utils/util' as *;
-.duo-1{
+
+.duo-1 {
     margin-top: 2rem;
     grid-area: first-duo;
     min-height: 100vh;
@@ -7,65 +8,71 @@
     width: 100%;
     @include flex-gap;
     width: 100%;
-    .container{
+
+    .container {
         @include flex-gap(2rem);
         flex-direction: column;
         height: 100%;
         width: 100%;
-         .duo{
-             @include flex-gap(1rem);
-             flex-direction: column;
-         }
-        .product{
+
+        .duo {
+            @include flex-gap(1rem);
+            flex-direction: column;
+        }
+
+        .product {
             @include flex-gap;
             flex-direction: column;
             height: 50%;
             width: 100%;
             position: relative;
 
-            img{
+            img {
                 height: 60vh;
                 width: 100%;
                 object-fit: cover;
                 object-position: top;
                 border-radius: 1rem;
             }
-            .solo-info{
-              z-index: 2;
-              position: absolute;
-              top: 0%;
-              left: 0%;
-              border-bottom-right-radius: 1rem;
-              @include back-white-product;
 
-              span{
-                font-size: clamp(0.4rem, 1.5vh, 1.3rem);
-                font-weight: 400;
-                color: var(--text-clr);
-                &::after{
-                    content: '';
-                    height: 30px;
-                    width: 30px;
-                    top: 100%;
-                    left: 0%;
-                    border-top-left-radius: 1.2rem;
-                    position: absolute;
-                    box-shadow: -6px -5px 0 0 var(--body-clr);
-                    background-color: transparent;
-                }
-               &::before{
-                content: '';
+            .solo-info {
+                z-index: 2;
                 position: absolute;
                 top: 0%;
-                left: 99.8%;
-                height: 10px;
-                width: 15px;
-                background-color: transparent;
-                border-top-left-radius: 0.6rem ;
-                box-shadow: -5px -2px 0 0 var(--body-clr);
-                
-               }
-              }
+                left: 0%;
+                border-bottom-right-radius: 1rem;
+                @include back-white-product;
+
+                span {
+                    font-size: clamp(0.4rem, 1.5vh, 1.3rem);
+                    font-weight: 400;
+                    color: var(--text-clr);
+
+                    &::after {
+                        content: '';
+                        height: 30px;
+                        width: 30px;
+                        top: 100%;
+                        left: 0%;
+                        border-top-left-radius: 1.2rem;
+                        position: absolute;
+                        box-shadow: -6px -5px 0 0 var(--body-clr);
+                        background-color: transparent;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0%;
+                        left: 99.8%;
+                        height: 10px;
+                        width: 15px;
+                        background-color: transparent;
+                        border-top-left-radius: 0.6rem;
+                        box-shadow: -5px -2px 0 0 var(--body-clr);
+
+                    }
+                }
             }
         }
     }

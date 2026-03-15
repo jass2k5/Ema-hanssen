@@ -152,7 +152,7 @@ nav .logo-text span {
   will-change: transform;
 }
 nav .logo-text span:hover a {
-  animation: loopText 0.3s ease-in-out;
+  animation: loopText 0.5s ease-in-out;
 }
 nav .logo-text span a {
   text-decoration: none;
@@ -176,7 +176,7 @@ nav ul li {
   will-change: transform;
 }
 nav ul li:hover a {
-  animation: loopText 0.3s ease-in-out;
+  animation: loopText 0.5s ease-in-out;
 }
 nav ul li a {
   text-decoration: none;
@@ -246,6 +246,7 @@ header .sliderimage {
   width: 100%;
   position: relative;
   overflow: hidden;
+  border-radius: 1rem;
 }
 header .hero-image {
   position: absolute;
@@ -255,9 +256,8 @@ header .hero-image {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  border-radius: 16px;
+  border-radius: 1rem;
   transition: transform 0.6s ease-in-out;
-  outline: 6px solid var(--body-clr);
 }
 header .active {
   z-index: 2;
