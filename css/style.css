@@ -1183,13 +1183,44 @@ header .featured::after {
     width: 100%;
     position: relative;
   }
+  main header .img .innerradius {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 30px;
+    width: 44.8%;
+  }
+  main header .img .innerradius::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    left: 0%;
+    border-top-left-radius: 0.6rem;
+    top: 110%;
+    box-shadow: -10px -7px 0 0 var(--body-clr);
+  }
+  main header .img .innerradius::before {
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 20px;
+    background: transparent;
+    left: 100%;
+    border-top-left-radius: 0.6rem;
+    top: 0;
+    box-shadow: -10px -10.5px 0 0 var(--body-clr);
+  }
   main header .img .hero-image {
     height: 100%;
     border-radius: 0.8rem;
     width: 100%;
   }
   main .Ema {
-    height: 38vh;
+    height: auto;
     grid-area: section;
   }
   main .Ema .upleftrow {
