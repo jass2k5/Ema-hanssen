@@ -269,6 +269,7 @@ header .active {
 header .slideout {
   transform: translateX(-110%);
   transition: transform 0.8s ease-in-out;
+  z-index: 3;
 }
 header .next {
   z-index: 1;
