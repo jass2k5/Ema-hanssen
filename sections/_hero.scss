@@ -30,7 +30,33 @@ header {
         transition: transform 0.6s ease-in-out;
         
     }
-
+    .imageindicators{
+        position: absolute;
+        height: auto;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 5%;
+        z-index: 4;
+        background-color: rgba(225, 255, 255, 0.233);
+        padding: 0.5rem;
+        border-radius: 1rem;
+        backdrop-filter: blur(4px);
+        display: flex;
+        gap: 0.3rem;
+        cursor: pointer;
+        
+        i{  
+            display: inline-block;
+            letter-spacing: 1.2;
+            font-size: clamp(0.2rem,1.5vh,0.9rem);
+            color: rgba(255, 255, 255, 0.37);
+            
+        }
+        .whitedot{
+            animation: customFadeIn 0.4s ease-in forwards;
+            color: rgba(255, 255, 255);
+        }
+    }
     .active {
         z-index: 2;
     }
