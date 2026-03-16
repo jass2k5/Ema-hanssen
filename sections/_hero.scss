@@ -28,7 +28,8 @@ header {
 
         i{ 
             display: inline-block;
-            background-color:  rgba(0, 0, 0, 0.2);
+            background-color:  var(--arrows-clr);
+            color: var(--contact-clr);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             padding: 0.8rem;
