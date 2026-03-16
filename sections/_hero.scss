@@ -97,6 +97,11 @@ header {
         transition: transform 0.8s ease-in-out;
         z-index: 3;
     }
+    .slideoutback{
+        transform: translateX(110%);
+        transition: transform 0.8s ease-in-out;
+        z-index: 3;
+    }
 
     .next {
         z-index: 1;
