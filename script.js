@@ -86,7 +86,37 @@ inds.forEach((dot,idx)=>{
         inds[currentindicator].classList.add('whitedot');
         autoslider = setInterval(slidingpanel,intervaltime);
     })
+});
+let arrowslider = document.querySelector('.slidearrows');
+let backwardarrow = document.querySelector('.backward');
+let forwardarrow = document.querySelector('.forward');
+forwardarrow.addEventListener('click',()=>{
+    clearInterval(autoslider);
+    slidingpanel();
+    autoslider = setInterval(slidingpanel,intervaltime);
+
 })
+backwardarrow.addEventListener('click',()=>{
+    clearInterval(autoslider);
+    images.forEach(img =>{
+            img.classList.remove('slideout','next');
+        });
+        images[currentindex].classList.add('slideout');
+        images[currentindex].classList.remove('active');
+        inds[currentindicator].classList.remove('whitedot');
+
+        currentindex = (currentindex - 1 + images.length ) % images.length;
+        currentindicator = currentindex;
+        images[currentindex].classList.add('active');
+        inds[currentindicator].classList.add('whitedot');
+
+
+        let nextimage = (currentindex - 1 + images.length)%images.length;
+        images[nextimage].classList.add('next');
+         autoslider = setInterval(slidingpanel,intervaltime)
+
+})
+
 let slidersection = document.querySelector('.duo-1')
 let container = document.querySelector('.container');
 const projectImages = [
