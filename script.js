@@ -132,8 +132,8 @@ const projectImages = [
         { src: 'img/img10.avif', title: 'Elegence'},
         
     ];
-    container.innerHTML = "";
     for(let i = 0; i < projectImages.length;i += 2){
+        let holderforduo = "";
         const duowrapper = document.createElement('div');
         duowrapper.classList.add('duo');
         const pair = projectImages.slice(i,i+2);
@@ -147,8 +147,9 @@ const projectImages = [
                     </div>
                  </div>`;
             
-            duowrapper.innerHTML += productHtml;
+            holderforduo += productHtml;
         })
+        duowrapper.innerHTML = holderforduo;
         container.appendChild(duowrapper);
     }
    
@@ -163,9 +164,31 @@ const projectImages = [
             productBox.classList.remove('is-hovered');
         })
     })
-   
-    
 
-    
+//the trigering animation by using api from browser
+window.addEventListener('load',()=>{
+    const observeonscroll = new IntersectionObserver((enteries,observer) =>{
+    enteries.forEach(entry => {
+        if (entry.isIntersecting){
+            console.log("entry visible",entry.target)
+            entry.target.classList.add('showonscroll');
+            if(entry.target.classList.contains('showonscroll')){
+                console.log(`class is added to ${entry.target}`);
+            }else{
+                console.log("failed to give classs");
+            }
+            observer.unobserve(entry.target);
+            console.log(`the container is unobserved now ${entry.target}`);
+        }
+    })
+},{threshold:0.15,rootMargin: "0px 0px -50px 0px"});
+
+const allelementstoslide = document.querySelectorAll('.duo ,.Ema ,.latest ,.infomobile ,.footer');
+console.log(`Found ${allelementstoslide.length} elements to observe.`);
+allelementstoslide.forEach( (el,index)=> {
+    console.log(`Observing element #${index}:`, el.className);
+    observeonscroll.observe(el)}
+);
+})
 
 })

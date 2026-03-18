@@ -16,11 +16,13 @@
         width: 100%;
 
         .duo {
+            
             @include flex-gap(1rem);
             flex-direction: column;
         }
 
         .product {
+            
             @include flex-gap;
             flex-direction: column;
             height: 50%;
