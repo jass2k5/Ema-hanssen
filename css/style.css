@@ -346,12 +346,12 @@ header .imageindicators .whitedot {
 header .active {
   z-index: 2;
 }
-header .slideout {
+header .slideforward {
   transform: translateX(-110%);
   transition: transform 0.8s ease-in-out;
   z-index: 3;
 }
-header .slideoutback {
+header .slidebackward {
   transform: translateX(110%);
   transition: transform 0.8s ease-in-out;
   z-index: 3;

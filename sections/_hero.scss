@@ -94,12 +94,12 @@ header {
         z-index: 2;
     }
 
-    .slideout {
+    .slideforward {
         transform: translateX(-110%);
         transition: transform 0.8s ease-in-out;
         z-index: 3;
     }
-    .slideoutback{
+    .slidebackward{
         transform: translateX(110%);
         transition: transform 0.8s ease-in-out;
         z-index: 3;

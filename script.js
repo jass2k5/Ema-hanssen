@@ -56,9 +56,9 @@ function slidingpanel(){
             return;
         }
         images.forEach(img =>{
-            img.classList.remove('slideout','slideoutback','next');
+            img.classList.remove('slideforward','slidebackward','next');
         });
-        images[currentindex].classList.add('slideout');
+        images[currentindex].classList.add('slideforward');
         images[currentindex].classList.remove('active');
         inds[currentindicator].classList.remove('whitedot');
 
@@ -77,7 +77,7 @@ inds.forEach((dot,idx)=>{
     dot.addEventListener('click',()=>{
         clearInterval(autoslider);
         images.forEach(img=>{
-            img.classList.remove('active','slideout','slideoutback','next');
+            img.classList.remove('active','slideforward','slidebackward','next');
         });
         inds[currentindicator].classList.remove('whitedot');
         currentindex = idx;
@@ -99,9 +99,9 @@ forwardarrow.addEventListener('click',()=>{
 backwardarrow.addEventListener('click',()=>{
     clearInterval(autoslider);
     images.forEach(img =>{
-            img.classList.remove('slideout','slideoutback','next');
+            img.classList.remove('slideforward','slidebackward','next');
         });
-        images[currentindex].classList.add('slideoutback');
+        images[currentindex].classList.add('slidebackward');
         images[currentindex].classList.remove('active');
         inds[currentindicator].classList.remove('whitedot');
 
@@ -121,7 +121,7 @@ let slidersection = document.querySelector('.duo-1')
 let container = document.querySelector('.container');
 const projectImages = [
         { src: 'img/img1.webp', title: 'Beige' },
-        { src: 'img/im,g2.webp', title: 'Darkness' },
+        { src: 'img/img2.webp', title: 'Darkness' },
         { src: 'img/img3.webp', title: 'Gentlemen' },
         { src: 'img/img4.webp', title: 'City' },
         { src: 'img/img5.webp', title: 'Nature' },
