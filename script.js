@@ -33,7 +33,7 @@ const SelectorGalleryGRid = {
     insideDuo: '.product'
 };
 const SelectorIntersection = {
-    observerProperties: { threshold: 0.15, rootMargin: "0px 0px -50px 0px" },
+    observerProperties: { threshold: 0.15, rootMargin: "0px 0px -10px 0px" },
     fadeup: 'showonscroll',
     allElements: '.duo ,.Ema ,.latest ,.infomobile ,.footer',
 };
@@ -115,7 +115,7 @@ function HeroSlider() {
         //3 core engine functions
         function updateSlider(newIndex, isBackward = false) {
             images.forEach(img => { img.classList.remove('slideforward', 'slidebackward', 'next'); });
-            dots.forEach(dot => { dot.classList.remove('whitedot'); });
+            dots[currentIndex].classList.remove('whitedot')
 
             images[currentIndex].classList.add(isBackward ? 'slidebackward' : 'slideforward');
             images[currentIndex].classList.remove('active');
@@ -207,23 +207,24 @@ function RenderProjectGallery() {
         console.warn("error in rendering gallery", error.message);
     }
 }
-function ScrollAnimation(){
-    try{
-        const observeScroll = new IntersectionObserver((enteries,observer)=>{
+function ScrollAnimation() {
+    try {
+        const observeScroll = new IntersectionObserver((enteries, observer) => {
             enteries.forEach(entry => {
-                if(entry.isIntersecting){
+                if (entry.isIntersecting) {
+                    console.log(`${entry.target} is intersected`)
                     entry.target.classList.add(SelectorIntersection.fadeup);
                     observer.unobserve(entry.target);
                 }
             })
-        },SelectorIntersection.observerProperties);
-    
-    const allelementstoslide = document.querySelectorAll(SelectorIntersection.allElements);
-    allelementstoslide.forEach((el)=>{
-        observeScroll.observe(el);
-    });
-    }catch(error){
-        console.warn("error in intersection observer api",error.message);
+        }, SelectorIntersection.observerProperties);
+
+        const allelementstoslide = document.querySelectorAll(SelectorIntersection.allElements);
+        allelementstoslide.forEach((el) => {
+            observeScroll.observe(el);
+        });
+    } catch (error) {
+        console.warn("error in intersection observer api", error.message);
     }
 }
 
@@ -231,5 +232,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ThemeSwitcher();
     HeroSlider();
     RenderProjectGallery();
-    ScrollAnimation();
-})
+});
+
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        ScrollAnimation();
+    }, 100);
+});
