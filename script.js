@@ -232,4 +232,4 @@ document.addEventListener('DOMContentLoaded', () => {
     HeroSlider();
     RenderProjectGallery();
     ScrollAnimation();
-})
+});

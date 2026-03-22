@@ -18,6 +18,7 @@
 @use 'sections/ema';
 @use 'sections/latest';
 @use 'sections/slider';
+@use 'sections/infoboxmobile';
 
 //footer layout
 @use 'layouts/footer';
@@ -29,7 +30,5 @@
 @use 'pages/worksections/scroll';
 
 //responsives (these should override base styles)
-@use 'responsive/infoboxmobile';
-@use 'responsive/smallsp';
 @use 'responsive/tablets';
 @use 'responsive/desktop';

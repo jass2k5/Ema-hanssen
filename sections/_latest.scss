@@ -1,7 +1,7 @@
 @use '../utils/util' as *;
 
 .latest {
-    
+
     grid-area: smartphone;
     height: auto;
     width: 100%;
@@ -52,4 +52,92 @@
             }
         }
     }
+}
+
+//small phones
+@media (max-width:395px) {
+    .latest {
+
+        .smartphoneinfo {
+
+            .latestwork {
+                @include flex-gap(30%);
+
+                .downclick {
+                    @include flex-gap(6px);
+
+                    h3 {
+                        font-size: clamp(0.8rem, 3vw + 0.3rem, 1.2rem);
+                    }
+
+                    i {
+                        font-size: 1rem;
+                    }
+                }
+
+                .view {
+                    font-size: clamp(0.8rem, 3vw + 0.3rem, 1.2rem);
+
+
+                }
+
+            }
+        }
+    }
+}
+
+//tablets
+@media (min-width:768px) {
+    .latest {
+        .smartphoneinfo {
+
+            .latestwork {
+                @include flex-gap(60%);
+            }
+        }
+    }
+}
+
+//desktop
+@media (min-width:1200px) {
+    .latest {
+        margin-top: -0.3rem;
+        grid-area: smartphone;
+        height: 100%;
+        border-radius: 1rem;
+        padding: 1rem;
+        background-color: var(--third-clr);
+
+        .smartphoneinfo {
+            height: 100%;
+            width: 100%;
+            padding: var(--space-xn);
+
+            .latestwork {
+                height: 100%;
+                width: 100%;
+                @include flex-gap(67%);
+
+                .downclick {
+                    @include flex-gap(8px);
+
+                    h3 {
+                        font-size: clamp(0.8rem, 2vw, 1rem);
+                    }
+
+                    i {
+                        font-size: clamp(0.8rem, 2vw, 1rem);
+                    }
+
+                }
+
+                .view {
+                    font-size: clamp(0.8rem, 1.5vw, 1rem);
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
 }

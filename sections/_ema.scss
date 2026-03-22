@@ -50,3 +50,172 @@
         }
     }
 }
+
+@media(min-width:768px) {
+    .Ema {
+
+        .upleftrow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+
+            .brandbox {
+                @include flex-gap(20%);
+                width: 50%;
+                height: 100%;
+
+                p {
+                    line-height: 1.8;
+                }
+
+            }
+
+            .infobox {
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0.8rem;
+                flex: 1;
+                flex-direction: column;
+                // padding: var(--space-xss);
+
+
+                .info {
+                    background-color: var(--third-clr);
+                    padding: 1.4rem;
+                    margin-right: 2px;
+                    height: 60%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 1.1rem;
+
+                    h3 {
+                        font-size: clamp(0.2rem, 2vh + 0.2rem, 1.1rem);
+                    }
+
+                    i {
+                        display: inline-block;
+                        font-size: clamp(0.2rem, 2vh + 0.1rem, 1.1rem);
+                        transition: transform 0.4s ease-in-out;
+                        pointer-events: none;
+                    }
+
+
+                    &:nth-last-child(1) {
+                        background-color: var(--second-clr);
+                        color: white;
+                    }
+
+                    #arrow {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (min-width:1200px) {
+    .Ema {
+        height: auto;
+        grid-area: section;
+
+        .upleftrow {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+
+            .brandbox {
+                flex: 1.5;
+                height: 100%;
+                padding: 3rem;
+                @include flex-gap(40%);
+                border-radius: 0.4rem;
+            }
+
+            .infobox {
+                flex: 0.9;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                height: 100%;
+                //    width: 40%;
+                border-radius: 0.8rem;
+                color: black;
+                gap: 0.4rem;
+
+                .info {
+                    cursor: pointer;
+                    background-color: var(--third-clr);
+                    color: var(--text-clr);
+                    padding: 0.7rem;
+                    margin-right: 2px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 0.8rem;
+
+                    h3 {
+                        font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+
+                    }
+
+                    .iconwrapper {
+                        position: relative;
+                        overflow: hidden;
+                        height: 2rem;
+                        width: 2rem;
+                        padding: 0.2rem 0rem;
+
+                    }
+
+                    i {
+                        display: inline-block;
+                        position: absolute;
+                        font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+                        pointer-events: none;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    .logos {
+                        transform: translateY(6px);
+                    }
+
+                    .arrow {
+                        transform: translateY(100%);
+                        opacity: 0;
+                    }
+
+                    &:hover .logos {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+
+                    &:hover .arrow {
+                        transform: translateY(6px);
+                        opacity: 1;
+                    }
+
+                    &:nth-last-child(1) {
+                        background-color: var(--contact-clr);
+                        color: var(--body-clr);
+                    }
+                }
+            }
+
+
+        }
+
+    }
+}

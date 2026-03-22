@@ -1,0 +1,99 @@
+@use '../utils/util' as *;
+.infomobile{   
+    grid-area: infobox;
+    @include flex-gap(1rem);
+    // margin-top: 2rem;
+    flex-direction: column;
+    padding: var(--space-xss);
+            .info{
+                background-color: var(--third-clr);
+                padding: 1.4rem;
+                margin-right: 2px;
+                height: 60%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 1.1rem;
+   
+                   h3{
+                     font-size: clamp(0.2rem, 2vh + 0.2rem, 1.1rem);
+                        }
+                    i{   
+                       display: inline-block;
+                       font-size: clamp(0.2rem, 2vh + 0.1rem, 1.1rem);
+                       transition: transform 0.4s ease-in-out;
+                       pointer-events: none;
+                           }
+                     
+                    &:nth-last-child(1){
+                        background-color: var(--contact-clr);
+                        color: var(--body-clr);
+                    }
+                   }
+                }
+@media(min-width:768px){
+    .infomobile{
+            display: none;
+
+        }
+}
+@media(min-width:1200px){
+       .infomobile{
+         margin-top: -0.3rem;
+         grid-area: infobox;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: row;
+         flex-wrap: wrap;
+         gap: 0.5rem;
+         height: auto;
+         padding: 0rem 0.4rem;
+         overflow: visible;
+         .info{
+             margin: 0;
+             height: auto;
+             padding: 1.6rem;
+             border-radius: 0.8rem;
+             width: calc(50% - 0.25rem);
+        
+          .iconwrapper{
+                        position: relative;
+                        overflow: hidden;
+                        height: 2rem;
+                        width: 2rem;
+                        padding: 0.2rem 0rem;
+                    
+                     }
+                    i{   
+                        display: inline-block;
+                        position: absolute;
+                        font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+                        pointer-events: none;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    
+                    .logos{
+                        transform: translateY(6px);
+                    }
+                    .arrow{
+                         transform: translateY(100%);
+                         opacity: 0;
+                    }
+                    &:hover .logos{
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+                    &:hover .arrow{
+                        transform: translateY(6px);
+                        opacity: 1;
+                    }
+                    &:nth-last-child(1){
+                        background-color: var(--contact-clr);
+                        color: var(--body-clr) ;
+                        width: 100%;
+                    }
+        
+        
+}}}
