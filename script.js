@@ -55,7 +55,11 @@ const projectGallery = [
     { src: 'img/img10.avif', title: 'Elegence' },
 
 ];
-
+const  SelectorMobileNav ={
+    overlay: '.mobile-menu-overlay',
+    activeClass: 'activeNav',
+    menuBtn: '.menu-toggle'
+}
 
 function ThemeSwitcher() {
     try {
@@ -227,11 +231,25 @@ function ScrollAnimation() {
         console.warn("error in intersection observer api", error.message);
     }
 }
+function MobileNav(){
+const overlay = document.querySelector(SelectorMobileNav.overlay);
+const btn = document.querySelector(SelectorMobileNav.menuBtn);
+if(!overlay||!btn){
+    console.warn("error occured retrieving div");
+    return;
+}
+btn.addEventListener('click',()=>{
+    overlay.classList.toggle(SelectorMobileNav.activeClass);
+    isActive = overlay.classList.contains(SelectorMobileNav.activeClass);
+    btn.textContent = isActive?'close':'Menu';
+})
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     ThemeSwitcher();
     HeroSlider();
     RenderProjectGallery();
+    MobileNav();
 })
 window.addEventListener('load',()=>{
     setTimeout(()=>{

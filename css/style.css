@@ -419,9 +419,10 @@ header .menu-toggle {
   position: fixed;
   top: 0;
   right: 2%;
-  z-index: 999;
+  z-index: 1001;
   margin-right: clamp(0.2rem, 1vw, 0.2rem);
-  padding: 1rem;
+  padding: 0.8rem;
+  text-align: center;
   background-color: var(--body-clr);
   color: var(--text-clr);
   border-bottom-left-radius: 1rem;
@@ -575,6 +576,80 @@ header .featured::after {
   transform: rotate(-22deg);
   box-shadow: 1px 2px 0 0 var(--body-clr);
 }
+header .mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--body-clr);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transform-origin: top right;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+header .mobile-menu-overlay.activeNav {
+  transform: scale(1);
+  opacity: 1;
+}
+header .mobile-menu-overlay .containerMenu {
+  height: 80vh;
+  width: 80%;
+  background-color: var(--body-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50%;
+  flex-direction: column;
+}
+header .mobile-menu-overlay .containerMenu .overview-nav {
+  color: var(--text-clr);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+  width: 100%;
+}
+header .mobile-menu-overlay .containerMenu .overview-nav .emaImage {
+  height: 57px;
+  width: 57px;
+  border-radius: var(--circle);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+}
+header .mobile-menu-overlay .containerMenu .overview-nav .sideview h2 {
+  font-size: var(--space-smd);
+}
+header .mobile-menu-overlay .containerMenu .overview-nav .sideview h3 {
+  font-size: var(--space-xss);
+  opacity: 0.7;
+}
+header .mobile-menu-overlay .containerMenu .mobile-links {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks {
+  background-color: var(--third-clr);
+  height: 100%;
+  width: 100%;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
 
 @media (min-width: 768px) {
   header {
@@ -598,6 +673,9 @@ header .featured::after {
     top: 0%;
     height: 98vh;
     width: 100%;
+  }
+  header .mobile-menu-overlay {
+    display: none;
   }
   header .img {
     height: 100%;
