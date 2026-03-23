@@ -94,9 +94,12 @@ nav {
     }
 }
 
-@media(max-width:767px) {
+@media(min-width:768px) {
+    .menu-toggle {
+        display: none;
+    }
     nav {
-        &::after{
+        &::after {
             content: '';
             position: absolute;
             top: 45%;
@@ -107,7 +110,36 @@ nav {
             border-top-left-radius: 1rem;
             box-shadow: -1.3px -1px 0 0 var(--body-clr);
         }
-        &::before{
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 1%;
+            height: 5px;
+            width: 5px;
+            border-top-left-radius: 1rem;
+            background-color: transparent;
+            box-shadow: -1.5px -1px 0 0 var(--body-clr);
+
+        }
+}}
+
+@media(max-width:767px) {
+    nav {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 45%;
+            left: 100%;
+            background-color: transparent;
+            height: 5px;
+            width: 5px;
+            border-top-left-radius: 1rem;
+            box-shadow: -1.3px -1px 0 0 var(--body-clr);
+        }
+
+        &::before {
             content: '';
             position: absolute;
             top: 100%;
@@ -133,6 +165,7 @@ nav {
             }
         }
     }
+
 }
 
 @media (min-width:1200px) {
@@ -182,46 +215,54 @@ nav {
 
 
         }
+
     }
 
-    @media (min-width:2500px) {
-        nav {
-            height: clamp(2rem, 4vh, 3rem);
+    .menu-toggle {
+        display: none;
+    }
+    .innerradius{
+        display: none;
+    }
+}
 
-            .logo-text {
-                @include flex-gap(20px);
+@media (min-width:2500px) {
+    nav {
+        height: clamp(2rem, 4vh, 3rem);
 
-
-                img {
-                    height: 1.6rem;
-                    width: 1.6rem;
-                }
-
-                span {
-                    padding: 5px;
-
-                    a {
-                        font-size: clamp(0.8rem, 1.3vh, 2rem);
+        .logo-text {
+            @include flex-gap(20px);
 
 
-                    }
-                }
+            img {
+                height: 1.6rem;
+                width: 1.6rem;
             }
 
-            ul {
-                @include flex-gap(clamp(0.8rem, 1vw, 1.5rem));
+            span {
+                padding: 5px;
 
-                li {
-
-                    a {
-                        font-size: clamp(0.3rem, 1.3vh, 2.5rem);
+                a {
+                    font-size: clamp(0.8rem, 1.3vh, 2rem);
 
 
-                    }
                 }
             }
+        }
 
+        ul {
+            @include flex-gap(clamp(0.8rem, 1vw, 1.5rem));
+
+            li {
+
+                a {
+                    font-size: clamp(0.3rem, 1.3vh, 2.5rem);
+
+
+                }
+            }
         }
 
     }
+
 }

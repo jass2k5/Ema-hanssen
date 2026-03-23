@@ -148,6 +148,11 @@ main {
   row-gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  main::-webkit-scrollbar {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   main {
     height: 100vh;
@@ -251,6 +256,33 @@ nav .modes i {
   color: black;
 }
 
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+  nav::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 100%;
+    background-color: transparent;
+    height: 5px;
+    width: 5px;
+    border-top-left-radius: 1rem;
+    box-shadow: -1.3px -1px 0 0 var(--body-clr);
+  }
+  nav::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    height: 5px;
+    width: 5px;
+    border-top-left-radius: 1rem;
+    background-color: transparent;
+    box-shadow: -1.5px -1px 0 0 var(--body-clr);
+  }
+}
 @media (max-width: 767px) {
   nav::after {
     content: "";
@@ -327,8 +359,14 @@ nav .modes i {
     font-size: 0.8rem;
     color: black;
   }
+  .menu-toggle {
+    display: none;
+  }
+  .innerradius {
+    display: none;
+  }
 }
-@media (min-width: 1200px) and (min-width: 2500px) {
+@media (min-width: 2500px) {
   nav {
     height: clamp(2rem, 4vh, 3rem);
   }
@@ -380,12 +418,13 @@ header .innerradius {
 header .menu-toggle {
   position: fixed;
   top: 0;
-  right: 4%;
+  right: 2%;
   z-index: 999;
+  margin-right: clamp(0.2rem, 1vw, 0.2rem);
   padding: 1rem;
   background-color: var(--body-clr);
   color: var(--text-clr);
-  border-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   font-weight: 500;
   text-transform: capitalize;
   font-size: clamp(0.3rem, 1vw + 0.9rem, 0.8rem);
@@ -404,13 +443,13 @@ header .menu-toggle::after {
 header .menu-toggle::before {
   content: "";
   position: absolute;
-  bottom: -10%;
-  right: 15%;
+  bottom: 0;
+  right: 0%;
   height: 6px;
   width: 6px;
   background-color: transparent;
   border-top-right-radius: 1rem;
-  box-shadow: 1px -1px 0 0 var(--body-clr);
+  box-shadow: 1px -3px 0 0 var(--body-clr);
 }
 header .slidearrows {
   position: absolute;
@@ -547,6 +586,10 @@ header .featured::after {
   header .hero-image {
     border-radius: 1.5rem;
   }
+  header .sliderimage {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
 }
 @media (min-width: 1200px) {
   header {
@@ -669,7 +712,7 @@ header .featured::after {
     background-color: var(--contact-clr);
     color: var(--body-clr);
   }
-  .Ema .upleftrow .infobox .info #arrow {
+  .Ema .upleftrow .infobox .info .arrow {
     display: none;
   }
 }
