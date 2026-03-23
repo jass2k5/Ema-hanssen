@@ -177,8 +177,12 @@ nav {
   gap: clamp(0.2rem, 1vw, 1.5rem);
   padding: var(--space-xs);
   background-color: var(--body-clr);
+  transform-origin: top;
   border-bottom-right-radius: 20px;
   z-index: 1000;
+  opacity: 0;
+  animation: grow 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+  will-change: transform;
   padding: 1rem;
 }
 nav .logo-text {
@@ -258,6 +262,18 @@ nav .modes i {
     left: 100%;
     border-top-left-radius: 1rem;
     box-shadow: -4px -6px 0 0 var(--body-clr);
+  }
+  nav::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    background: transparent;
+    left: 1.2%;
+    border-top-left-radius: 1rem;
+    top: 99%;
+    transform: rotate(-10deg);
+    box-shadow: -1.8px -1px 0 0 var(--body-clr);
   }
 }
 @media (min-width: 2500px) {
