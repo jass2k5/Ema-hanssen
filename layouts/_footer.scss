@@ -104,8 +104,8 @@
             }
 
             .f-nav {
-
                 ul {
+                   
                     @include flex-gap(1rem);
                     flex-direction: column;
 
@@ -113,6 +113,7 @@
                         list-style: none;
 
                         a {
+                           
                             font-size: 0.9rem;
                             color: var(--body-clr);
                             text-decoration: none;
@@ -134,11 +135,13 @@
             .allcms {
 
                 ul {
+                   
                     @include flex-gap(1rem);
                     flex-direction: column;
 
                     li {
                         list-style: none;
+                         
                     }
                 }
             }
@@ -155,11 +158,13 @@
 
             .utilities {
                 ul {
+                  
                     @include flex-gap(1rem);
                     flex-direction: column;
 
                     li {
                         list-style: none;
+                        
                     }
                 }
             }
@@ -200,6 +205,7 @@
     }
 
 }
+
 
 @media(min-width:768px) {
     .footer {

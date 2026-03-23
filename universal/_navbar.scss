@@ -94,6 +94,7 @@ nav {
     }
 }
 @media(max-width:767px){
+    nav{
  ul {
         @include flex-gap(clamp(0.2rem, 0.8vw, 1.3rem));
         
@@ -106,7 +107,7 @@ nav {
             will-change: transform;
         }
 }
-}
+}}
 @media (min-width:1200px){
     nav{
         &::after{

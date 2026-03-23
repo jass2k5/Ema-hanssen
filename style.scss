@@ -20,8 +20,8 @@
 @use 'sections/slider';
 @use 'sections/infoboxmobile';
 
-//footer layout
 @use 'layouts/footer';
+//footer layout
 
 //page 2 work (base styles before responsives)
 @use 'pages/worksections/mainw';
@@ -30,5 +30,3 @@
 @use 'pages/worksections/scroll';
 
 //responsives (these should override base styles)
-@use 'responsive/tablets';
-@use 'responsive/desktop';
