@@ -173,7 +173,7 @@ header {
 @media(min-width: 1200px){
      header{
             grid-area: header;
-            position: sticky;
+            position: sticky; 
             top: 0%;
             height: 98vh;
             width: 100%;
@@ -183,40 +183,40 @@ header {
             width: 100%;
             position: relative;
 
-            .innerradius{
-                position: absolute;
-                background-color: transparent;
-                top: 0;
-                left: 0;
-                z-index: 99;
-                height: 30px;
-                width: 44.8%;
+            // .innerradius{
+            //     position: absolute;
+            //     background-color: transparent;
+            //     top: 0;
+            //     left: 0;
+            //     z-index: 99;
+            //     height: 30px;
+            //     width: 44.8%;
 
-                &::after{
-                    content: '';
-                    position: absolute;
-                    height: 20px;
-                    width: 20px;
-                    background: transparent;
-                    left: 0%;
-                    border-top-left-radius: 0.6rem;
-                    top: 110%;
-                    box-shadow: -10px -7px 0 0  var(--body-clr);
-                }
+            //     &::after{
+            //         content: '';
+            //         position: absolute;
+            //         height: 20px;
+            //         width: 20px;
+            //         background: transparent;
+            //         left: 0%;
+            //         border-top-left-radius: 0.6rem;
+            //         top: 110%;
+            //         box-shadow: -10px -7px 0 0  var(--body-clr);
+            //     }
 
-                &::before{
-                    content: '';
-                    position: absolute;
-                    height: 22px;
-                    width: 20px;
-                    background: transparent;
-                    left: 100%;
-                    border-top-left-radius: 0.6rem;
-                    top: 0;
-                    box-shadow: -10px -10.5px 0 0 var(--body-clr);
-                }
+            //     &::before{
+            //         content: '';
+            //         position: absolute;
+            //         height: 22px;
+            //         width: 20px;
+            //         background: transparent;
+            //         left: 100%;
+            //         border-top-left-radius: 0.6rem;
+            //         top: 0;
+            //         box-shadow: -10px -10.5px 0 0 var(--body-clr);
+            //     }
 
-            }
+            // }
 
             .hero-image{
                 height: 100%;

@@ -142,7 +142,7 @@ main {
   background-color: var(--body-clr);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   grid-template-areas: "header" "section" "smartphone" "first-duo" "infobox" "footer";
   z-index: 0;
   row-gap: 1rem;
@@ -247,6 +247,19 @@ nav .modes i {
   color: black;
 }
 
+@media (min-width: 1200px) {
+  nav::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    top: 25.6%;
+    left: 100%;
+    border-top-left-radius: 1rem;
+    box-shadow: -4px -6px 0 0 var(--body-clr);
+  }
+}
 @media (min-width: 2500px) {
   nav {
     height: clamp(2rem, 4vh, 3rem);
@@ -435,37 +448,6 @@ header .featured::after {
     height: 100%;
     width: 100%;
     position: relative;
-  }
-  header .img .innerradius {
-    position: absolute;
-    background-color: transparent;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    height: 30px;
-    width: 44.8%;
-  }
-  header .img .innerradius::after {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: transparent;
-    left: 0%;
-    border-top-left-radius: 0.6rem;
-    top: 110%;
-    box-shadow: -10px -7px 0 0 var(--body-clr);
-  }
-  header .img .innerradius::before {
-    content: "";
-    position: absolute;
-    height: 22px;
-    width: 20px;
-    background: transparent;
-    left: 100%;
-    border-top-left-radius: 0.6rem;
-    top: 0;
-    box-shadow: -10px -10.5px 0 0 var(--body-clr);
   }
   header .img .hero-image {
     height: 100%;
