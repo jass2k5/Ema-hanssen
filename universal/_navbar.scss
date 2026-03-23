@@ -19,7 +19,7 @@ nav {
     padding: 1rem;
 
     .logo-text {
-        @include flex-gap(10px);
+        @include flex-gap(5px);
         overflow: hidden;
 
         .logo {
@@ -41,7 +41,7 @@ nav {
                 color: var(--text-clr);
                 font-size: clamp(0.3rem, 1vw + 0.9rem, 0.8rem);
                 font-weight: 500;
-                text-transform: capitalize;
+                text-transform: lowercase;
                 display: inline-block;
             }
         }
@@ -49,8 +49,9 @@ nav {
 
     ul {
         @include flex-gap(clamp(0.2rem, 0.8vw, 1.3rem));
-
+        
         li {
+
             list-style: none;
             padding: 5px;
             height: auto;
@@ -75,7 +76,7 @@ nav {
     .modes {
         padding: 0rem 0.2rem;
         border-radius: 0.8rem;
-        width: 30px;
+        width: 28px;
         height: 20px;
         background-color: rgb(236, 236, 236);
         display: flex;
@@ -85,12 +86,26 @@ nav {
 
 
         i {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: black;
 
         }
 
     }
+}
+@media(max-width:767px){
+ ul {
+        @include flex-gap(clamp(0.2rem, 0.8vw, 1.3rem));
+        
+        li {
+            display: none;
+            list-style: none;
+            padding: 5px;
+            height: auto;
+            overflow: hidden;
+            will-change: transform;
+        }
+}
 }
 @media (min-width:1200px){
     nav{
@@ -117,6 +132,25 @@ nav {
                     top: 100%;
                     box-shadow: -7px -10px 0 0  var(--body-clr);
         }
+        .modes {
+        padding: 0rem 0.2rem;
+        border-radius: 0.8rem;
+        width: 30px;
+        height: 20px;
+        background-color: rgb(236, 236, 236);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+
+
+        i {
+            font-size: 0.8rem;
+            color: black;
+
+        }
+
+    
     }
 }
 
@@ -159,4 +193,5 @@ nav {
 
     }
 
+}
 }

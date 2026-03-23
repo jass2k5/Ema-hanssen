@@ -189,7 +189,7 @@ nav .logo-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   overflow: hidden;
 }
 nav .logo-text .logo {
@@ -209,7 +209,7 @@ nav .logo-text span a {
   color: var(--text-clr);
   font-size: clamp(0.3rem, 1vw + 0.9rem, 0.8rem);
   font-weight: 500;
-  text-transform: capitalize;
+  text-transform: lowercase;
   display: inline-block;
 }
 nav ul {
@@ -238,7 +238,7 @@ nav ul li a {
 nav .modes {
   padding: 0rem 0.2rem;
   border-radius: 0.8rem;
-  width: 30px;
+  width: 28px;
   height: 20px;
   background-color: rgb(236, 236, 236);
   display: flex;
@@ -247,10 +247,26 @@ nav .modes {
   cursor: pointer;
 }
 nav .modes i {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: black;
 }
 
+@media (max-width: 767px) {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.2rem, 0.8vw, 1.3rem);
+  }
+  ul li {
+    display: none;
+    list-style: none;
+    padding: 5px;
+    height: auto;
+    overflow: hidden;
+    will-change: transform;
+  }
+}
 @media (min-width: 1200px) {
   nav::after {
     content: "";
@@ -274,8 +290,23 @@ nav .modes i {
     top: 100%;
     box-shadow: -7px -10px 0 0 var(--body-clr);
   }
+  nav .modes {
+    padding: 0rem 0.2rem;
+    border-radius: 0.8rem;
+    width: 30px;
+    height: 20px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+  nav .modes i {
+    font-size: 0.8rem;
+    color: black;
+  }
 }
-@media (min-width: 2500px) {
+@media (min-width: 1200px) and (min-width: 2500px) {
   nav {
     height: clamp(2rem, 4vh, 3rem);
   }
@@ -569,8 +600,8 @@ header .featured::after {
     pointer-events: none;
   }
   .Ema .upleftrow .infobox .info:nth-last-child(1) {
-    background-color: var(--second-clr);
-    color: white;
+    background-color: var(--contact-clr);
+    color: var(--body-clr);
   }
   .Ema .upleftrow .infobox .info #arrow {
     display: none;
@@ -834,6 +865,9 @@ header .featured::after {
   padding-bottom: 0.5rem;
   background-color: var(--body-clr);
 }
+.duo-1 .container .product .solo-info i {
+  display: none;
+}
 .duo-1 .container .product .solo-info span {
   font-size: clamp(0.4rem, 1.5vh, 1.3rem);
   font-weight: 400;
@@ -1013,6 +1047,9 @@ header .featured::after {
 .infomobile .info:nth-last-child(1) {
   background-color: var(--contact-clr);
   color: var(--body-clr);
+}
+.infomobile .info .iconwrapper .arrow {
+  display: none;
 }
 
 @media (min-width: 768px) {

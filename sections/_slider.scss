@@ -45,6 +45,11 @@
                 border-bottom-right-radius: 1rem;
                 @include back-white-product;
 
+
+                i {
+                    display: none;
+                }
+
                 span {
                     font-size: clamp(0.4rem, 1.5vh, 1.3rem);
                     font-weight: 400;
@@ -125,6 +130,7 @@
                     height: 45vh;
 
                 }
+
             }
 
         }

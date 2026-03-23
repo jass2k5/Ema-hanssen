@@ -30,6 +30,11 @@
                         background-color: var(--contact-clr);
                         color: var(--body-clr);
                     }
+                    .iconwrapper{
+                        .arrow{
+                            display: none;
+                        }
+                    }
                    }
                 }
 @media(min-width:768px){
