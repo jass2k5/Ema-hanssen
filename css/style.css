@@ -38,7 +38,7 @@
   --arrows-clr: rgba(0, 0, 0, 0.2);
 }
 
-.duo.showonscroll,
+.product.showonscroll,
 .Ema.showonscroll,
 .latest.showonscroll,
 .infomobile.showonscroll,
@@ -47,7 +47,7 @@
   transform: translateY(0) !important;
 }
 
-.duo,
+.product,
 .Ema,
 .latest,
 .footer, .infomobile {

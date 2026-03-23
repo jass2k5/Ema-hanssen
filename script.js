@@ -35,7 +35,7 @@ const SelectorGalleryGRid = {
 const SelectorIntersection = {
     observerProperties: { threshold: 0.15, rootMargin: "0px 0px -10px 0px" },
     fadeup: 'showonscroll',
-    allElements: '.duo ,.Ema ,.latest ,.infomobile ,.footer',
+    allElements: '.product ,.Ema ,.latest ,.infomobile ,.footer',
 };
 const heroImages = [
     { src: 'img/image.png', alt: 'hero-image' },
