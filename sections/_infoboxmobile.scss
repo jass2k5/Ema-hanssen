@@ -32,11 +32,24 @@
                     }
                     .iconwrapper{
                         .arrow{
-                            display: none;
+                          display: inline-block;
                         }
                     }
                    }
+  
                 }
+
+@media(max-width:767px){
+    .infomobile{
+        .info{
+            .iconwrapper{
+                .arrow{
+                    display: none;
+                }
+            }
+        }
+    }
+}
 @media(min-width:768px){
     .infomobile{
             display: none;
@@ -83,6 +96,7 @@
                         transform: translateY(6px);
                     }
                     .arrow{
+                        display: block;
                          transform: translateY(100%);
                          opacity: 0;
                     }

@@ -418,7 +418,7 @@ header .innerradius {
 header .menu-toggle {
   position: fixed;
   top: 0;
-  right: 2%;
+  right: 1%;
   z-index: 1001;
   margin-right: clamp(0.2rem, 1vw, 0.2rem);
   padding: 0.8rem;
@@ -860,6 +860,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks {
     transform: translateY(6px);
   }
   .Ema .upleftrow .infobox .info .arrow {
+    display: inline-block;
     transform: translateY(100%);
     opacity: 0;
   }
@@ -1177,6 +1178,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks {
     gap: 0.5rem;
   }
   .duo-1 .container .duo .product .solo-info i {
+    display: inline-block;
     width: 0%;
     height: 0%;
     opacity: 0;
@@ -1236,9 +1238,14 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks {
   color: var(--body-clr);
 }
 .infomobile .info .iconwrapper .arrow {
-  display: none;
+  display: inline-block;
 }
 
+@media (max-width: 767px) {
+  .infomobile .info .iconwrapper .arrow {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .infomobile {
     display: none;
@@ -1283,6 +1290,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks {
     transform: translateY(6px);
   }
   .infomobile .info .arrow {
+    display: block;
     transform: translateY(100%);
     opacity: 0;
   }

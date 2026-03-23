@@ -44,9 +44,7 @@
                 left: 0%;
                 border-bottom-right-radius: 1rem;
                 @include back-white-product;
-
-
-                i {
+                i{
                     display: none;
                 }
 
@@ -192,6 +190,7 @@
 
 
                         i {
+                            display: inline-block;
                             width: 0%;
                             height: 0%;
                             opacity: 0;
