@@ -252,6 +252,28 @@ nav .modes i {
 }
 
 @media (max-width: 767px) {
+  nav::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 100%;
+    background-color: transparent;
+    height: 5px;
+    width: 5px;
+    border-top-left-radius: 1rem;
+    box-shadow: -1.3px -1px 0 0 var(--body-clr);
+  }
+  nav::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 4.5%;
+    height: 5px;
+    width: 5px;
+    border-top-left-radius: 1rem;
+    background-color: transparent;
+    box-shadow: -1.5px -1px 0 0 var(--body-clr);
+  }
   nav ul {
     display: flex;
     align-items: center;
@@ -342,9 +364,53 @@ header {
   width: 100%;
 }
 header .img {
-  height: 46vh;
+  height: 50vh;
   width: 100%;
   position: relative;
+}
+header .innerradius {
+  position: fixed;
+  height: 20px;
+  width: 100%;
+  background-color: var(--body-clr);
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+header .menu-toggle {
+  position: fixed;
+  top: 0;
+  right: 4%;
+  z-index: 999;
+  padding: 1rem;
+  background-color: var(--body-clr);
+  color: var(--text-clr);
+  border-radius: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: clamp(0.3rem, 1vw + 0.9rem, 0.8rem);
+}
+header .menu-toggle::after {
+  content: "";
+  position: absolute;
+  top: 38%;
+  left: -13%;
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+  border-top-right-radius: 1.1rem;
+  box-shadow: 2px -4px 0 0 var(--body-clr);
+}
+header .menu-toggle::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: 15%;
+  height: 6px;
+  width: 6px;
+  background-color: transparent;
+  border-top-right-radius: 1rem;
+  box-shadow: 1px -1px 0 0 var(--body-clr);
 }
 header .slidearrows {
   position: absolute;

@@ -6,13 +6,56 @@ header {
     width: 100%;
 
     .img {
-        height: 46vh;
+        height: 50vh;
         width: 100%;
         position: relative;
-
-
     }
+    .innerradius{
+        position: fixed;
+        height: 20px;
+        width: 100%;
+        background-color: var(--body-clr);
+        top: 0;
+        left: 0;
+        z-index: 998;
+    }
+    .menu-toggle{
+        position: fixed;
+        top: 0;
+        right: 4%;
+        z-index: 999;
+        padding: 1rem;
+        background-color: var(--body-clr);
+        color: var(--text-clr);
+        border-radius: 1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: clamp(0.3rem, 1vw + 0.9rem, 0.8rem);
+        &::after{
+            content: '';
+            position: absolute;
+            top: 38%;
+            left: -13%;
+            height: 10px;
+            width: 10px;
+            background-color: transparent;
+            border-top-right-radius: 1.1rem;
+            box-shadow: 2px -4px 0 0 var(--body-clr);
 
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            right: 15%;
+            height: 6px;
+            width: 6px;
+            background-color: transparent;
+            border-top-right-radius: 1rem;
+            box-shadow: 1px -1px 0 0 var(--body-clr);
+        }
+    }
+    
     .slidearrows {
         position: absolute;
         top: 50%;
