@@ -276,6 +276,15 @@ header {
                     align-items: center;
                     justify-content: space-between;
                     padding: 1rem;
+                    i{
+                        display: inline-block;
+                        transform: rotate(45deg);
+                    }
+                    &:active{
+                        transform: scale(1.02);
+                        background-color: var(--text-clr);
+                        color: var(--body-clr);
+                    }
                 }
 
 

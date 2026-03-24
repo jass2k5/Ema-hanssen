@@ -55,10 +55,12 @@ const projectGallery = [
     { src: 'img/img10.avif', title: 'Elegence' },
 
 ];
-const  SelectorMobileNav ={
+const SelectorMobileNav = {
     overlay: '.mobile-menu-overlay',
     activeClass: 'activeNav',
-    menuBtn: '.menu-toggle'
+    menuBtn: '.menu-toggle',
+    mobileLinks: '.nav-blanks',
+    attribute: 'data-target'
 }
 
 function ThemeSwitcher() {
@@ -231,18 +233,32 @@ function ScrollAnimation() {
         console.warn("error in intersection observer api", error.message);
     }
 }
-function MobileNav(){
-const overlay = document.querySelector(SelectorMobileNav.overlay);
-const btn = document.querySelector(SelectorMobileNav.menuBtn);
-if(!overlay||!btn){
-    console.warn("error occured retrieving div");
-    return;
-}
-btn.addEventListener('click',()=>{
-    overlay.classList.toggle(SelectorMobileNav.activeClass);
-    isActive = overlay.classList.contains(SelectorMobileNav.activeClass);
-    btn.textContent = isActive?'close':'Menu';
-})
+function MobileNav() {
+    const overlay = document.querySelector(SelectorMobileNav.overlay);
+    const btn = document.querySelector(SelectorMobileNav.menuBtn);
+    const mobileLinks = document.querySelectorAll(SelectorMobileNav.mobileLinks);
+
+    if (!overlay || !btn || !mobileLinks) {
+        console.warn("error occured retrieving div");
+        return;
+    }
+    btn.addEventListener('click', () => {
+        overlay.classList.toggle(SelectorMobileNav.activeClass);
+        const isActive = overlay.classList.contains(SelectorMobileNav.activeClass);
+        btn.textContent = isActive ? 'close' : 'Menu';
+    });
+    //links working
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const targetDestination = link.getAttribute(SelectorMobileNav.attribute);
+            if (targetDestination) {
+                window.open(targetDestination, '_blank');
+                overlay.classList.toggle(SelectorMobileNav.activeClass);
+                const isActive = overlay.classList.contains(SelectorMobileNav.activeClass);
+                btn.textContent = isActive ? 'close' : 'Menu';
+            }
+        });
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -251,8 +267,8 @@ document.addEventListener('DOMContentLoaded', () => {
     RenderProjectGallery();
     MobileNav();
 })
-window.addEventListener('load',()=>{
-    setTimeout(()=>{
+window.addEventListener('load', () => {
+    setTimeout(() => {
         ScrollAnimation();
-    },200)
+    }, 200)
 })

@@ -656,6 +656,15 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks {
   justify-content: space-between;
   padding: 1rem;
 }
+header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks i {
+  display: inline-block;
+  transform: rotate(45deg);
+}
+header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:active {
+  transform: scale(1.02);
+  background-color: var(--text-clr);
+  color: var(--body-clr);
+}
 
 @media (min-width: 768px) {
   header {
