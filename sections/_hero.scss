@@ -26,7 +26,7 @@ header {
         transform-origin: top;
         will-change: transform;
         opacity: 0;
-         animation: grow 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+        animation: grow 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
         top: 0;
         right: 1%;
         z-index: 1001;
@@ -216,8 +216,10 @@ header {
         width: 100%;
         background-color: var(--body-clr);
         z-index: 1000;
+        overscroll-behavior: none;
+        touch-action: none;
         @include flex-gap();
-        transform-origin: top right ;
+        transform-origin: top right;
         transform: scale(0);
         opacity: 0;
         transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
@@ -226,56 +228,60 @@ header {
             transform: scale(1);
             opacity: 1;
         }
-        .containerMenu{
+
+        .containerMenu {
             height: 80vh;
             width: 80%;
             background-color: var(--body-clr);
-           @include flex-gap(50%);
-           flex-direction: column;
-
-
-        .overview-nav{
-            color: var(--text-clr);
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            justify-content: flex-start;
-            width: 100%;
-
-            .emaImage{
-                @include ema-img(57px, 57px, var(--circle));
-            }
-
-            .sideview {
-                h2 {
-                    font-size: var(--space-smd);
-                }
-
-                h3 {
-                    font-size: var(--space-xss);
-                    opacity: 0.7;
-                }
-            }
-        }
-        .mobile-links{
-            height: 100%;
-            width: 100%;
-            @include flex-gap(0.8rem);
+            @include flex-gap(50%);
             flex-direction: column;
-            .nav-blanks{
-                background-color: var(--third-clr);
-                height: 100%;
-                width: 100%;
-                border-radius: 0.8rem;
+
+
+            .overview-nav {
+                color: var(--text-clr);
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                padding: 1rem;
+                gap: 16px;
+                justify-content: flex-start;
+                width: 100%;
+
+                .emaImage {
+                    @include ema-img(57px, 57px, var(--circle));
+                }
+
+                .sideview {
+                    h2 {
+                        font-size: var(--space-smd);
+                    }
+
+                    h3 {
+                        font-size: var(--space-xss);
+                        opacity: 0.7;
+                    }
+                }
             }
-           
-        
+
+            .mobile-links {
+                height: 100%;
+                width: 100%;
+                @include flex-gap(0.8rem);
+                flex-direction: column;
+
+                .nav-blanks {
+                    background-color: var(--third-clr);
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1rem;
+                }
+
+
+            }
         }
-    }}
+    }
 }
 
 @media(min-width:768px) {
@@ -361,4 +367,5 @@ header {
 
     }
 }
+
 //completed

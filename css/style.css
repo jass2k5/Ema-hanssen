@@ -588,6 +588,8 @@ header .mobile-menu-overlay {
   width: 100%;
   background-color: var(--body-clr);
   z-index: 1000;
+  overscroll-behavior: none;
+  touch-action: none;
   display: flex;
   align-items: center;
   justify-content: center;
