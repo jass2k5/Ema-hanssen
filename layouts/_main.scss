@@ -61,5 +61,6 @@ main {
      "header infobox"
      "header footer";
      overflow-y: scroll;
+     z-index: 1;
      column-gap: 0.5rem;}
 }

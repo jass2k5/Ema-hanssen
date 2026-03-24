@@ -308,8 +308,9 @@ header {
         grid-area: header;
         position: sticky;
         top: 0%;
-        height: 98vh;
+        height: calc(100vh - 24px);
         width: 100%;
+        z-index: 2;
 
         .mobile-menu-overlay {
             display: none;
