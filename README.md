@@ -29,5 +29,5 @@ The goal was to deeply understand complex DOM rendering, responsive sub-pixel ma
 ---images 
 ![Desktop View](.github/assets/architecture.png)
 ![Desktop View](.github/assets/mobileresponsive.png)
-![Desktop View](.github/assets/performace.png.png)
+![Desktop View](.github/assets/performace.png)
 *Built with grit, raw code, and a lot of caffeine.*
