@@ -1,5 +1,5 @@
 import { themes, SelectorsTheme, SelectorMobileNav } from './config.js';
-function ThemeSwitcher() {
+export function ThemeSwitcher() {
     try {
         const themeBtn = document.querySelector(SelectorsTheme.darkbtn);
         const body = document.body;
@@ -24,7 +24,7 @@ function ThemeSwitcher() {
         console.warn("theme switch skipped", error.message);
     };
 }
-function MobileNav() {
+export function MobileNav() {
     const overlay = document.querySelector(SelectorMobileNav.overlay);
     const btn = document.querySelector(SelectorMobileNav.menuBtn);
     const mobileLinks = document.querySelectorAll(SelectorMobileNav.mobileLinks);
@@ -51,7 +51,3 @@ function MobileNav() {
         });
     });
 }
-document.addEventListener('DOMContentLoaded',()=>{
-    ThemeSwitcher();
-    MobileNav();
-})

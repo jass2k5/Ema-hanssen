@@ -5,9 +5,9 @@ import {
     SelectorIntersection, 
     heroImages, 
     projectGallery 
-} from './config.js';
+} from '../globaljs/config.js';
 
-function HeroSlider() {
+export function HeroSlider() {
     //assigning containers into variables
     try {
         const imagesHolder = document.querySelector(SelectorHero.HeroImgHolder);
@@ -93,7 +93,7 @@ function HeroSlider() {
         console.log("error found", error.message);
     }
 };
-function RenderProjectGallery() {
+export function RenderProjectGallery() {
     try {
         const container = document.querySelector(SelectorGalleryGRid.DuoHolder);
         if (!container) throw new Error("COultn't found the gallery grid and container");
@@ -131,7 +131,7 @@ function RenderProjectGallery() {
         console.warn("error in rendering gallery", error.message);
     }
 }
-function ScrollAnimation() {
+export function ScrollAnimation() {
     try {
         const observeScroll = new IntersectionObserver((enteries, observer) => {
             enteries.forEach(entry => {
@@ -152,12 +152,3 @@ function ScrollAnimation() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    HeroSlider();
-    RenderProjectGallery();
-})
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        ScrollAnimation();
-    }, 200)
-})
