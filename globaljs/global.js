@@ -1,4 +1,4 @@
-import { themes, SelectorsTheme, SelectorMobileNav } from './config.js';
+import { themes, SelectorsTheme, SelectorMobileNav,  SelectorIntersection } from './config.js';
 export function ThemeSwitcher() {
     try {
         const themeBtn = document.querySelector(SelectorsTheme.darkbtn);
@@ -51,3 +51,25 @@ export function MobileNav() {
         });
     });
 }
+export function ScrollAnimation() {
+    try {
+        const observeScroll = new IntersectionObserver((enteries, observer) => {
+            enteries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log(`${entry.target} is intersected`)
+                    entry.target.classList.add(SelectorIntersection.fadeup);
+                    observer.unobserve(entry.target);
+                }
+            })
+        }, SelectorIntersection.observerProperties);
+
+        const allelementstoslide = document.querySelectorAll(SelectorIntersection.allElements);
+        allelementstoslide.forEach((el) => {
+            observeScroll.observe(el);
+        });
+    } catch (error) {
+        console.warn("error in intersection observer api", error.message);
+    }
+}
+
+

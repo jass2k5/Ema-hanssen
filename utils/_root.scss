@@ -43,7 +43,7 @@
 .Ema.showonscroll, 
 .latest.showonscroll, 
 .infomobile.showonscroll, 
-.footer.showonscroll {
+.footer.showonscroll,.journal.showonscroll, .infoandpic.showonscroll{
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
@@ -52,7 +52,7 @@
 .product,
 .Ema,
 .latest,
-.footer,.infomobile {
+.footer,.infomobile,.journal, .infoandpic {
     opacity: 0!important;
     transform: translateY(100px)!important;
     transition: opacity 0.8s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;

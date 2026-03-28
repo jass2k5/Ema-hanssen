@@ -1,4 +1,4 @@
-import { ThemeSwitcher,MobileNav } from "./global.js";
+import { ThemeSwitcher,MobileNav,ScrollAnimation} from "./global.js";
 export function initGlobal(){
     ThemeSwitcher();
     MobileNav();

@@ -35,7 +35,7 @@ export const SelectorGalleryGRid = {
 export const SelectorIntersection = {
     observerProperties: { threshold: 0.15, rootMargin: "0px 0px -10px 0px" },
     fadeup: 'showonscroll',
-    allElements: '.product ,.Ema ,.latest ,.infomobile ,.footer',
+    allElements: ' .infoandpic,.journal,.product ,.Ema ,.latest ,.infomobile ,.footer',
 };
 export const heroImages = [
     { src: 'img/image.png', alt: 'hero-image' },
@@ -62,3 +62,35 @@ export const SelectorMobileNav = {
     mobileLinks: '.nav-blanks',
     attribute: 'data-target'
 }
+export const BlogGalleryData = [
+    {
+        src: "../img/workscroll1.avif",
+        alt: "first",
+        text: "Mastering Light: Techniques for stunning urban photography"
+    },
+    {
+        src: "../img/work2.avif",
+        alt: "second",
+        text: "The art of candid moments: creating authentic lifestyle images"
+    },
+    {
+        src: "../img/work3.avif",
+        alt: "third",
+        text: "transforming landscapes: finding beauty in nature's details"
+    },
+    {
+        src: "../img/work4.avif",
+        alt: "fourth",
+        text: "creating impact: the power of black and white portraits"
+    },
+    {
+        src: "../img/work5.avif",
+        alt: "fifth",
+        text: "beyond the frame exploring conceptual fine art photography"
+    },
+    {
+        src: "../img/work6.avif",
+        alt: "sixth",
+        text: "adventure awaits: photographing the thrill of outdoor exploration"
+    }
+];

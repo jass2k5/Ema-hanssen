@@ -1,7 +1,6 @@
 import { initGlobal } from "./globaljs/exportglobal.js";
-import { initHOME } from "./homejs/exporthome.js";
-import { ScrollAnimation } from "./homejs/home.js";
-
+import { initHOME} from "./homejs/exporthome.js";
+import { ScrollAnimation } from "./globaljs/global.js";
 document.addEventListener('DOMContentLoaded',()=>{
     initGlobal();
     const currentPage = document.body.getAttribute('data-page');
@@ -14,14 +13,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
 })
 window.addEventListener('load',()=>{
-    const currentPage = document.body.getAttribute('data-page');
-    switch (currentPage){
-      case 'home':
-        setTimeout(()=>{
-            ScrollAnimation();
-        },200);
-        break;
-      default:
-        console.log("no animation on this page");
-    }
+    // Scroll reveal is used by shared components like `.infomobile` and `.footer`
+    // across pages, so run it globally.
+    setTimeout(() => {
+        ScrollAnimation();
+    }, 200);
 })

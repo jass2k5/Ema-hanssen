@@ -1,8 +1,7 @@
 import { 
     SelectorHero, 
     SelectorIndicator, 
-    SelectorGalleryGRid, 
-    SelectorIntersection, 
+    SelectorGalleryGRid,  
     heroImages, 
     projectGallery 
 } from '../globaljs/config.js';
@@ -131,24 +130,3 @@ export function RenderProjectGallery() {
         console.warn("error in rendering gallery", error.message);
     }
 }
-export function ScrollAnimation() {
-    try {
-        const observeScroll = new IntersectionObserver((enteries, observer) => {
-            enteries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    console.log(`${entry.target} is intersected`)
-                    entry.target.classList.add(SelectorIntersection.fadeup);
-                    observer.unobserve(entry.target);
-                }
-            })
-        }, SelectorIntersection.observerProperties);
-
-        const allelementstoslide = document.querySelectorAll(SelectorIntersection.allElements);
-        allelementstoslide.forEach((el) => {
-            observeScroll.observe(el);
-        });
-    } catch (error) {
-        console.warn("error in intersection observer api", error.message);
-    }
-}
-

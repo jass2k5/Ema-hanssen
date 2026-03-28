@@ -1,0 +1,111 @@
+@use '../../utils/util' as *;
+.scroll{
+    grid-area: scroll;
+    height: auto;
+    width: 100%;
+    .container-scroll{
+       height: 100%;
+       width: 100%;
+       @include flex-gap(1rem);
+       flex-direction: column;
+       flex-wrap: wrap;
+         
+       .slider{
+         @include flex-gap(1rem);
+         flex-direction: column;
+         height: auto;
+         width: 100%;
+         .infoandpic{
+            position: relative;
+            @include flex-gap;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 1rem;
+            }
+            .inside-info{
+                z-index: 2;
+                height: auto;
+                position: absolute;
+                bottom: 4%;
+                width: 100%;
+                border-radius: 0.5rem;
+                padding: 0rem 1rem;
+
+                p{
+                     font-size: clamp(0.8rem, 2vw + 0.3rem, 1rem);
+                     text-transform: capitalize;
+                     font-weight: 400;
+                     line-height: 1.4;
+                     background-color:var(--third-clr);
+                     border-radius: 0.8rem;
+                     padding: 1rem;
+                }
+
+            }
+         }
+       }
+    }
+}
+@media (min-width:768px){
+     .scroll{
+        .container-scroll{
+            flex-direction: row;
+            flex-wrap: wrap;
+            .slider{
+                flex-direction: row;
+                .infoandpic{
+                    transition: transform 0.4s ease-in-out;
+                    img{
+                        height: 65vh;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1024px){
+    
+    .scroll {
+        grid-area: scroll;
+
+        .container-scroll {
+            flex-direction: row;
+
+            .slider {
+                flex-direction: row;
+
+                .infoandpic {
+                    .glass-above {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 0.8rem;
+                        pointer-events: none;
+                        backdrop-filter: blur(0px);
+                        -webkit-backdrop-filter: blur(0px);
+                        transition: backdrop-filter 0.5s ease;
+                        z-index: 1;
+                    }
+
+                    img {
+                        height: 65vh;
+                        z-index: 0;
+                    }
+                    &:hover .glass-above{
+                        backdrop-filter: blur(5px);
+                        -webkit-backdrop-filter: blur(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+

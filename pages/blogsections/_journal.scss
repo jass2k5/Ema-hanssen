@@ -29,17 +29,55 @@
             border: 1px solid rgba(255,255,255,0.6);
             border-radius: 0.5rem;
             padding: 0.5rem;
+            &:hover{
+                background-color: var(--text-clr);
+            }
             a{
-                color: var(--second-clr);
+                color: var(--text-clr);
                 text-decoration: none;
                 font-weight: 400;
                 font-size: clamp(0.5rem, 2vh + 0.3rem, 0.8rem);
             }
             i{
-                color: black;
+                color: var(--text-clr);
                 font-size: clamp(0.6rem, 2vh , 1.2rem);
+            }
+            &:hover a{
+               color: var(--body-clr); 
+            }
+            &:hover i{
+               color: var(--body-clr); 
             }
 
         }
+    }
+}
+@media (min-width: 490px) and (max-width: 1023.98px){
+     .journal{
+        height: 45vh;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) and (min-height:1000px){
+      .journal{
+        .three-columns{
+            gap: 6rem;
+        }
+    }
+}
+
+@media (min-width:1024px){
+    .journal {
+        grid-area: journal;
+        height: 45vh;
+
+        .three-columns {
+            position: relative;
+            justify-content: space-between;
+            gap: 4rem;
+
+        }
+
     }
 }
