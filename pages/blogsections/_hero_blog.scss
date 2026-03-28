@@ -188,7 +188,7 @@
                     display: inline-block;
                     transform: translateY(-5px);
                     border-radius: 4px;
-                    background-color: var(--second-clr);
+                    background-color: var(--text-clr);
                     color: var(--body-clr);
                     padding: 0rem 0.3rem;
                     font-size: 1.8vh;
@@ -200,12 +200,13 @@
                     font-weight: 400;
                     text-decoration: none;
                     font-size: medium;
-                    color: var(--second-clr);
-                    border-bottom: 1px solid black;
+                    color: var(--text-clr);
+                    border-bottom: 1px solid var(--text-clr);
+    
                     transition: transform 0.5s ease-in-out;
 
                     &:hover {
-                        transform: translateY(-3px);
+                        transform: scale(0.9);
                     }
 
                 }

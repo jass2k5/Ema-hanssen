@@ -1,5 +1,6 @@
 import { initGlobal } from "./globaljs/exportglobal.js";
-import { initHOME} from "./homejs/exporthome.js";
+import { initHOME} from "./home/homejs/exporthome.js";
+import { initBlog } from "./pages/blogjs/exportblog.js";
 import { ScrollAnimation } from "./globaljs/global.js";
 document.addEventListener('DOMContentLoaded',()=>{
     initGlobal();
@@ -7,6 +8,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     switch (currentPage){
         case 'home':
             initHOME();
+            break;
+        case 'blog':
+            initBlog();
             break;
         default:
             console.warn('No page initializer:', currentPage);

@@ -94,3 +94,7 @@ export const BlogGalleryData = [
         text: "adventure awaits: photographing the thrill of outdoor exploration"
     }
 ];
+export const SelectorBlogGallery = {
+    containerScroll: '.container-scroll',
+    duoSlider: 'slider',
+}

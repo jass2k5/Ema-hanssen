@@ -4,7 +4,7 @@ import {
     SelectorGalleryGRid,  
     heroImages, 
     projectGallery 
-} from '../globaljs/config.js';
+} from '../../globaljs/config.js';
 
 export function HeroSlider() {
     //assigning containers into variables
