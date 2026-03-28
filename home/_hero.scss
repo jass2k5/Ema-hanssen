@@ -286,6 +286,10 @@ header {
                         color: var(--body-clr);
                     }
                 }
+                .nav-blanks:nth-last-child(1){
+                    background-color: var(--contact-clr);
+                    color: var(--body-clr);
+                }
 
 
             }

@@ -665,6 +665,10 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:active {
   background-color: var(--text-clr);
   color: var(--body-clr);
 }
+header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-child(1) {
+  background-color: var(--contact-clr);
+  color: var(--body-clr);
+}
 
 @media (min-width: 768px) {
   header {
