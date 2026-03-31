@@ -130,3 +130,5 @@ export function RenderProjectGallery() {
         console.warn("error in rendering gallery", error.message);
     }
 }
+
+

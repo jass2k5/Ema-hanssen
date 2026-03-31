@@ -1,4 +1,4 @@
-import { themes, SelectorsTheme, SelectorMobileNav,  SelectorIntersection } from './config.js';
+import { themes, SelectorsTheme, SelectorMobileNav,  SelectorIntersection, SelectorHero } from './config.js';
 export function ThemeSwitcher() {
     try {
         const themeBtn = document.querySelector(SelectorsTheme.darkbtn);
@@ -71,5 +71,12 @@ export function ScrollAnimation() {
         console.warn("error in intersection observer api", error.message);
     }
 }
-
-
+export function gotoLink(){
+    const links = document.querySelectorAll(SelectorHero.contactBoxes);
+    links.forEach(link =>{
+        link.addEventListener('click',()=>{
+            const url = link.getAttribute(SelectorHero.attribute);
+            window.open(url,'_blank');
+        })
+    })
+}

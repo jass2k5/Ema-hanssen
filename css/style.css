@@ -1726,12 +1726,12 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     pointer-events: none;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
-    transition: backdrop-filter 0.5s ease;
+    transition: all 0.5s ease;
     z-index: 1;
   }
   .work-header:hover .glass-header {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
   .work-header .text-edit {
     bottom: 2%;

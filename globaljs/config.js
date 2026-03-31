@@ -20,6 +20,8 @@ export const SelectorHero = {
     slideBackward: 'slidebackward',
     backwardArrow: '.backward',
     forwardArrow: '.forward',
+    contactBoxes: '.info',
+    attribute:'data-goto'
 };
 export const SelectorIndicator = {
     indicatorHtml: ` <i class="ri-checkbox-blank-circle-fill"></i>`,
