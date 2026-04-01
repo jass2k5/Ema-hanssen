@@ -1334,7 +1334,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   grid-template-columns: auto;
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "row1" "row2" "row3";
-  padding: var(--main-padding);
+  margin-top: 0.5rem;
   background-color: var(--body-clr);
 }
 .footer .aboutandmore {
@@ -2018,12 +2018,12 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   grid-template-rows: repeat(4, max-content);
   grid-template-areas: "header" "leftpreview" "workgrid" "footer";
   z-index: 0;
-  row-gap: 1rem;
+  row-gap: 0.5rem;
 }
 
 .work-header {
   grid-area: header;
-  height: 30vh;
+  height: 35vh;
   width: 100%;
   background-color: var(--third-clr);
   color: var(--text-clr);
@@ -2047,7 +2047,18 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   text-transform: capitalize;
   font-size: 2rem;
 }
+.work-header .work-intro p {
+  font-size: clamp(0.4rem, 3vh, 1rem);
+  line-height: 1.4;
+  font-weight: 300;
+  display: inline-block;
+}
 
+@media (max-width: 400px) {
+  .work-header {
+    height: 40vh;
+  }
+}
 .work-grid {
   grid-area: workgrid;
   height: auto;
@@ -2061,6 +2072,8 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   justify-content: center;
   gap: 0.5rem;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 .work-grid .project-list .card-text {
   position: relative;
@@ -2087,6 +2100,9 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   top: 0%;
   left: 0%;
   border-bottom-right-radius: 1rem;
+  font-size: clamp(0.4rem, 1.5vh, 1.3rem);
+  font-weight: 400;
+  color: var(--text-clr);
   text-transform: capitalize;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -2119,6 +2135,15 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   display: none;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .work-grid .project-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .work-grid .project-list .card-text {
+    height: 100vh;
+  }
+}
 .left-preview {
   display: none;
 }/*# sourceMappingURL=style.css.map */

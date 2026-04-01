@@ -2,7 +2,7 @@
 
 .work-header{
     grid-area: header;
-    height: 30vh;
+    height: 35vh;
     width: 100%;
     background-color: var(--third-clr);
     color: var(--text-clr);
@@ -26,7 +26,18 @@
         text-transform: capitalize;
         font-size: 2rem;
        }
+       p{
+        font-size: clamp(0.4rem,3vh,1rem);
+        line-height: 1.4;
+        font-weight: 300;
+        display: inline-block;
+       }
        
     }
      
+}
+@media (max-width:400px){
+    .work-header{
+        height: 40vh;
+    }
 }

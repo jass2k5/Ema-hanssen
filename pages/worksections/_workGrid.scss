@@ -1,68 +1,88 @@
 @use '../../utils/util' as *;
-.work-grid{
+
+.work-grid {
     grid-area: workgrid;
     height: auto;
     width: 100%;
-
-    .project-list{
+    .project-list {
         height: 100%;
         width: 100%;
         @include flex-gap(0.5rem);
         flex-direction: column;
-        .card-text{
-        position: relative;
-        height: 60vh;
-        width: 100%;
-        border-radius: 1rem;
-        
-        img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .card-text {
+            position: relative;
+            height: 60vh;
             width: 100%;
-            object-fit: cover;
-            object-position: top;
-            z-index: 0;
             border-radius: 1rem;
-        }
-        h3{
-               z-index: 2;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                z-index: 0;
+                border-radius: 1rem;
+            }
+
+            h3 {
+                z-index: 2;
                 position: absolute;
                 top: 0%;
                 left: 0%;
                 border-bottom-right-radius: 1rem;
+                font-size: clamp(0.4rem, 1.5vh, 1.3rem);
+                font-weight: 400;
+                color: var(--text-clr);
                 @include back-white-product;
 
-                   &::after {
-                        content: '';
-                        height: 30px;
-                        width: 30px;
-                        top: 100%;
-                        left: 0%;
-                        border-top-left-radius: 1.2rem;
-                        position: absolute;
-                        box-shadow: -6px -5px 0 0 var(--body-clr);
-                        background-color: transparent;
-                    }
+                &::after {
+                    content: '';
+                    height: 30px;
+                    width: 30px;
+                    top: 100%;
+                    left: 0%;
+                    border-top-left-radius: 1.2rem;
+                    position: absolute;
+                    box-shadow: -6px -5px 0 0 var(--body-clr);
+                    background-color: transparent;
+                }
 
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0%;
-                        left: 99.8%;
-                        height: 10px;
-                        width: 15px;
-                        background-color: transparent;
-                        border-top-left-radius: 0.6rem;
-                        box-shadow: -5px -2px 0 0 var(--body-clr);
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0%;
+                    left: 99.8%;
+                    height: 10px;
+                    width: 15px;
+                    background-color: transparent;
+                    border-top-left-radius: 0.6rem;
+                    box-shadow: -5px -2px 0 0 var(--body-clr);
 
-                    }
+                }
+            }
+
+            span {
+                display: none;
+            }
+
         }
-        span{
-            display: none;
+    }
+}
+@media (min-width:768px) and (max-width:1024px){
+  .work-grid{
+    .project-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .card-text{
+           height: 100vh;
+
         }
-        
     }
-    }
+  }
 }

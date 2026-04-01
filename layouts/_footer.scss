@@ -10,7 +10,8 @@
     grid-template-areas: "row1"
         "row2"
         "row3";
-    padding: var(--main-padding);
+    // padding: var(--main-padding);
+    margin-top: 0.5rem;
     background-color: var(--body-clr);
 
     .aboutandmore {
