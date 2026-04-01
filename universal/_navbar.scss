@@ -13,8 +13,8 @@ nav {
     transform-origin: top;
     border-bottom-right-radius: 20px;
     z-index: 1000;
-    opacity: 0;
-    animation: grow 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+    // opacity: 0;
+    // animation: grow 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
     will-change: transform;
     padding: 1rem;
 

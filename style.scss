@@ -23,8 +23,13 @@
 @use 'layouts/footer';
 //footer layout
 
-//page 2 work (base styles before responsives)
+//page 2 blog (base styles before responsives)
 @use 'pages/blogsections/mainw';
 @use 'pages/blogsections/hero_blog';
 @use 'pages/blogsections/journal';
 @use 'pages/blogsections/scroll';
+//page 3 work 
+@use 'pages/worksections/workmain';
+@use 'pages/worksections/workHeader';
+@use 'pages/worksections/workGrid';
+@use 'pages/worksections/leftPreview';
