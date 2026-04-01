@@ -1,6 +1,6 @@
 @use '../../utils/util' as *;
 
-.work-header {
+.blog-header {
     grid-area: header;
     height: 70%;
     width: 100%;
@@ -66,7 +66,7 @@
 }
 
 @media (min-width: 1024px) {
-    .work-header {
+    .blog-header {
         grid-area: header;
         position: sticky;
         top: 0;
@@ -163,7 +163,7 @@
 }
 
 @media (min-width:768px) and (max-width: 1000px) {
-    .work-header {
+    .blog-header {
         height: calc(65vh - var(--main-padding));
         overflow: visible;
 

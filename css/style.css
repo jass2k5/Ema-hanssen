@@ -1609,7 +1609,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     font-size: 1.5rem;
   }
 }
-.work-main {
+.blog-main {
   min-height: 100vh;
   height: auto;
   width: 100%;
@@ -1627,7 +1627,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
 }
 
 @media (min-width: 1024px) {
-  .work-main {
+  .blog-main {
     height: 100vh;
     width: 100%;
     padding: var(--main-padding);
@@ -1639,21 +1639,21 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     grid-template-areas: "header journal" "header scroll" "header infobox" "header footer";
     gap: 1rem;
   }
-  .work-main > .infomobile {
+  .blog-main > .infomobile {
     display: flex;
   }
 }
-.work-header {
+.blog-header {
   grid-area: header;
   height: 70%;
   width: 100%;
 }
-.work-header .container {
+.blog-header .container {
   height: 50vh;
   width: 100%;
   position: relative;
 }
-.work-header .main-image {
+.blog-header .main-image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -1663,7 +1663,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   border-radius: 16px;
   position: relative;
 }
-.work-header .text-edit {
+.blog-header .text-edit {
   position: absolute;
   bottom: 4%;
   width: 100%;
@@ -1671,7 +1671,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   height: auto;
   padding: 0rem 1rem;
 }
-.work-header .text-edit .paragraph {
+.blog-header .text-edit .paragraph {
   background-color: var(--third-clr);
   padding: 1rem;
   display: flex;
@@ -1679,7 +1679,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   justify-content: center;
   border-radius: 1rem;
 }
-.work-header .text-edit .paragraph span {
+.blog-header .text-edit .paragraph span {
   display: inline-block;
   transform: translateY(-10px);
   border-radius: 4px;
@@ -1689,18 +1689,18 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   font-size: 1.4vh;
   margin-right: 0.5rem;
 }
-.work-header .text-edit .paragraph p {
+.blog-header .text-edit .paragraph p {
   font-size: clamp(0.7rem, 2vw + 0.1rem, 1rem);
   text-transform: capitalize;
   font-weight: 400;
   line-height: 1.5;
 }
-.work-header .text-edit .paragraph a {
+.blog-header .text-edit .paragraph a {
   display: none;
 }
 
 @media (min-width: 1024px) {
-  .work-header {
+  .blog-header {
     grid-area: header;
     position: sticky;
     top: 0;
@@ -1708,15 +1708,15 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     height: calc(100vh - var(--main-padding) * 2);
     overflow: hidden;
   }
-  .work-header:hover .text-edit .paragraph a::after {
+  .blog-header:hover .text-edit .paragraph a::after {
     width: 25%;
   }
-  .work-header .container {
+  .blog-header .container {
     position: relative;
     height: 100%;
     width: 100%;
   }
-  .work-header .glass-header {
+  .blog-header .glass-header {
     position: absolute;
     top: 0;
     left: 0;
@@ -1729,17 +1729,17 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     transition: all 0.5s ease;
     z-index: 1;
   }
-  .work-header:hover .glass-header {
+  .blog-header:hover .glass-header {
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
   }
-  .work-header .text-edit {
+  .blog-header .text-edit {
     bottom: 2%;
     width: 100%;
     padding: 0rem 0.5rem;
     z-index: 2;
   }
-  .work-header .text-edit .paragraph {
+  .blog-header .text-edit .paragraph {
     padding: 1rem;
     position: relative;
     display: flex;
@@ -1747,7 +1747,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     justify-content: flex-start;
     gap: 0.6rem;
   }
-  .work-header .text-edit .paragraph span {
+  .blog-header .text-edit .paragraph span {
     display: inline-block;
     transform: translateY(-10px);
     border-radius: 4px;
@@ -1756,7 +1756,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     padding: 0rem 0.3rem;
     font-size: 1.8vh;
   }
-  .work-header .text-edit .paragraph a {
+  .blog-header .text-edit .paragraph a {
     position: absolute;
     bottom: 34%;
     right: 2%;
@@ -1767,7 +1767,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     color: var(--text-clr);
     transition: transform 0.5s ease-in-out;
   }
-  .work-header .text-edit .paragraph a::after {
+  .blog-header .text-edit .paragraph a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1779,17 +1779,17 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   }
 }
 @media (min-width: 768px) and (max-width: 1000px) {
-  .work-header {
+  .blog-header {
     height: calc(65vh - var(--main-padding));
     overflow: visible;
   }
-  .work-header .container {
+  .blog-header .container {
     height: 100%;
   }
-  .work-header .text-edit {
+  .blog-header .text-edit {
     padding: 0rem 0.5rem;
   }
-  .work-header .text-edit .paragraph {
+  .blog-header .text-edit .paragraph {
     height: auto;
     width: auto;
     padding: 1.5rem;
@@ -1799,7 +1799,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     justify-content: flex-start;
     gap: 0.6rem;
   }
-  .work-header .text-edit .paragraph span {
+  .blog-header .text-edit .paragraph span {
     display: inline-block;
     transform: translateY(-5px);
     border-radius: 4px;
@@ -1808,7 +1808,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     padding: 0rem 0.3rem;
     font-size: 1.8vh;
   }
-  .work-header .text-edit .paragraph a {
+  .blog-header .text-edit .paragraph a {
     display: inline-block;
     margin-left: 1.5rem;
     font-weight: 400;
@@ -1818,7 +1818,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     border-bottom: 1px solid var(--text-clr);
     transition: transform 0.5s ease-in-out;
   }
-  .work-header .text-edit .paragraph a:hover {
+  .blog-header .text-edit .paragraph a:hover {
     transform: scale(0.9);
   }
 }
