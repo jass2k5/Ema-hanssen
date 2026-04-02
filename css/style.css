@@ -1193,7 +1193,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.7rem;
   }
   .duo-1 .container .duo .product .solo-info i {
     display: inline-block;
@@ -1220,6 +1220,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     transform: translateX(0);
     height: 100%;
     width: 100%;
+    margin-right: 0.3rem;
   }
 }
 .infomobile {
@@ -2021,6 +2022,14 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   row-gap: 0.5rem;
 }
 
+@media (min-width: 1024px) {
+  .work-main {
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: "leftpreview header " "leftpreview workgrid" "leftpreview footer";
+  }
+}
 .work-header {
   grid-area: header;
   height: 35vh;
@@ -2059,6 +2068,23 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     height: 40vh;
   }
 }
+@media (min-width: 1024px) {
+  .work-header {
+    align-items: flex-start;
+    height: auto;
+    padding: 3rem;
+  }
+  .work-header .work-intro {
+    gap: 8rem;
+  }
+  .work-header .work-intro h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  .work-header .work-intro p {
+    line-height: 2;
+  }
+}
 .work-grid {
   grid-area: workgrid;
   height: auto;
@@ -2080,6 +2106,9 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   height: 60vh;
   width: 100%;
   border-radius: 1rem;
+}
+.work-grid .project-list .card-text i {
+  display: none;
 }
 .work-grid .project-list .card-text img {
   position: absolute;
@@ -2142,6 +2171,113 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   }
   .work-grid .project-list .card-text {
     height: 100vh;
+  }
+}
+@media (min-width: 1024px) {
+  .work-grid {
+    padding-top: 0.5rem;
+  }
+  .work-grid .project-list {
+    gap: 0.8rem;
+  }
+  .work-grid .project-list .card-text {
+    height: auto;
+    width: 100%;
+    background-color: var(--third-clr);
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    will-change: margin, visibility;
+    padding: 0.7rem;
+  }
+  .work-grid .project-list .card-text img {
+    display: none;
+  }
+  .work-grid .project-list .card-text i {
+    display: inline-block;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .work-grid .project-list .card-text:hover i {
+    visibility: visible;
+    margin: 0rem 1rem;
+  }
+  .work-grid .project-list .card-text span {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    font-size: clamp(0.4rem, 2vh, 2rem);
+    font-weight: 300;
+  }
+  .work-grid .project-list .card-text h3 {
+    position: relative;
+    z-index: 0;
+    border-radius: none;
+    font-size: clamp(0.4rem, 2vh, 2rem);
+    font-weight: 300;
+    color: var(--text-clr);
+    text-transform: capitalize;
+    padding: 0px;
+    background-color: transparent;
+  }
+  .work-grid .project-list .card-text h3::after {
+    display: none;
+  }
+  .work-grid .project-list .card-text h3::before {
+    display: none;
+  }
+  .work-grid .project-list .contact-box {
+    height: auto;
+    width: 100%;
+    background-color: var(--contact-clr);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem;
+    color: var(--body-clr);
+  }
+  .work-grid .project-list .contact-box h3 {
+    position: relative;
+    z-index: 0;
+    border-radius: none;
+    font-size: clamp(0.4rem, 2vh, 2rem);
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 0px;
+    background-color: transparent;
+  }
+  .work-grid .project-list .contact-box .arwcnt {
+    position: relative;
+    overflow: hidden;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.2rem 0rem;
+  }
+  .work-grid .project-list .contact-box .arwcnt i {
+    display: inline-block;
+    position: absolute;
+    font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .work-grid .project-list .contact-box .arwcnt .cnt {
+    transform: translateY(6px);
+  }
+  .work-grid .project-list .contact-box .arwcnt .arw {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  .work-grid .project-list .contact-box:hover .cnt {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  .work-grid .project-list .contact-box:hover .arw {
+    transform: translateY(6px);
+    opacity: 1;
   }
 }
 .left-preview {

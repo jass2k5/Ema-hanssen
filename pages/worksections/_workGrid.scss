@@ -4,6 +4,7 @@
     grid-area: workgrid;
     height: auto;
     width: 100%;
+
     .project-list {
         height: 100%;
         width: 100%;
@@ -17,6 +18,11 @@
             height: 60vh;
             width: 100%;
             border-radius: 1rem;
+
+
+            i {
+                display: none;
+            }
 
             img {
                 position: absolute;
@@ -74,15 +80,152 @@
         }
     }
 }
-@media (min-width:768px) and (max-width:1024px){
-  .work-grid{
-    .project-list{
-        flex-direction: row;
-        flex-wrap: wrap;
-        .card-text{
-           height: 100vh;
 
+@media (min-width:768px) and (max-width:1024px) {
+    .work-grid {
+        .project-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .card-text {
+                height: 100vh;
+
+            }
         }
     }
-  }
+}
+
+@media (min-width:1024px) {
+    .work-grid {
+        padding-top: 0.5rem;
+
+        .project-list {
+            // padding-bottom: 2rem;
+            gap: 0.8rem;
+
+            .card-text {
+                height: auto;
+                width: 100%;
+                background-color: var(--third-clr);
+                border-radius: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                will-change: margin, visibility;
+                padding: 0.7rem;
+
+                img {
+                    display: none;
+                }
+
+                i {
+                    display: inline-block;
+                    visibility: hidden;
+                    transition: all 0.5s ease-in-out;
+
+                }
+
+                &:hover i {
+                    visibility: visible;
+                    margin: 0rem 1rem;
+                }
+
+                span {
+                    position: relative;
+                    z-index: 0;
+                    display: inline-block;
+                    transition: all 0.5s ease-in-out;
+                    font-size: clamp(0.4rem, 2vh, 2rem);
+                    font-weight: 300;
+                }
+
+                h3 {
+
+                    position: relative;
+                    z-index: 0;
+                    border-radius: none;
+                    font-size: clamp(0.4rem, 2vh, 2rem);
+                    font-weight: 300;
+                    color: var(--text-clr);
+                    text-transform: capitalize;
+                    padding: 0px;
+                    background-color: transparent;
+
+
+                    &::after {
+                        display: none;
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .contact-box {
+                height: auto;
+                width: 100%;
+                background-color: var(--contact-clr);
+
+                border-radius: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.7rem;
+                color: var(--body-clr);
+
+                h3 {
+                    position: relative;
+                    z-index: 0;
+                    border-radius: none;
+                    font-size: clamp(0.4rem, 2vh, 2rem);
+                    font-weight: 300;
+
+                    text-transform: capitalize;
+                    padding: 0px;
+                    background-color: transparent;
+
+                }
+
+                .arwcnt {
+                    position: relative;
+                    overflow: hidden;
+                    height: 2rem;
+                    width: 2rem;
+                    padding: 0.2rem 0rem;
+                      i {
+                        display: inline-block;
+                        position: absolute;
+                        font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+                        pointer-events: none;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                     .cnt {
+                        transform: translateY(6px);
+                    }
+
+                    .arw {
+                        display: inline-block;
+                        transform: translateY(100%);
+                        opacity: 0;
+                    }
+                    
+                    
+
+                }
+                &:hover .cnt {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+
+                    &:hover .arw {
+                        transform: translateY(6px);
+                        opacity: 1;
+                    }
+
+            }
+        }
+    }
 }

@@ -18,4 +18,16 @@
         "footer";
     z-index: 0;
     row-gap: 0.5rem;
+};
+@media (min-width:1024px){
+    .work-main{
+       height: 100vh;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: repeat(2,max-content);
+       grid-template-areas: 
+       "leftpreview header "
+       "leftpreview workgrid"
+       "leftpreview footer";
+    };
+
 }

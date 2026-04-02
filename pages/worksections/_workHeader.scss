@@ -41,3 +41,22 @@
         height: 40vh;
     }
 }
+@media (min-width:1024px){
+    .work-header{
+        align-items: flex-start;
+        height: auto;
+        padding: 3rem;
+
+        .work-intro{
+            gap: 8rem;
+            h1{
+                font-size: 2.5rem;
+                font-weight: 400;
+            }
+            p{
+                line-height: 2;
+            }
+
+        }
+    }
+}

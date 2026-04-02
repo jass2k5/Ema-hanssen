@@ -26,5 +26,5 @@ window.addEventListener('load',()=>{
     gotoLink();
     setTimeout(() => {
         ScrollAnimation();
-    }, 200);
+    },100);
 })

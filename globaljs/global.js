@@ -72,7 +72,7 @@ export function ScrollAnimation() {
     }
 }
 export function gotoLink(){
-    const links = document.querySelectorAll(SelectorHero.contactBoxes);
+    const links = document.querySelectorAll(`${SelectorHero.contactBoxes},.contact-box`);
     links.forEach(link =>{
         link.addEventListener('click',()=>{
             const url = link.getAttribute(SelectorHero.attribute);

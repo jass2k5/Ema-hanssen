@@ -186,7 +186,7 @@
                         left: 0%;
                         border-bottom-right-radius: 1rem;
                         @include back-white-product;
-                        @include flex-gap(0.5rem);
+                        @include flex-gap(0.7rem);
 
 
                         i {
@@ -220,6 +220,7 @@
                             transform: translateX(0);
                             height: 100%;
                             width: 100%;
+                            margin-right: 0.3rem;
                         }
                     }
                 }
