@@ -25,7 +25,7 @@ export function renderWorkGallery(){
             container.appendChild(card);
         }
         container.insertAdjacentHTML('beforeend', `
-            <div class="contact-box" data-goto="mailto:jaspindersingh3050@gmail.com">
+            <div class="contact-box reveal"  data-goto="mailto:jaspindersingh3050@gmail.com">
                 <h3>Contact</h3>
                 <div class="arwcnt">
                     <i class="ri-mail-line cnt"></i>

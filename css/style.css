@@ -52,7 +52,7 @@
 .latest,
 .footer, .infomobile, .journal, .infoandpic, .reveal {
   opacity: 0 !important;
-  transform: translateY(100px) !important;
+  transform: translateY(65px) !important;
   transition: opacity 0.8s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
@@ -2293,6 +2293,10 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     justify-content: space-between;
     will-change: margin, visibility;
     padding: 0.7rem;
+    transition: opacity 0.4s ease;
+  }
+  .work-grid .project-list .card-text:hover {
+    opacity: 0.5;
   }
   .work-grid .project-list .card-text img {
     display: none;
