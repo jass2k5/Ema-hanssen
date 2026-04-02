@@ -188,5 +188,5 @@ export const workProjectsData = [
 ];
 export const SelectorWorkGallery={
     container: '.project-list',
-
+    leftContainer:'.left-preview'
 }

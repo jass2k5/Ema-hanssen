@@ -15,15 +15,24 @@ export function renderWorkGallery(){
                     </div>`;
                     workHolder += pairHolder
             card.innerHTML = workHolder;
+            card.addEventListener("mouseenter", () => {
+                let previewImage = document.querySelector('#main-preview-img');
+                let previewlower = document.querySelector('.infoh');
+                
+                if (previewImage) previewImage.src = pair.src;
+                if (previewlower) previewlower.textContent = pair.h3;
+            });
             container.appendChild(card);
         }
-        container.innerHTML += `<div class="contact-box" data-goto="mailto:jaspindersingh3050@gmail.com">
-                        <h3>Contact</h3>
-                        <div class="arwcnt">
-                            <i class="ri-mail-line  cnt"></i>
-                            <i class="ri-arrow-right-up-long-line arw"></i>
-                        </div>
-                    </div>`;
+        container.insertAdjacentHTML('beforeend', `
+            <div class="contact-box" data-goto="mailto:jaspindersingh3050@gmail.com">
+                <h3>Contact</h3>
+                <div class="arwcnt">
+                    <i class="ri-mail-line cnt"></i>
+                    <i class="ri-arrow-right-up-long-line arw"></i>
+                </div>
+            </div>
+        `);
     }catch(error){
         console.warn("error in rendering work gallery",error.message);
     }

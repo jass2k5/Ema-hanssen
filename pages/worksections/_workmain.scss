@@ -22,6 +22,7 @@
 @media (min-width:1024px){
     .work-main{
        height: 100vh;
+       padding: var(--main-padding);
        grid-template-columns: 1fr 1fr;
        grid-template-rows: repeat(2,max-content);
        grid-template-areas: 

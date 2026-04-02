@@ -4,19 +4,19 @@
 }
 @media(min-width:1024px){
     .left-preview{
-        height: calc(100vh-var(--main-padding));
+      height: calc(100vh - var(--main-padding)*2);
         max-height: 100vh;
         position: sticky;
-        top: 0;
+        top: 0%;
         left: 0;
         grid-area: leftpreview;
-        height: 100%;
         width: 100%;
         display: block;
         border-radius: 1rem;
+        overflow: hidden;
         #main-preview-img{
             z-index: 0;
-            height: 98%;
+            height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: top;
@@ -25,7 +25,7 @@
         h3{
             z-index: 1;
             position: absolute;
-            bottom: 2%;
+            bottom: 0%;
             right: 0%;
             border-top-left-radius: 1rem;
             background-color: var(--body-clr);
