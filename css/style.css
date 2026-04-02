@@ -2232,7 +2232,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     height: auto;
     width: 100%;
     background-color: var(--contact-clr);
-    border-radius: 0.5rem;
+    border-radius: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2282,4 +2282,61 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
 }
 .left-preview {
   display: none;
+}
+
+@media (min-width: 1024px) {
+  .left-preview {
+    height: calc(100vh-var (--main-padding));
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    grid-area: leftpreview;
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+  }
+  .left-preview #main-preview-img {
+    z-index: 0;
+    height: 98%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    border-radius: 1rem;
+  }
+  .left-preview h3 {
+    z-index: 1;
+    position: absolute;
+    bottom: 2%;
+    right: 0%;
+    border-top-left-radius: 1rem;
+    background-color: var(--body-clr);
+    padding: clamp(0.2rem, 1vw + 0.1rem, 0.5rem);
+    font-size: clamp(0.7rem, 2vw + 0.4rem, 1.1rem);
+  }
+  .left-preview h3::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 5px;
+    background-color: transparent;
+    border-bottom-right-radius: 4rem;
+    bottom: 0%;
+    right: 100%;
+    box-shadow: 1px 1.4px 0 0 var(--body-clr);
+  }
+  .left-preview h3::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 3px;
+    background-color: transparent;
+    border-bottom-right-radius: 0.8rem;
+    top: -8%;
+    right: -1%;
+    box-shadow: 1px 1px 0 0 var(--body-clr);
+  }
 }/*# sourceMappingURL=style.css.map */
