@@ -1,0 +1,66 @@
+@use '../../utils/util' as *;
+
+.sliderAbout {
+    grid-area: clients;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--third-clr);
+    color: var(--text-clr);
+    border-radius: 0.8rem;
+    overflow-x: hidden;
+    padding: 1rem;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 130px;
+        z-index: 2;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, var(--third-clr), transparent);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, var(--third-clr), transparent);
+    }
+
+    .client {
+        padding: 1rem;
+
+        h2 {
+            font-weight: 400;
+        }
+    }
+
+    .group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: max-content;
+
+        will-change: transform;
+
+
+        .card {
+            flex-shrink: 0;
+
+            svg {
+                height: auto;
+                min-height: 90px;
+                width: 160px;
+            }
+        }
+    }
+}

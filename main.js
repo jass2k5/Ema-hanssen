@@ -3,6 +3,7 @@ import { initHOME} from "./home/homejs/exporthome.js";
 import { initBlog } from "./pages/blogjs/exportblog.js";
 import {ScrollAnimation,gotoLink } from "./globaljs/global.js";
 import { initWork } from "./pages/workjs/exportwork.js";
+import { initAbout } from "./pages/aboutsection/aboutjs/exportabout.js";
 document.addEventListener('DOMContentLoaded',()=>{
     initGlobal();
     const currentPage = document.body.getAttribute('data-page');
@@ -15,6 +16,9 @@ document.addEventListener('DOMContentLoaded',()=>{
             break;
         case 'work':
             initWork();
+            break;
+        case 'about':
+            initAbout();
             break;
         default:
             console.warn('No page initializer:', currentPage);

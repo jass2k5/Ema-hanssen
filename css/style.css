@@ -52,7 +52,7 @@
 .latest,
 .footer, .infomobile, .journal, .infoandpic, .reveal {
   opacity: 0 !important;
-  transform: translateY(65px) !important;
+  transform: translateY(45px) !important;
   transition: opacity 0.8s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
@@ -90,6 +90,14 @@
   }
   100% {
     color: #ffffff;
+  }
+}
+@keyframes about-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 * {
@@ -2133,7 +2141,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
 .work-grid .project-list .contact-box .arwcnt i {
   display: inline-block;
   position: absolute;
-  font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+  font-size: clamp(0.4rem, 2.5vw + 0.4rem, 1rem);
   pointer-events: none;
   transition: all 0.3s ease-in-out;
 }
@@ -2446,4 +2454,249 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     right: -1%;
     box-shadow: 1px 1px 0 0 var(--body-clr);
   }
+}
+.aboutMain {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.aboutMain::-webkit-scrollbar {
+  height: auto;
+}
+.aboutMain::-webkit-scrollbar-track {
+  background: var(--third-clr);
+}
+.aboutMain::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-clr);
+  border-radius: 100px;
+  border: 3px solid var(--third-clr);
+}
+.aboutMain::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover);
+}
+.aboutMain {
+  padding: var(--main-padding);
+  position: relative;
+  background-color: var(--body-clr);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, max-content);
+  grid-template-areas: "header" "ema" "about" "clients" "exhibitions" "awards" "infobox" "footer";
+  z-index: 0;
+  row-gap: 1.3rem;
+}
+
+.aboutHeader {
+  height: 55vh;
+  width: 100%;
+  border-radius: 0.8rem;
+}
+.aboutHeader .containerHeader {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.aboutHeader .containerHeader .imgHeader {
+  height: 100%;
+  width: 100%;
+}
+.aboutHeader .containerHeader .imgHeader img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 0.8rem;
+}
+
+.EmaAbout {
+  grid-area: ema;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+.EmaAbout .upleftrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 1rem;
+}
+.EmaAbout .upleftrow .infobox {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+.EmaAbout .upleftrow .infobox .info:nth-child(n) {
+  display: none;
+}
+.EmaAbout .upleftrow .infobox .info:nth-last-child(1) {
+  display: block;
+  cursor: pointer;
+  background-color: var(--contact-clr);
+  color: var(--body-clr);
+  padding: 0.7rem;
+  margin-right: 2px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.8rem;
+}
+.EmaAbout .upleftrow .infobox .info:nth-last-child(1) h3 {
+  font-size: clamp(0.2rem, 3vw + 0.1rem, 1rem);
+}
+.EmaAbout .upleftrow .infobox .info:nth-last-child(1) .iconwrapper {
+  position: relative;
+  overflow: hidden;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.2rem 0rem;
+}
+.EmaAbout .upleftrow .infobox .info:nth-last-child(1) i {
+  display: inline-block;
+  position: absolute;
+  font-size: clamp(0.2rem, 3vw + 0.1rem, 1rem);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.EmaAbout .upleftrow .infobox .info:nth-last-child(1) .logos {
+  transform: translateY(6px);
+}
+.EmaAbout .upleftrow .infobox .info:nth-last-child(1) .arrow {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.EmaAbout .upleftrow .brandbox {
+  color: var(--text-clr);
+  background-color: var(--third-clr);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+.EmaAbout .upleftrow .brandbox p {
+  line-height: var(--lh-body);
+}
+.EmaAbout .upleftrow .brandbox .overview {
+  color: var(--text-clr);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+  width: 100%;
+}
+.EmaAbout .upleftrow .brandbox .overview .ema-img {
+  height: 57px;
+  width: 57px;
+  border-radius: var(--circle);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+}
+.EmaAbout .upleftrow .brandbox .overview .sideview h2 {
+  font-size: var(--space-smd);
+}
+.EmaAbout .upleftrow .brandbox .overview .sideview h3 {
+  font-size: var(--space-xss);
+  opacity: 0.7;
+}
+
+.About {
+  grid-area: about;
+  height: auto;
+  width: 100%;
+  background-color: var(--third-clr);
+  color: var(--text-clr);
+  padding: var(--space-md);
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.About h1 {
+  font-weight: 400;
+  font-size: clamp(2rem, 2.5vh + 0.8rem, 2.5rem);
+}
+.About .paragraphsDuo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.About .paragraphsDuo p {
+  font-size: clamp(0.4rem, 2.5vh, 1rem);
+  line-height: 1.6;
+}
+
+.sliderAbout {
+  grid-area: clients;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--third-clr);
+  color: var(--text-clr);
+  border-radius: 0.8rem;
+  overflow-x: hidden;
+  padding: 1rem;
+  position: relative;
+}
+.sliderAbout::before, .sliderAbout::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 130px;
+  z-index: 2;
+}
+.sliderAbout::before {
+  left: 0;
+  background: linear-gradient(to right, var(--third-clr), transparent);
+}
+.sliderAbout::after {
+  right: 0;
+  background: linear-gradient(to left, var(--third-clr), transparent);
+}
+.sliderAbout .client {
+  padding: 1rem;
+}
+.sliderAbout .client h2 {
+  font-weight: 400;
+}
+.sliderAbout .group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: -moz-max-content;
+  width: max-content;
+  will-change: transform;
+}
+.sliderAbout .group .card {
+  flex-shrink: 0;
+}
+.sliderAbout .group .card svg {
+  height: auto;
+  min-height: 90px;
+  width: 160px;
 }/*# sourceMappingURL=style.css.map */

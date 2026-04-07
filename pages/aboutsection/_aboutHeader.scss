@@ -1,0 +1,24 @@
+@use '../../utils/util' as *;
+.aboutHeader{
+    height: 55vh;
+    width: 100%;
+    border-radius: 0.8rem;
+   .containerHeader{
+    height: 100%;
+    width: 100%;
+    position: relative;
+   
+
+    .imgHeader{
+        height:100%;
+        width: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+             border-radius: 0.8rem;
+        }
+    }
+   }
+}
