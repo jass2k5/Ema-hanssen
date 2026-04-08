@@ -213,5 +213,42 @@ export const SelectorAboutSvgs = [
 
 export const SelectorAbout ={
     container: '.sliderAbout',
-    group: '.group'
+    group: '.group',
+    Exhibition: '.Exhibitions',
+    part1: '.part1',
+    part2: '.part2',
+    box: '.aboutExhibition'
 }
+export const SelectorAboutExhibition =[
+    {
+        title: "Through the Lens",
+        year: "2024",
+        // Adding an icon property makes it easy to conditionally render the arrow
+        icon: "ri-arrow-right-up-long-line" 
+    },
+    {
+        title: "Candid Connections",
+        year: "2024",
+        icon: null
+    },
+    {
+        title: "Urban Stories",
+        year: "2023",
+        icon: null
+    },
+    {
+        title: "Nature's Palette",
+        year: "2023",
+        icon: null
+    },
+    {
+        title: "Moments Unseen",
+        year: "2022",
+        icon: null
+    },
+    {
+        title: "Reflections of Prague",
+        year: "2022",
+        icon: null
+    }
+];

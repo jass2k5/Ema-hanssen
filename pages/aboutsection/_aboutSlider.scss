@@ -11,10 +11,9 @@
     background-color: var(--third-clr);
     color: var(--text-clr);
     border-radius: 0.8rem;
-    overflow-x: hidden;
-    padding: 1rem;
+    border-right: 5px solid var(--third-clr);
     position: relative;
-
+    overflow: hidden;
     &::before,
     &::after {
         content: '';
@@ -22,7 +21,7 @@
         top: 0;
         bottom: 0;
         width: 130px;
-        z-index: 2;
+        z-index: 3;
     }
 
     &::before {
@@ -36,21 +35,20 @@
     }
 
     .client {
+        
         padding: 1rem;
 
         h2 {
             font-weight: 400;
         }
     }
-
     .group {
         display: flex;
         align-items: center;
-        justify-content: center;
+        align-self: flex-start;
         gap: 1rem;
         width: max-content;
-
-        will-change: transform;
+        z-index: 1;
 
 
         .card {
