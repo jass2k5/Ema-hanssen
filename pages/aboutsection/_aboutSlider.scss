@@ -11,29 +11,29 @@
     background-color: var(--third-clr);
     color: var(--text-clr);
     border-radius: 0.8rem;
-    border-right: 5px solid var(--third-clr);
+   
     position: relative;
     overflow: hidden;
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 130px;
-        z-index: 3;
-    }
+    z-index: 1;
 
-    &::before {
-        left: 0;
-        background: linear-gradient(to right, var(--third-clr), transparent);
+    .track {
+        width: 100%;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%
+        );
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%
+        );
     }
-
-    &::after {
-        right: 0;
-        background: linear-gradient(to left, var(--third-clr), transparent);
-    }
-
     .client {
         
         padding: 1rem;
