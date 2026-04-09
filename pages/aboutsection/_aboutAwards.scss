@@ -64,3 +64,33 @@
         }
     }
 }
+@media (min-width:1200px){
+   .Awards{
+     .Apart1{
+        min-height: 30vh;
+        gap: 5rem;
+        padding: 3rem;  
+    }
+    .Apart2{
+          .aboutAwards{
+                min-height: 8vh;
+                will-change: margin,visibility;
+                .awardleft{
+                    justify-content: space-between;
+                    flex-direction: row;
+                    width: 98%;
+                    transition: all 0.3s ease-in-out;
+                }
+                .awardright{
+                    visibility: hidden;
+                    width: 2%;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover .awardright{
+                    visibility: visible;
+                    margin-left: 1.2rem;
+                }
+            }
+    }
+   }
+}

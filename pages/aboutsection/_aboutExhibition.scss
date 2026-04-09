@@ -64,3 +64,35 @@
     }
 
 }
+@media (min-width:1200px){
+    .Exhibitions{
+        height: auto;
+        width: 100%;
+        .part1{
+            min-height: 30vh;
+            gap: 5rem;
+            padding: 3rem;
+        }
+        .part2{
+            .aboutExhibition{
+                min-height: 8vh;
+                will-change: margin,visibility;
+                .left{
+                    justify-content: space-between;
+                    flex-direction: row;
+                    width: 98%;
+                    transition: all 0.3s ease-in-out;
+                }
+                .right{
+                    visibility: hidden;
+                    width: 2%;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover .right{
+                    visibility: visible;
+                    margin-left: 1.2rem;
+                }
+            }
+        }
+    }
+}

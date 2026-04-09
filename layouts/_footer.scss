@@ -106,7 +106,7 @@
 
             .f-nav {
                 ul {
-                   
+
                     @include flex-gap(1rem);
                     flex-direction: column;
 
@@ -114,7 +114,7 @@
                         list-style: none;
 
                         a {
-                           
+
                             font-size: 0.9rem;
                             color: var(--body-clr);
                             text-decoration: none;
@@ -136,13 +136,13 @@
             .allcms {
 
                 ul {
-                   
+
                     @include flex-gap(1rem);
                     flex-direction: column;
 
                     li {
                         list-style: none;
-                         
+
                     }
                 }
             }
@@ -159,13 +159,13 @@
 
             .utilities {
                 ul {
-                  
+
                     @include flex-gap(1rem);
                     flex-direction: column;
 
                     li {
                         list-style: none;
-                        
+
                     }
                 }
             }
@@ -216,6 +216,7 @@
             flex-direction: row;
             justify-content: space-evenly;
 
+
             .first-half {
                 width: 50%;
                 flex-direction: row;
@@ -257,7 +258,8 @@
 
 @media(min-width:1200px) {
     .footer {
-
+        max-height: 40vh;
+        
         grid-area: footer;
         height: auto;
         width: 100%;
@@ -265,6 +267,9 @@
         .aboutandmore {
             flex-direction: row;
             justify-content: space-evenly;
+            border-top-left-radius: 0.8rem;
+            border-top-right-radius: 0.8rem;
+
 
             .first-half {
                 width: 50%;
@@ -285,6 +290,8 @@
 
         .end {
             padding: 3rem;
+            border-bottom-left-radius: 0.8rem;
+            border-bottom-right-radius: 0.8rem;
 
             h3 {
                 font-size: 1.5rem;

@@ -139,7 +139,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 1.1rem;
+  border-radius: 0.8rem;
 }
 .infomobile .info h3 {
   font-size: clamp(0.2rem, 2vh + 0.2rem, 1.1rem);
@@ -170,6 +170,7 @@ body::-webkit-scrollbar {
 }
 @media (min-width: 1200px) {
   .infomobile {
+    height: auto;
     margin-top: -0.3rem;
     grid-area: infobox;
     display: flex;
@@ -178,8 +179,6 @@ body::-webkit-scrollbar {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
-    height: auto;
-    padding: 0rem 0.4rem;
     overflow: visible;
   }
   .infomobile .info {
@@ -1575,6 +1574,7 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
 }
 @media (min-width: 1200px) {
   .footer {
+    max-height: 40vh;
     grid-area: footer;
     height: auto;
     width: 100%;
@@ -1582,6 +1582,8 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   .footer .aboutandmore {
     flex-direction: row;
     justify-content: space-evenly;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
   }
   .footer .aboutandmore .first-half {
     width: 50%;
@@ -1603,6 +1605,8 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   }
   .footer .end {
     padding: 3rem;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
   }
   .footer .end h3 {
     font-size: 1.5rem;
@@ -2489,6 +2493,9 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
 @media (min-width: 1200px) {
   .aboutMain {
     height: 100vh;
+    row-gap: 0.8rem;
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(7, max-content);
     grid-template-areas: "header ema" "header about" "header clients" "header exhibitions" "header awards" "header infobox" "header footer";
@@ -2619,8 +2626,8 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   width: 100%;
 }
 .EmaAbout .upleftrow .brandbox .overview .ema-img {
-  height: 57px;
-  width: 57px;
+  height: 60px;
+  width: 60px;
   border-radius: var(--circle);
   -o-object-fit: contain;
      object-fit: contain;
@@ -2635,6 +2642,90 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   opacity: 0.7;
 }
 
+@media (min-width: 1200px) {
+  .EmaAbout {
+    min-height: 30vh;
+    height: auto;
+  }
+  .EmaAbout .upleftrow {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.6rem;
+  }
+  .EmaAbout .upleftrow .brandbox {
+    flex: 1.5;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40%;
+    border-radius: 0.8rem;
+  }
+  .EmaAbout .upleftrow .infobox {
+    flex: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 0.8rem;
+    gap: 0.4rem;
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n) {
+    display: flex;
+    cursor: pointer;
+    background-color: var(--third-clr);
+    color: var(--text-clr);
+    padding: 0.7rem;
+    margin-right: 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.8rem;
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n) h3 {
+    font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n) .iconwrapper {
+    position: relative;
+    overflow: hidden;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.2rem 0rem;
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n) i {
+    display: inline-block;
+    position: absolute;
+    font-size: clamp(0.2rem, 1.5vw + 0.1rem, 1rem);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n) .logos {
+    transform: translateY(6px);
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n) .arrow {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n):hover .logos {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n):hover .arrow {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+  .EmaAbout .upleftrow .infobox .info:nth-child(n):nth-last-child(1) {
+    background-color: var(--contact-clr);
+    color: var(--body-clr);
+  }
+}
 .About {
   grid-area: about;
   height: auto;
@@ -2665,6 +2756,13 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   line-height: 1.6;
 }
 
+@media (min-width: 1200px) {
+  .About {
+    min-height: 40vh;
+    padding: 3rem;
+    gap: 6rem;
+  }
+}
 .sliderAbout {
   grid-area: clients;
   height: auto;
@@ -2767,6 +2865,36 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   justify-content: center;
 }
 
+@media (min-width: 1200px) {
+  .Exhibitions {
+    height: auto;
+    width: 100%;
+  }
+  .Exhibitions .part1 {
+    min-height: 30vh;
+    gap: 5rem;
+    padding: 3rem;
+  }
+  .Exhibitions .part2 .aboutExhibition {
+    min-height: 8vh;
+    will-change: margin, visibility;
+  }
+  .Exhibitions .part2 .aboutExhibition .left {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 98%;
+    transition: all 0.3s ease-in-out;
+  }
+  .Exhibitions .part2 .aboutExhibition .right {
+    visibility: hidden;
+    width: 2%;
+    transition: all 0.3s ease-in-out;
+  }
+  .Exhibitions .part2 .aboutExhibition:hover .right {
+    visibility: visible;
+    margin-left: 1.2rem;
+  }
+}
 .Awards {
   grid-area: awards;
   height: -moz-max-content;
@@ -2825,4 +2953,31 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .Awards .Apart1 {
+    min-height: 30vh;
+    gap: 5rem;
+    padding: 3rem;
+  }
+  .Awards .Apart2 .aboutAwards {
+    min-height: 8vh;
+    will-change: margin, visibility;
+  }
+  .Awards .Apart2 .aboutAwards .awardleft {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 98%;
+    transition: all 0.3s ease-in-out;
+  }
+  .Awards .Apart2 .aboutAwards .awardright {
+    visibility: hidden;
+    width: 2%;
+    transition: all 0.3s ease-in-out;
+  }
+  .Awards .Apart2 .aboutAwards:hover .awardright {
+    visibility: visible;
+    margin-left: 1.2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
