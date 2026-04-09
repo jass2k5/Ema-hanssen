@@ -3,8 +3,7 @@
     min-height: 100vh;
     height: auto;
     width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
+  
     &::-webkit-scrollbar{
         height: auto;
     }
@@ -41,9 +40,9 @@
 }
 @media (min-width: 1200px){
     .aboutMain{
-        height: 100vh;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(7,max-content);
+      
         grid-template-areas: 
         "header ema"
         "header about"
@@ -52,7 +51,5 @@
         "header awards"
         "header infobox"
         "header footer";
-        overflow-y: scroll;
-        overflow-x: hidden;
     }
 }

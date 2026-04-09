@@ -8,6 +8,7 @@
     height: 100%;
     width: 100%;
     position: relative;
+    z-index: 1;
    
 
     .imgHeader{
@@ -18,18 +19,20 @@
             width: 100%;
             object-fit: cover;
             object-position: top;
-             border-radius: 0.8rem;
+            border-radius: 0.8rem;
         }
     }
    }
 }
-@media (min-width: 1200px){
+@media (min-width:1200px){
     .aboutHeader{
-        grid-area: header;
+        position: sticky;
         top: 0;
+        left: 0;
         height: calc(100vh - var(--main-padding)*2);
         width: 100%;
-        position: sticky;
+       
         overflow: hidden;
+  
     }
 }

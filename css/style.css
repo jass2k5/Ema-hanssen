@@ -2486,7 +2486,18 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   row-gap: 1.3rem;
 }
 
+@media (min-width: 1200px) {
+  .aboutMain {
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, max-content);
+    grid-template-areas: "header ema" "header about" "header clients" "header exhibitions" "header awards" "header infobox" "header footer";
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
 .aboutHeader {
+  grid-area: header;
   height: 55vh;
   width: 100%;
   border-radius: 0.8rem;
@@ -2510,6 +2521,16 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   border-radius: 0.8rem;
 }
 
+@media (min-width: 1200px) {
+  .aboutHeader {
+    grid-area: header;
+    top: 0;
+    height: calc(100vh - var(--main-padding) * 2);
+    width: 100%;
+    position: sticky;
+    overflow: hidden;
+  }
+}
 .EmaAbout {
   grid-area: ema;
   display: flex;

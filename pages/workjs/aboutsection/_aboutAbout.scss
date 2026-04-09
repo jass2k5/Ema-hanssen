@@ -1,0 +1,34 @@
+@use '../../utils/util' as *;
+
+.About {
+    grid-area: about;
+    height: auto;
+    width: 100%;
+    background-color: var(--third-clr);
+    color: var(--text-clr);
+    padding: var(--space-md);
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+        font-weight: 400;
+        font-size: clamp(2rem, 2.5vh + 0.8rem, 2.5rem);
+    }
+
+    .paragraphsDuo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        p {
+            font-size: clamp(0.4rem, 2.5vh, 1rem);
+            line-height: 1.6;
+        }
+    }
+}
