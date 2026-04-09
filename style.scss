@@ -11,6 +11,7 @@
 
 
 //page sections in order
+@use 'layouts/infoboxmobile';
 // @import 'universal/navbar';
 @use 'universal/navbar';
 @use 'home/main';
@@ -18,7 +19,6 @@
 @use 'home/ema';
 @use 'home/latest';
 @use 'home/slider';
-@use 'home/infoboxmobile';
 
 @use 'layouts/footer';
 //footer layout
@@ -40,3 +40,4 @@
 @use 'pages/aboutsection/aboutAbout';
 @use 'pages/aboutsection/aboutSlider';
 @use 'pages/aboutsection/aboutExhibition';
+@use 'pages/aboutsection/aboutAwards';

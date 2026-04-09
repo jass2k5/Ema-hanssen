@@ -37,7 +37,7 @@ export const SelectorGalleryGRid = {
 export const SelectorIntersection = {
     observerProperties: { threshold: 0.15, rootMargin: "0px 0px 30px 0px" },
     fadeup: 'showonscroll',
-    allElements: '.reveal, .infoandpic,.journal,.product ,.Ema ,.latest ,.infomobile ,.footer',
+    allElements: '.reveal, .infoandpic,.journal,.product ,.Ema ,.latest ,.footer',
 };
 export const heroImages = [
     { src: 'img/image.png', alt: 'hero-image' },
@@ -217,7 +217,11 @@ export const SelectorAbout ={
     Exhibition: '.Exhibitions',
     part1: '.part1',
     part2: '.part2',
-    box: '.aboutExhibition'
+    box: '.aboutExhibition',
+    Awards: '.Awards',
+    Apart2: '.Apart2',
+    boxAward:'.aboutAwards'
+
 }
 export const SelectorAboutExhibition =[
     {
@@ -250,5 +254,37 @@ export const SelectorAboutExhibition =[
         title: "Reflections of Prague",
         year: "2022",
         icon: null
+    }
+];
+export const AwardsData = [
+    {
+        title: "Prague Photography Award",
+        year: "2024",
+        icon: "ri-arrow-right-up-long-line" 
+    },
+    {
+        title: "European Fine Art Photography",
+        year: "2024",
+        icon: "ri-arrow-right-up-long-line"
+    },
+    {
+        title: "Best Urban Photography",
+        year: "2023",
+        icon: "ri-arrow-right-up-long-line"
+    },
+    {
+        title: "Nature Photographer of the Year",
+        year: "2023",
+        icon: "ri-arrow-right-up-long-line"
+    },
+    {
+        title: "Candid Moments Award",
+        year: "2022",
+        icon: "ri-arrow-right-up-long-line"
+    },
+    {
+        title: "Excellence in Visual Storytelling",
+        year: "2022",
+        icon: "ri-arrow-right-up-long-line"
     }
 ];

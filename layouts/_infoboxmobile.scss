@@ -1,10 +1,11 @@
 @use '../utils/util' as *;
 .infomobile{   
     grid-area: infobox;
-    @include flex-gap(1rem);
+    @include flex-gap(0.8rem);
+    width: 100%;
     // margin-top: 2rem;
     flex-direction: column;
-    padding: var(--space-xss);
+
             .info{
                 background-color: var(--third-clr);
                 padding: 1.4rem;
