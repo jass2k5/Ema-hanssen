@@ -22,8 +22,8 @@
         grid-area: row1;
         height: 100%;
         width: 100%;
-        border-top-right-radius: 2rem;
-        border-top-left-radius: 2rem;
+        border-top-right-radius: 0.8rem;
+        border-top-left-radius: 0.8rem;
         background-color: var(--text-clr);
         padding: 4rem;
         gap: 2rem;
@@ -178,8 +178,8 @@
         width: 100%;
         background-color: var(--text-clr);
         margin-top: -1px;
-        border-bottom-left-radius: 2rem;
-        border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
         @include flex-gap(1rem);
         flex-direction: column;
         color: var(--body-clr);

@@ -658,7 +658,7 @@ header .featured {
   position: absolute;
   bottom: 0%;
   right: 0%;
-  padding: clamp(0.2rem, 1vw + 0.1rem, 0.5rem);
+  padding: clamp(0.2rem, 1.5vw + 0.1rem, 0.7rem);
   background-color: var(--body-clr);
   border-top-left-radius: 1rem;
 }
@@ -1351,8 +1351,8 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   grid-area: row1;
   height: 100%;
   width: 100%;
-  border-top-right-radius: 2rem;
-  border-top-left-radius: 2rem;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
   background-color: var(--text-clr);
   padding: 4rem;
   gap: 2rem;
@@ -1504,8 +1504,8 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   width: 100%;
   background-color: var(--text-clr);
   margin-top: -1px;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2980,4 +2980,204 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     visibility: visible;
     margin-left: 1.2rem;
   }
+}
+.contactMain {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.contactMain::-webkit-scrollbar {
+  height: auto;
+}
+.contactMain::-webkit-scrollbar-track {
+  background: var(--third-clr);
+}
+.contactMain::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-clr);
+  border-radius: 100px;
+  border: 3px solid var(--third-clr);
+}
+.contactMain::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover);
+}
+.contactMain {
+  padding: var(--main-padding);
+  position: relative;
+  background-color: var(--body-clr);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, max-content);
+  grid-template-areas: "header" "form" "image" "address" "infobox" "footer";
+  z-index: 0;
+  row-gap: 1rem;
+}
+
+.form {
+  grid-area: form;
+  background-color: var(--third-clr);
+  color: var(--text-clr);
+  min-height: 30vh;
+  height: auto;
+  width: 100%;
+  border-radius: 0.8rem;
+  padding: 2rem;
+}
+.form #form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.form #form h1 {
+  align-self: flex-start;
+  margin-bottom: 2rem;
+}
+.form #form .inputs {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form #form .inputs input,
+.form #form .inputs textarea {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem 1rem;
+  background-color: var(--body-clr);
+  border: 1px solid rgba(150, 150, 150, 0.2);
+  border-radius: 0.6rem;
+  color: var(--text-clr);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form #form .inputs input:-webkit-autofill,
+.form #form .inputs input:-webkit-autofill:hover,
+.form #form .inputs input:-webkit-autofill:focus,
+.form #form .inputs textarea:-webkit-autofill,
+.form #form .inputs textarea:-webkit-autofill:hover,
+.form #form .inputs textarea:-webkit-autofill:focus {
+  /* Use an inset shadow to literally paint over the white background with your body color */
+  -webkit-box-shadow: 0 0 0px 1000px var(--body-clr) inset !important;
+  /* Force the text color to stay matching your theme */
+  -webkit-text-fill-color: var(--text-clr) !important;
+  /* A modern fallback trick to delay the background change indefinitely */
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.form #form .inputs textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.form #form .inputs .btn {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: var(--contact-clr);
+  color: var(--body-clr);
+  border: none;
+  border-radius: 0.6rem;
+  font-family: inherit;
+  font-weight: 300;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.form #form .inputs .btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.form #form .inputs .btn:active {
+  transform: translateY(0);
+}
+.form #form .inputs .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.centerImage {
+  grid-area: image;
+  min-height: 30vh;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.centerImage img {
+  height: 45vh;
+  border-radius: 0.8rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.studioInformation {
+  grid-area: address;
+  min-height: 40vh;
+  height: auto;
+  width: 100%;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--third-clr);
+  color: var(--text-clr);
+  padding: 2rem;
+}
+.studioInformation .first {
+  align-self: flex-start;
+  font-weight: 300;
+}
+.studioInformation .location {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.studioInformation .buttonContainer {
+  align-self: center;
+  height: auto;
+  width: 100%;
+  background-color: var(--contact-clr);
+  color: var(--body-clr);
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+.studioInformation .buttonContainer .arrowWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.studioInformation .buttonContainer .arrowWrapper .above {
+  transform: translateY(10px);
+  transition: all 0.2s ease-in-out;
+}
+.studioInformation .buttonContainer .arrowWrapper .below {
+  transform: translateY(100%);
+  transition: all 0.2s ease-in-out;
+}
+.studioInformation .buttonContainer:hover .above {
+  transform: translateY(-100%);
+}
+.studioInformation .buttonContainer:hover .below {
+  transform: translateY(-7px);
 }/*# sourceMappingURL=style.css.map */

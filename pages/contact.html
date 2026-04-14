@@ -4,175 +4,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" as="image" href="img/image.png">
-    <link rel="preload" as="image" href="img/photo.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="icon" as="image" type="image/x-icon" href="img/logo.svg">
-    <title>prototype-ema-by-jass</title>
+    <link rel="icon" as="image" type="image/x-icon" href="../img/logo.svg">
+    <title>Contact</title>
 </head>
 
-<body data-page="home">
-    <main>
-        <header>
-            <div class="img">
-                <div class="sliderimage">
-
-                </div>
-                <div class="imageindicators">
-
-                </div>
-                <div class="slidearrows">
-                    <i class="ri-arrow-left-s-line backward"></i>
-                    <i class="ri-arrow-right-s-line forward"></i>
+<body data-page="contact">
+    <main class="contactMain">
+        <!-- using about header because its same as of we need in contact -->
+        <header class="aboutHeader">
+            <div class="containerHeader">
+                <div class="imgHeader">
+                    <img src="../img/contactimg.avif" alt="contactImage">
                 </div>
                 <nav>
                     <div class="logo-text">
+
                         <svg class="logo" width="15" height="15" viewBox="0 0 15 15" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
+
                             <g clip-path="url(#clip0_7717_41)">
+
                                 <mask id="mask0_7717_41" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
                                     y="0" width="15" height="15">
+
                                     <path d="M15 0H0V15H15V0Z" fill="white" />
+
                                 </mask>
+
                                 <g mask="url(#mask0_7717_41)">
+
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M7.5 11.25C9.57105 11.25 11.25 9.57105 11.25 7.5C11.25 5.42894 9.57105 3.75 7.5 3.75C5.42894 3.75 3.75 5.42894 3.75 7.5C3.75 9.57105 5.42894 11.25 7.5 11.25ZM7.5 15C11.6421 15 15 11.6421 15 7.5C15 3.35786 11.6421 0 7.5 0C3.35786 0 0 3.35786 0 7.5C0 11.6421 3.35786 15 7.5 15Z"
                                         fill="currentColor" />
+
                                 </g>
+
                             </g>
+
                             <defs>
+
                                 <clipPath id="clip0_7717_41">
+
                                     <rect width="15" height="15" fill="white" />
+
                                 </clipPath>
+
                             </defs>
+
                         </svg>
 
-                        <span><a href="index.html">hanssen</a></span>
+
+
+                        <span><a href="../index.html">hanssen</a></span>
+
                     </div>
+
                     <ul>
-                        <li><a href="pages/work.html">Work</a></li>
-                        <li><a href="pages/about.html">About</a></li>
-                        <li><a href="pages/blog.html">Blog</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
+
+                        <li><a href="work.html">Work</a></li>
+
+                        <li><a href="about.html">About</a></li>
+
+                        <li><a href="blog.html">Blog</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
                         <div class="modes">
+
                             <i class="ri-circle-fill"></i>
+
                         </div>
+
                     </ul>
+
                 </nav>
+
                 <div class="menu-toggle">menu</div>
+
                 <div class="innerradius"></div>
+
                 <div class="featured">
-                    <span>featured projects</span>
+
+                    <!-- utilizing the home class of featuredd -->
+
+                    <span>My Studio</span>
+
                 </div>
+
             </div>
+
             <div class="mobile-menu-overlay" id="mobileMenu">
+
                 <div class="containerMenu">
-                  <div class="overview-nav">
-                        <img class="emaImage" src="img/photo.png" alt="picture of actress">
+
+                    <div class="overview-nav">
+
+                        <img class="emaImage" src="../img/photo.png" alt="picture of actress">
+
                         <div class="sideview">
+
                             <h2>Ema Hanssen</h2>
+
                             <h3>photographer</h3>
+
                         </div>
+
                     </div>
-                <div class="mobile-links">
-                    <div class="nav-blanks"  data-target="index.html">
-                        <h3>Home</h3>
-                        <i class="ri-arrow-right-up-long-line "></i>
+
+                    <div class="mobile-links">
+                        <div class="nav-blanks" data-target="../index.html">
+                            <h3>Home</h3>
+                            <i class="ri-arrow-right-up-long-line "></i>
+                        </div>
+                        <div class="nav-blanks" data-target="work.html">
+                            <h3>Work</h3>
+                            <i class="ri-arrow-right-up-long-line "></i>
+                        </div>
+                        <div class="nav-blanks" data-target="about.html">
+                            <h3>About</h3>
+                            <i class="ri-arrow-right-up-long-line "></i>
+                        </div>
+                        <div class="nav-blanks" data-target="blog.html">
+                            <h3>Blog</h3>
+                            <i class="ri-arrow-right-up-long-line "></i>
+                        </div>
+                        <div class="nav-blanks" data-target="contact.html">
+                            <h3>Contact Me</h3>
+                            <i class="ri-arrow-right-up-long-line "></i>
+                        </div>
+
                     </div>
-                    <div class="nav-blanks" data-target="pages/work.html">
-                        <h3>Work</h3>
-                        <i class="ri-arrow-right-up-long-line "></i>
-                    </div>
-                    <div class="nav-blanks" data-target="pages/about.html">
-                        <h3>About</h3>
-                        <i class="ri-arrow-right-up-long-line "></i>
-                    </div>
-                    <div class="nav-blanks" data-target="pages/blog.html">
-                        <h3>Blog</h3>
-                        <i class="ri-arrow-right-up-long-line "></i>
-                    </div>
-                    <div class="nav-blanks" data-target="pages/contact.html">
-                        <h3>Contact Me</h3>
-                        <i class="ri-arrow-right-up-long-line "></i>
-                    </div>
-                    
-                
-            </div>
-            </div>
+
+                </div>
             </div>
         </header>
-        <section class="Ema">
-            <div class="upleftrow">
-                <div class="brandbox">
-                    <div class="overview">
-                        <img class="ema-img" src="img/photo.png" alt="picture of actress">
-                        <div class="sideview">
-                            <h2>Ema Hanssen</h2>
-                            <h3>photographer</h3>
-                        </div>
-                    </div>
-                    <p>I'm Ema, a photographer based in Prague. I capture authentic moments and tell stories through my
-                        images, blending creativity and emotion in each shot.</p>
-                </div>
-
-
-                <div class="infobox" >
-                    <div class="info" data-goto="https://www.instagram.com/jaspinder____84/">
-                        <h3>instagram</h3>
-                        <div class="iconwrapper">
-                            <i class="ri-instagram-line  logos"></i>
-                            <i class="ri-arrow-right-up-long-line arrow"></i>
-                        </div>
-                    </div>
-                    <div class="info" data-goto="https://in.pinterest.com/jsssndl/_profile/">
-                        <h3>Pinterest</h3>
-                        <div class="iconwrapper">
-                            <i class="ri-pinterest-line  logos"></i>
-                            <i class="ri-arrow-right-up-long-line arrow"></i>
-                        </div>
-                    </div>
-                    <div class="info" data-goto="https://discord.com/channels/@me/1451595945383825500">
-                        <h3>Discord</h3>
-                        <div class="iconwrapper">
-                            <i class="ri-discord-line logos"></i>
-                            <i class="ri-arrow-right-up-long-line arrow"></i>
-                        </div>
-                    </div>
-                    <div class="info" data-goto="https://x.com/JStartswit84533">
-                        <h3>Twitter</h3>
-                        <div class="iconwrapper">
-                            <i class="ri-twitter-x-line  logos"></i>
-                            <i class="ri-arrow-right-up-long-line arrow"></i>
-                        </div>
-                    </div>
-                    <div class="info" data-goto="mailto:jaspindersingh3050@gmail.com">
-                        <h3>Contact Me</h3>
-                        <div class="iconwrapper">
-                            <i class="ri-mail-line  logos"></i>
-                            <i class="ri-arrow-right-up-long-line arrow"></i>
-                        </div>
-                    </div>
+        <section class="form">
+            <form id = "form" action="https://api.web3forms.com/submit" method="POST">
+                <h1>Let's Talk</h1>
+              <div class="inputs">
+                  <input type="hidden" name="access_key" value="8ed52522-49ca-4f6d-b76e-ae710e10884b">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button class = "btn" type="submit">Send Message</button>
+              </div>
+            </form>
+        </section>
+        <section class="centerImage">
+            <img src="../img/centercontactimage.avif" alt="contactImage">
+        </section>
+        <section class="studioInformation">
+            <div class="first">
+                <h2>Prague</h2>
+                <h2>Studio</h2>
+            </div>
+            <div class="location">
+                <span>Vinohradská 121,</span>
+                <span>130 00 Praha 3,</span>
+                <span>Czech Republic</span>
+            </div>
+            <div class="buttonContainer">
+                <span>Get Direction</span>
+                <div class="arrowWrapper">
+                    <i class="ri-arrow-right-up-long-line above"></i>
+                    <i class="ri-arrow-right-up-long-line below"></i>
                 </div>
             </div>
         </section>
-        <section class="latest">
-            <div class="smartphoneinfo">
-                <div class="latestwork">
-                    <div class="downclick">
-                        <h3>latest work</h3>
-                        <i class="ri-arrow-down-long-line"></i>
-                    </div>
-                    <h3 class="view">View All</h3>
-                </div>
-            </div>
-        </section>
-        <section class="duo-1">
-            <div class="container">
-            </div>
-        </section>
-
-        <section class="infomobile">
+          <section class="infomobile">
             <div class="info reveal" data-goto="https://www.instagram.com/jaspinder____84/">
                         <h3>instagram</h3>
                         <div class="iconwrapper">
@@ -209,10 +210,10 @@
                         </div>
                     </div>
         </section>
-        <footer class="footer">
+         <footer class="footer">
             <section class="aboutandmore">
                 <div class="first-half">
-                    <img class="ema-img" src="img/photo.png" alt="picture of actress">
+                    <img class="ema-img" src="../img/photo.png" alt="picture of actress">
                     <div class="sideview">
                         <h2>Ema Hanssen</h2>
                         <h3>photographer</h3>
@@ -266,8 +267,7 @@
                 </div>
             </section>
         </footer>
-    </main>
-    <script type="module" src="./main.js"></script>
+        <script type="module" src="../main.js"></script>
 </body>
 
 </html>

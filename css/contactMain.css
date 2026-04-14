@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+:root {
+  --main-padding: 0.8rem;
+  --body-clr: white;
+  --second-clr: black;
+  --third-clr: whitesmoke;
+  --text-clr: black;
+  --contact-clr: black;
+  --circle: 50%;
+  --main-font: "Ubuntu", sans-serif;
+  --font-size: 1rem;
+  --lh-body: 1.6;
+  --space-xn: 0.2rem;
+  --space-xs: 0.4rem;
+  --space-xss: 0.9rem;
+  --space-s: 1rem;
+  --space-smd: 1.2rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --blur: 30px;
+  --br-clr1: rgba(255, 255, 255, 0.3);
+  --gap-logo: 0.4rem;
+  --margin-nav: clamp(0.2rem, 1vw + 0.2rem, 0.4rem);
+  --thumb-clr: rgba(99, 99, 99, 0.8);
+  --thumb-hover: #555555da;
+  --indicator-clr: rgba(225, 255, 255, 0.233);
+  --arrows-clr: rgba(225, 255, 255, 0.233);
+}
+
+.darkmode {
+  --body-clr: black;
+  --third-clr: rgb(40, 42, 43);
+  --text-clr: white;
+  --contact-clr: whitesmoke;
+  --thumb-clr: rgba(209, 209, 209);
+  --thumb-hover: rgba(255, 255, 255);
+  --indicator-clr: rgba(0, 0, 0, 0.363);
+  --arrows-clr: rgba(0, 0, 0, 0.2);
+}
+
+.product.showonscroll,
+.Ema.showonscroll,
+.latest.showonscroll,
+.footer.showonscroll, .journal.showonscroll, .infoandpic.showonscroll, .reveal.showonscroll {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.product,
+.Ema,
+.latest,
+.footer, .journal, .infoandpic, .reveal {
+  opacity: 0 !important;
+  transform: translateY(45px) !important;
+  transition: opacity 0.8s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes loopText {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes customFadeIn {
+  0% {
+    color: rgba(255, 255, 255, 0.37);
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+@keyframes about-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.contactMain {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.contactMain::-webkit-scrollbar {
+  height: auto;
+}
+.contactMain::-webkit-scrollbar-track {
+  background: var(--third-clr);
+}
+.contactMain::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-clr);
+  border-radius: 100px;
+  border: 3px solid var(--third-clr);
+}
+.contactMain::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover);
+}
+.contactMain {
+  padding: var(--main-padding);
+  position: relative;
+  background-color: var(--body-clr);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, max-content);
+  grid-template-areas: "header" "form" "image" "address" "infobox" "footer";
+  z-index: 0;
+  row-gap: 1rem;
+}/*# sourceMappingURL=contactMain.css.map */

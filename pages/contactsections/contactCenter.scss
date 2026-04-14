@@ -1,0 +1,15 @@
+@use '../../utils/util' as *;
+.centerImage{
+    grid-area: image;
+    min-height: 30vh;
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    img{
+        height: 45vh;
+        border-radius: 0.8rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
