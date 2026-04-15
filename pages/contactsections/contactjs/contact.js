@@ -41,7 +41,7 @@ export function location() {
         const btn = document.querySelector('.buttonContainer');
         if (!btn) throw new Error("Error retrieving location button");
 
-        // Listen for the click
+
         btn.addEventListener('click', () => {
             
          

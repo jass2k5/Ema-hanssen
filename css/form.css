@@ -186,4 +186,31 @@
 .form #form .inputs .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media (min-width: 1200px) {
+  .form {
+    min-height: 60vh;
+    padding: 3rem;
+    overflow: hidden;
+  }
+  .form #form {
+    gap: 20%;
+  }
+  .form #form h1 {
+    font-size: 3rem;
+  }
+  .form #form .inputs .inputholder {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.2rem;
+  }
+  .form #form .inputs .inputholder input {
+    height: auto;
+    width: 50%;
+  }
 }/*# sourceMappingURL=form.css.map */

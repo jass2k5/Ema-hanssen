@@ -224,6 +224,25 @@ body::-webkit-scrollbar {
     width: 100%;
   }
 }
+.contactInfomobile {
+  grid-area: infobox;
+  min-height: 35vh;
+  max-height: 35vh;
+  flex-direction: column;
+  margin-top: 0rem;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  padding: 0rem;
+}
+.contactInfomobile .info {
+  height: 100%;
+  padding: 0.6rem;
+  width: 98%;
+}
+.contactInfomobile .info:nth-last-child(1) {
+  width: 98%;
+}
+
 nav {
   background-color: var(--body-clr);
   position: fixed;
@@ -3008,12 +3027,20 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   background-color: var(--body-clr);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, max-content);
+  grid-template-rows: repeat(6, max-content);
   grid-template-areas: "header" "form" "image" "address" "infobox" "footer";
   z-index: 0;
   row-gap: 1rem;
 }
 
+@media (min-width: 1200px) {
+  .contactMain {
+    height: 100vh;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: "header form form form" "header address image infobox" "header footer footer footer";
+  }
+}
 .form {
   grid-area: form;
   background-color: var(--third-clr);
@@ -3103,6 +3130,32 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   cursor: not-allowed;
 }
 
+@media (min-width: 1200px) {
+  .form {
+    min-height: 60vh;
+    padding: 3rem;
+    overflow: hidden;
+  }
+  .form #form {
+    gap: 20%;
+  }
+  .form #form h1 {
+    font-size: 3rem;
+  }
+  .form #form .inputs .inputholder {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.2rem;
+  }
+  .form #form .inputs .inputholder input {
+    height: auto;
+    width: 50%;
+  }
+}
 .centerImage {
   grid-area: image;
   min-height: 30vh;
@@ -3120,6 +3173,15 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
      object-position: center;
 }
 
+@media (min-width: 1200px) {
+  .centerImage {
+    grid-area: image;
+    height: 35vh;
+  }
+  .centerImage img {
+    height: 100%;
+  }
+}
 .studioInformation {
   grid-area: address;
   min-height: 40vh;
@@ -3180,4 +3242,13 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
 }
 .studioInformation .buttonContainer:hover .below {
   transform: translateY(-7px);
+}
+
+@media (min-width: 1200px) {
+  .studioInformation {
+    grid-area: address;
+    min-height: 35vh;
+    height: 35vh;
+    max-height: 35vh;
+  }
 }/*# sourceMappingURL=style.css.map */

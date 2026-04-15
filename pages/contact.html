@@ -13,7 +13,7 @@
 <body data-page="contact">
     <main class="contactMain">
         <!-- using about header because its same as of we need in contact -->
-        <header class="aboutHeader">
+        <header class="aboutHeader contactHeader">
             <div class="containerHeader">
                 <div class="imgHeader">
                     <img src="../img/contactimg.avif" alt="contactImage">
@@ -145,8 +145,10 @@
                 <h1>Let's Talk</h1>
               <div class="inputs">
                   <input type="hidden" name="access_key" value="8ed52522-49ca-4f6d-b76e-ae710e10884b">
-                <input type="text" name="name" placeholder="Your Name" required>
+                <div class="inputholder">
+                    <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email">
+                </div>
                 <textarea name="message" placeholder="Your Message" required></textarea>
                 <button class = "btn" type="submit">Send Message</button>
               </div>
@@ -173,7 +175,7 @@
                 </div>
             </div>
         </section>
-          <section class="infomobile">
+          <section class="infomobile contactInfomobile">
             <div class="info reveal" data-goto="https://www.instagram.com/jaspinder____84/">
                         <h3>instagram</h3>
                         <div class="iconwrapper">

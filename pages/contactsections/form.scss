@@ -101,3 +101,34 @@
         }
     }
 }
+@media (min-width:1200px){
+    .form{
+        min-height: 60vh;
+        padding: 3rem;
+        overflow: hidden;
+        #form{
+            gap: 20%;
+            h1{
+                font-size: 3rem;
+
+            }
+            .inputs{
+                // flex-direction: row;
+                .inputholder{
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    gap: 0.2rem;
+                    input{
+                        height: auto;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+    }
+}

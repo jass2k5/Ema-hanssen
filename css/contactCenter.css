@@ -114,4 +114,14 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+@media (min-width: 1200px) {
+  .centerImage {
+    grid-area: image;
+    height: 35vh;
+  }
+  .centerImage img {
+    height: 100%;
+  }
 }/*# sourceMappingURL=contactCenter.css.map */
