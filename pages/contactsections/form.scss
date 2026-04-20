@@ -31,6 +31,10 @@
             justify-content: center;
             flex-direction: column;
 
+            .inputholder{
+                flex-direction: column;
+            }
+
             input,
             textarea {
                 width: 100%;
@@ -130,5 +134,31 @@
             }
         }
 
+    }
+}
+@media (min-width:768px) and (max-width:1190px){
+    .form{
+        min-height: 50vh;
+        padding: 2rem;
+        overflow: hidden;
+        #form{
+            flex-direction:column;
+            
+            .inputs{
+                flex-direction: column;
+                .inputholder{
+                   height: auto;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    .input{
+                        height: auto;
+                        width: 50%;
+                    }
+                }
+            }
+        }
     }
 }

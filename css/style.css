@@ -797,6 +797,18 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   color: var(--body-clr);
 }
 
+@media (max-width: 375px) {
+  header .mobile-menu-overlay .containerMenu {
+    height: 60vh;
+    width: 80%;
+    background-color: var(--body-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30%;
+    flex-direction: column;
+  }
+}
 @media (min-width: 768px) {
   header {
     height: 100%;
@@ -2557,6 +2569,11 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     overflow: hidden;
   }
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .aboutHeader {
+    height: 65vh;
+  }
+}
 .EmaAbout {
   grid-area: ema;
   display: flex;
@@ -3071,6 +3088,9 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
   justify-content: center;
   flex-direction: column;
 }
+.form #form .inputs .inputholder {
+  flex-direction: column;
+}
 .form #form .inputs input,
 .form #form .inputs textarea {
   width: 100%;
@@ -3156,6 +3176,31 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
     width: 50%;
   }
 }
+@media (min-width: 768px) and (max-width: 1190px) {
+  .form {
+    min-height: 50vh;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  .form #form {
+    flex-direction: column;
+  }
+  .form #form .inputs {
+    flex-direction: column;
+  }
+  .form #form .inputs .inputholder {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form #form .inputs .inputholder .input {
+    height: auto;
+    width: 50%;
+  }
+}
 .centerImage {
   grid-area: image;
   min-height: 30vh;
@@ -3173,10 +3218,21 @@ header .mobile-menu-overlay .containerMenu .mobile-links .nav-blanks:nth-last-ch
      object-position: center;
 }
 
+@media (min-width: 768px) {
+  .centerImage {
+    grid-area: image;
+    min-height: 50vh;
+  }
+  .centerImage img {
+    height: 100%;
+  }
+}
 @media (min-width: 1200px) {
   .centerImage {
     grid-area: image;
+    min-height: 35vh;
     height: 35vh;
+    max-height: 35vh;
   }
   .centerImage img {
     height: 100%;

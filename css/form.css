@@ -129,6 +129,9 @@
   justify-content: center;
   flex-direction: column;
 }
+.form #form .inputs .inputholder {
+  flex-direction: column;
+}
 .form #form .inputs input,
 .form #form .inputs textarea {
   width: 100%;
@@ -210,6 +213,31 @@
     gap: 0.2rem;
   }
   .form #form .inputs .inputholder input {
+    height: auto;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1190px) {
+  .form {
+    min-height: 50vh;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  .form #form {
+    flex-direction: column;
+  }
+  .form #form .inputs {
+    flex-direction: column;
+  }
+  .form #form .inputs .inputholder {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form #form .inputs .inputholder .input {
     height: auto;
     width: 50%;
   }

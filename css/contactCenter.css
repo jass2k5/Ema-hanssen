@@ -116,10 +116,21 @@
      object-position: center;
 }
 
+@media (min-width: 768px) {
+  .centerImage {
+    grid-area: image;
+    min-height: 50vh;
+  }
+  .centerImage img {
+    height: 100%;
+  }
+}
 @media (min-width: 1200px) {
   .centerImage {
     grid-area: image;
+    min-height: 35vh;
     height: 35vh;
+    max-height: 35vh;
   }
   .centerImage img {
     height: 100%;

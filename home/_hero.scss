@@ -276,22 +276,39 @@ header {
                     align-items: center;
                     justify-content: space-between;
                     padding: 1rem;
-                    i{
+
+                    i {
                         display: inline-block;
                         transform: rotate(45deg);
                     }
-                    &:active{
+
+                    &:active {
                         transform: scale(1.02);
                         background-color: var(--text-clr);
                         color: var(--body-clr);
                     }
                 }
-                .nav-blanks:nth-last-child(1){
+
+                .nav-blanks:nth-last-child(1) {
                     background-color: var(--contact-clr);
                     color: var(--body-clr);
                 }
 
 
+            }
+        }
+    }
+}
+
+@media (max-width:375px) {
+    header{
+        .mobile-menu-overlay {
+            .containerMenu {
+                height: 60vh;
+                width: 80%;
+                background-color: var(--body-clr);
+                @include flex-gap(30%);
+                flex-direction: column;
             }
         }
     }
