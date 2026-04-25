@@ -80,3 +80,40 @@ export function gotoLink(){
         })
     })
 }
+
+export function buildOfflineScreen() {
+  const overlay = document.createElement('div');
+  overlay.id = 'offline-overlay';
+  overlay.className = 'offline-overlay';
+  
+  // Inject the inner HTML
+  overlay.innerHTML = `
+    <img src="../img/error.png" alt="No Connection" class="offline-img" />
+    <div class="offline-content">
+      <h2>Connection Lost.</h2>
+      <p>Please check your internet connection to view the portfolio.</p>
+      <button id="offline-refresh-btn" class="offline-refresh-btn">Try Again</button>
+    </div>
+  `;
+  
+ const refreshBtn = overlay.querySelector('#offline-refresh-btn');
+  
+  refreshBtn.addEventListener('click', () => {
+    window.location.reload(); 
+  });
+  document.body.appendChild(overlay);
+  
+  return overlay;
+}
+
+// 2. Run the function so the overlay exists in the background
+const offlineOverlay = buildOfflineScreen();
+
+// 3. Listen for the connection to drop or return
+window.addEventListener('offline', () => {
+  offlineOverlay.classList.add('is-active');
+});
+
+window.addEventListener('online', () => {
+  offlineOverlay.classList.remove('is-active');
+});

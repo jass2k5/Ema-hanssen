@@ -53,6 +53,84 @@
 .latest,
 .footer,.journal, .infoandpic , .reveal{
     opacity: 0!important;
-    transform: translateY(45px)!important;
+    transform: translateY(35px)!important;
     transition: opacity 0.8s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+//for error 404
+.offline-overlay {
+  position: fixed;
+  inset: 0; // Shorthand for top, right, bottom, left: 0
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+  // Hidden by default
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+
+  // When the JS adds this class, the screen fades in
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .offline-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+  }
+
+  .offline-content {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-family: inherit; 
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: #a0a0a0;
+    }
+  }
+  .offline-refresh-btn {
+      margin-top: 2rem;
+      padding: 0.8rem 2.5rem;
+      font-size: 1rem;
+      font-family: inherit;
+      color: black;
+      background: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px; // Adjust this to match your bento grid radius
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  
 }
